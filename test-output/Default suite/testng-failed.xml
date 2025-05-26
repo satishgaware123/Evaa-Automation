@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.evaa.chatbot.bookappointment.Book_appointment_with_insurance_Test">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="Enable_ensurance_required_from_admin"/>
+          <include name="verify_detail_on_maximeyes_site"/>
+          <include name="Test_book_appointment_with_insurance"/>
+          <include name="setUp"/>
+          <include name="startBrowser"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.evaa.chatbot.bookappointment.Book_appointment_with_insurance_Test -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

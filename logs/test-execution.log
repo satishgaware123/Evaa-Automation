@@ -1,0 +1,41 @@
+2025-05-26 16:04:28 [main] INFO  WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
+2025-05-26 16:04:28 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
+2025-05-26 16:04:28 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-26 16:05:04 [main] INFO  EvvaChatBaseClass - ✅ Test Passed: Disable_ensurance_required_from_admin
+2025-05-26 16:09:12 [main] INFO  WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
+2025-05-26 16:09:12 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
+2025-05-26 16:09:12 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-26 16:09:33 [main] INFO  EvvaChatBaseClass - ✅ Test Passed: Enable_ensurance_required_from_admin
+2025-05-26 16:09:34 [main] INFO  WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
+2025-05-26 16:09:34 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
+2025-05-26 16:09:34 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-26 16:09:56 [main] INFO  EvvaChatBaseClass - ✅ Test Passed: Disable_ensurance_required_from_admin
+2025-05-26 16:10:46 [main] INFO  EvvaChatBaseClass - ✅ Test Passed: Test_book_appointment_without_insurance
+2025-05-26 16:18:20 [main] INFO  WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
+2025-05-26 16:18:20 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
+2025-05-26 16:18:20 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-26 16:18:44 [main] INFO  EvvaChatBaseClass - ✅ Test Passed: Enable_ensurance_required_from_admin
+2025-05-26 16:19:39 [main] INFO  EvvaChatBaseClass - ✅ Test Passed: Test_book_appointment_with_insurance
+2025-05-26 16:19:40 [main] INFO  WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
+2025-05-26 16:19:40 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
+2025-05-26 16:19:40 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-26 16:20:02 [main] INFO  EvvaChatBaseClass - ✅ Test Passed: Disable_ensurance_required_from_admin
+2025-05-26 16:20:53 [main] INFO  EvvaChatBaseClass - ✅ Test Passed: Test_book_appointment_without_insurance
+2025-05-26 16:23:56 [main] INFO  WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
+2025-05-26 16:23:56 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
+2025-05-26 16:23:56 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-26 16:23:56 [main] INFO  WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
+2025-05-26 16:23:56 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
+2025-05-26 16:23:56 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-26 16:24:26 [main] INFO  WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
+2025-05-26 16:24:26 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
+2025-05-26 16:24:26 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-26 16:24:26 [main] INFO  WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
+2025-05-26 16:24:26 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
+2025-05-26 16:24:26 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-26 16:24:42 [main] INFO  WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
+2025-05-26 16:24:42 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
+2025-05-26 16:24:42 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-26 16:24:45 [main] INFO  WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
+2025-05-26 16:24:45 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
+2025-05-26 16:24:45 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
