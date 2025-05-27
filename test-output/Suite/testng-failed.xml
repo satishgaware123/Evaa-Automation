@@ -3,15 +3,24 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.evaa.chatbot.bookappointment.Book_appointment_with_insurance_Test">
+      <class name="com.evaa.chatbot.bookappointment.book_appointment_suceessfuly">
         <methods>
           <include name="closeBrowser"/>
-          <include name="verify_detail_on_maximeyes_site"/>
+          <include name="setUp"/>
+          <include name="startBrowser"/>
+          <include name="Test_book_appointment_without_insurance"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.evaa.chatbot.bookappointment.book_appointment_suceessfuly -->
+      <class name="com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest">
+        <methods>
+          <include name="Test_book_appointment_with_insurance"/>
+          <include name="closeBrowser"/>
           <include name="setUp"/>
           <include name="startBrowser"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.evaa.chatbot.bookappointment.Book_appointment_with_insurance_Test -->
+      </class> <!-- com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

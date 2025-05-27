@@ -3,17 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.evaa.chatbot.bookappointment.Book_appointment_with_insurance_Test">
+      <class name="com.evaa.chatbot.bookappointment.book_appointment_suceessfuly">
         <methods>
           <include name="closeBrowser"/>
-          <include name="Enable_ensurance_required_from_admin"/>
-          <include name="verify_detail_on_maximeyes_site"/>
-          <include name="Test_book_appointment_with_insurance"/>
+          <include name="Disable_ensurance_required_from_admin"/>
           <include name="setUp"/>
           <include name="startBrowser"/>
+          <include name="Test_book_appointment_without_insurance"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.evaa.chatbot.bookappointment.Book_appointment_with_insurance_Test -->
+      </class> <!-- com.evaa.chatbot.bookappointment.book_appointment_suceessfuly -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
