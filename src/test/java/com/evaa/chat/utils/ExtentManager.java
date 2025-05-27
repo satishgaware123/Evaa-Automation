@@ -20,7 +20,7 @@ public class ExtentManager {
 			}
 
 			ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
-			sparkReporter.config().setReportName("Automation Test Report");
+			sparkReporter.config().setReportName("Evaa Automation Test Report");
 			sparkReporter.config().setDocumentTitle("Test Execution Report");
 			sparkReporter.config().setTheme(Theme.STANDARD);
 
@@ -28,10 +28,10 @@ public class ExtentManager {
 			extent.attachReporter(sparkReporter);
 
 			// ✅ Add environment details
-			extent.setSystemInfo("QA Engineer", "Your Name");
-			extent.setSystemInfo("Environment", "Staging");
-			extent.setSystemInfo("OS", System.getProperty("os.name"));
-			extent.setSystemInfo("Java Version", System.getProperty("java.version"));
+			extent.setSystemInfo("QA Engineer", "Satish Gaware");
+			extent.setSystemInfo("Environment", "QA");
+			extent.setSystemInfo("OS", System.getProperty("Windows 10 Pro"));
+			extent.setSystemInfo("Java Version", System.getProperty("21"));
 			extent.setSystemInfo("Browser", "Chrome");
 		}
 		return extent;

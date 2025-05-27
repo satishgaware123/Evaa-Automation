@@ -25,16 +25,17 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.evaa.chat.test.pom.EvaaChatPom;
 import com.evaa.chat.utils.ConfigReader;
 import com.evaa.chat.utils.ExtentManager;
 import com.evaa.chat.utils.ScreenshotUtil;
+import com.evaa.chatbot.bookappointment.pom.BookAppointment;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class EvvaChatBaseClass {
 	protected WebDriver driver;
-	protected EvaaChatPom pom;
+//	protected EvaaChatPom pom;
+	protected BookAppointment pom;
 	protected ConfigReader config;
 	protected WebDriverWait wait;
 	protected static ExtentReports extent;
@@ -86,7 +87,8 @@ public class EvvaChatBaseClass {
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 //		driver.manage().timeouts().implicitlyWait(60, driver);
 
-		pom = new EvaaChatPom(driver);
+//		pom = new EvaaChatPom(driver);
+		pom = new BookAppointment(driver);
 		config = new ConfigReader();
 		wait = new WebDriverWait(driver, Duration.ofSeconds(70));
 

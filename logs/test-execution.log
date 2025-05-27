@@ -39,3 +39,32 @@
 2025-05-26 16:24:45 [main] INFO  WebDriverManager - Using chromedriver 136.0.7103.113 (resolved driver for Chrome 136)
 2025-05-26 16:24:45 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\136.0.7103.113\chromedriver.exe
 2025-05-26 16:24:45 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-27 10:42:14 [main] INFO  WebDriverManager - Using chromedriver 137.0.7151.40 (resolved driver for Chrome 137)
+2025-05-27 10:42:14 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\137.0.7151.40\chromedriver.exe
+2025-05-27 10:42:14 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-27 10:42:17 [main] INFO  WebDriverManager - Using chromedriver 137.0.7151.40 (resolved driver for Chrome 137)
+2025-05-27 10:42:17 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\137.0.7151.40\chromedriver.exe
+2025-05-27 10:42:17 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-27 10:50:46 [main] INFO  WebDriverManager - Using chromedriver 137.0.7151.40 (resolved driver for Chrome 137)
+2025-05-27 10:50:46 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\137.0.7151.40\chromedriver.exe
+2025-05-27 10:50:46 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-27 10:55:50 [main] INFO  WebDriverManager - Using chromedriver 137.0.7151.40 (resolved driver for Chrome 137)
+2025-05-27 10:55:50 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\137.0.7151.40\chromedriver.exe
+2025-05-27 10:55:50 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-27 10:56:12 [main] INFO  EvvaChatBaseClass - ✅ Test Passed: Enable_ensurance_required_from_admin
+2025-05-27 10:58:04 [main] ERROR EvvaChatBaseClass - ❌ Test Failed: Test_book_appointment_with_insurance | Reason: Expected condition failed: waiting for visibility of element located by By.id: insuranceCN (tried for 70 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.19.2.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.40 (84781974514a..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54128}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54128/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 30220279c9e43cab33a7a8d0424ed395
+2025-05-27 10:58:04 [main] INFO  WebDriverManager - Using chromedriver 137.0.7151.40 (resolved driver for Chrome 137)
+2025-05-27 10:58:04 [main] INFO  WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Satish_G\.cache\selenium\chromedriver\win64\137.0.7151.40\chromedriver.exe
+2025-05-27 10:58:04 [main] INFO  EvvaChatBaseClass - 🖥 Running tests in NORMAL mode
+2025-05-27 10:58:27 [main] INFO  EvvaChatBaseClass - ✅ Test Passed: Disable_ensurance_required_from_admin
+2025-05-27 11:00:14 [main] ERROR EvvaChatBaseClass - ❌ Test Failed: Test_book_appointment_without_insurance | Reason: Expected condition failed: waiting for element to be clickable: By.xpath: (//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[1] (tried for 70 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.19.2.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.40 (84781974514a..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54417}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54417/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b8a06837e3068e3589365a325bf0eb87

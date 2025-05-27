@@ -1,4 +1,4 @@
-package com.evaa.chat.test.pom;
+package com.evaa.chatbot.bookappointment.pom;
 
 import java.time.Duration;
 
@@ -12,11 +12,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pom.evaa.baseclass.EvvaChatBaseClass;
 
-public class EvaaChatPom extends EvvaChatBaseClass {
+public class BookAppointment extends EvvaChatBaseClass {
 	private WebDriver driver; // ✅ WebDriver instance
 
 	// ✅ Constructor to initialize WebElements
-	public EvaaChatPom(WebDriver driver) {
+	public BookAppointment(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this); // Initialize PageFactory elements
 	}
