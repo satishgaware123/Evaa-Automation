@@ -1,4 +1,4 @@
-package com.evaa.chatbot.bookappointment;
+package com.evaa.chatbot;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -14,14 +14,14 @@ import org.testng.annotations.Test;
 import com.evaa.baseclass.EvvaChatBaseClass;
 import com.github.javafaker.Faker;
 
-public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
+public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseClass {
 	String chatMessage;
 	private static final Faker faker = new Faker();
 
 	// Store the expected names as static or instance variables
-	final String expectedFirstName = faker.name().firstName();
-	final String expectedLastName = faker.name().lastName();
-	final String expectedNumber = faker.number().digits(10);
+	private final String expectedFirstName = faker.name().firstName();
+	private final String expectedLastName = faker.name().lastName();
+	private final String expectedNumber = faker.number().digits(10);
 
 	public void check_the_response() {
 
@@ -35,7 +35,7 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 	}
 
 	@Test(priority = 1)
-	public void Disable_ensurance_required_from_admin() throws Exception {
+	public void Enable_ensurance_required_from_admin() throws Exception {
 
 		driver.get("https://assistant2-pinecone-admin.evaa.ai/");
 		driver.findElement(By.xpath("//button[text()=' MaximEyes']")).click();
@@ -57,25 +57,25 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 		preferences.click();
 		Thread.sleep(5000);
 		WebElement checkbox1 = wait.until(ExpectedConditions.elementToBeClickable(By.id("UploadInsCardId")));
-		if (checkbox1.isSelected()) {
+		if (!checkbox1.isSelected()) {
 			checkbox1.click();
-			System.out.println("UploadInsCardId checkbox was selected. Now unchecked.");
+			System.out.println("Enable the insurance");
 		} else {
-			System.out.println("UploadInsCardId checkbox was already unselected.");
+			System.out.println("Allready Enable");
 		}
 
 		WebElement checkbox2 = wait.until(ExpectedConditions.elementToBeClickable(By.id("insuranceReqApptId")));
-		if (checkbox2.isSelected()) {
+		if (!checkbox2.isSelected()) {
 			checkbox2.click();
-			System.out.println("insuranceReqApptId checkbox was selected. Now unchecked.");
+			System.out.println("Enable the insurance");
 		} else {
-			System.out.println("insuranceReqApptId checkbox was already unselected.");
+			System.out.println("Allready Enable");
 		}
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 2)
-	public void Test_book_appointment_without_insurance() throws Exception {
+	@Test(priority = 2, enabled = true)
+	public void Test_book_appointment_with_insurance() throws Exception {
 
 		driver.get(botUrl);
 		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#chat-widget-push-to-talk > img"))).click();
@@ -90,13 +90,15 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 		check_the_response();
 		bookAppointment.sendKeys("yes");
 		send_button.click();
-		PrimaryInformationPage();
+		PrimanryInformationPage();
 
 		driver.findElement(By.id("otp1")).sendKeys("9753");
 		pom.next_button_on_otp_page().click();
 		System.out.println("i am on otp page");
 		System.out.println("Expected: " + expectedFirstName);
 		System.out.println("Actual  : " + expectedLastName);
+
+		fillInsuranceDetails();
 
 		// appoitment detail page - select location, provider, reason
 		fillAppointmentDetails();
@@ -105,6 +107,23 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 		Thread.sleep(3000);
 		verifyTheDetials();
 		Thread.sleep(3000);
+
+	}
+
+	public void fillInsuranceDetails() {
+
+		WebElement insuranceCN = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("insuranceCN")));
+		insuranceCN.sendKeys("Cigna");
+
+		WebElement insuranceID = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("insuranceID")));
+		insuranceID.sendKeys("Cigna001");
+
+		WebElement save = wait.until(ExpectedConditions.elementToBeClickable((By.xpath("//span[text()='SAVE']"))));
+		save.click();
+
+		WebElement finish_Booking = wait
+				.until(ExpectedConditions.elementToBeClickable((By.xpath("//span[text()='Finish Booking']"))));
+		finish_Booking.click();
 
 	}
 
@@ -178,7 +197,7 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 
 	}
 
-	public void PrimaryInformationPage() {
+	public void PrimanryInformationPage() {
 		enterText(pom.getFirstNameField(), expectedFirstName);
 		enterText(pom.getLastNameField(), expectedLastName);
 		enterText(pom.getDobField(), dob);
