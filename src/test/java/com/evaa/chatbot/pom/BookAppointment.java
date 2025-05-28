@@ -1,4 +1,4 @@
-package com.evaa.chatbot.bookappointment.pom;
+package com.evaa.chatbot.pom;
 
 import java.time.Duration;
 

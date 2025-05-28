@@ -1,4 +1,4 @@
-package com.evaa.chatbot.bookappointment;
+package com.evaa.chatbot;
 import com.evaa.baseclass.EvvaChatBaseClass;
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;

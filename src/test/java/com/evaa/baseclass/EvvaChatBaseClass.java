@@ -25,7 +25,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.evaa.chatbot.bookappointment.pom.BookAppointment;
+import com.evaa.chatbot.pom.BookAppointment;
 import com.evaa.utils.ConfigReader;
 import com.evaa.utils.ExtentManager;
 import com.evaa.utils.ScreenshotUtil;
