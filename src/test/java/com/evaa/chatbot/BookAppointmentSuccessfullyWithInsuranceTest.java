@@ -74,7 +74,7 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 2, enabled = true)
+	@Test(priority = 2, enabled = true, dependsOnMethods = {"Enable_ensurance_required_from_admin"})
 	public void Test_book_appointment_with_insurance() throws Exception {
 
 		driver.get(botUrl);
@@ -148,7 +148,7 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		System.out.println("✅ Appointment confirmation message verified successfully.");
 	}
 
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = false, dependsOnMethods = {"Test_book_appointment_with_insurance"})
 	public void verify_detail_on_maximeyes_site() throws Exception {
 //		driver.get("https://hheyeqainternalmysql.maximeyes.com/Account/Login");
 		driver.get(maximeyesURL);
