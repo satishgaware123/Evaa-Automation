@@ -1,4 +1,4 @@
-package com.evaa.chat.utils;
+package com.evaa.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;

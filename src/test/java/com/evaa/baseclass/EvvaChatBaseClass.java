@@ -1,4 +1,4 @@
-package pom.evaa.baseclass;
+package com.evaa.baseclass;
 
 import java.awt.Desktop;
 import java.io.File;
@@ -25,10 +25,10 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.evaa.chat.utils.ConfigReader;
-import com.evaa.chat.utils.ExtentManager;
-import com.evaa.chat.utils.ScreenshotUtil;
-import com.evaa.chatbot.bookappointment.pom.BookAppointment;
+import com.evaa.chatbot.pom.BookAppointment;
+import com.evaa.utils.ConfigReader;
+import com.evaa.utils.ExtentManager;
+import com.evaa.utils.ScreenshotUtil;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -36,10 +36,10 @@ public class EvvaChatBaseClass {
 	protected WebDriver driver;
 //	protected EvaaChatPom pom;
 	protected BookAppointment pom;
-	protected ConfigReader config;
 	protected WebDriverWait wait;
 	protected static ExtentReports extent;
 	protected static ExtentTest test;
+	protected static ConfigReader config;
 
 	private static final Logger log = LogManager.getLogger(EvvaChatBaseClass.class);
 	private static final String LOG_FILE_PATH = "logs/test-execution.log"; // Path to Log4j log file

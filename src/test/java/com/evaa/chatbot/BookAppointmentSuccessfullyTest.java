@@ -1,4 +1,4 @@
-package com.evaa.chatbot.bookappointment;
+package com.evaa.chatbot;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -11,18 +11,17 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.evaa.baseclass.EvvaChatBaseClass;
 import com.github.javafaker.Faker;
 
-import pom.evaa.baseclass.EvvaChatBaseClass;
-
-public class book_appointment_suceessfuly extends EvvaChatBaseClass {
+public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 	String chatMessage;
 	private static final Faker faker = new Faker();
 
 	// Store the expected names as static or instance variables
-	private String expectedFirstName = faker.name().firstName();
-	private String expectedLastName = faker.name().lastName();
-	private String expectedNumber = faker.number().digits(10);
+	final String expectedFirstName = faker.name().firstName();
+	final String expectedLastName = faker.name().lastName();
+	final String expectedNumber = faker.number().digits(10);
 
 	public void check_the_response() {
 
@@ -91,7 +90,7 @@ public class book_appointment_suceessfuly extends EvvaChatBaseClass {
 		check_the_response();
 		bookAppointment.sendKeys("yes");
 		send_button.click();
-		PrimanryInformationPage();
+		PrimaryInformationPage();
 
 		driver.findElement(By.id("otp1")).sendKeys("9753");
 		pom.next_button_on_otp_page().click();
@@ -179,7 +178,7 @@ public class book_appointment_suceessfuly extends EvvaChatBaseClass {
 
 	}
 
-	public void PrimanryInformationPage() {
+	public void PrimaryInformationPage() {
 		enterText(pom.getFirstNameField(), expectedFirstName);
 		enterText(pom.getLastNameField(), expectedLastName);
 		enterText(pom.getDobField(), dob);

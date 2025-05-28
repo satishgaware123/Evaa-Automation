@@ -1,4 +1,4 @@
-package com.evaa.chatbot.bookappointment;
+package com.evaa.chatbot;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -11,11 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.evaa.baseclass.EvvaChatBaseClass;
 import com.github.javafaker.Faker;
 
-import pom.evaa.baseclass.EvvaChatBaseClass;
-
-public class BookAppointmentWithInsuranceTest extends EvvaChatBaseClass {
+public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseClass {
 	String chatMessage;
 	private static final Faker faker = new Faker();
 
