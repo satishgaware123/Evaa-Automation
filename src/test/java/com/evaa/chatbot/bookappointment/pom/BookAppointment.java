@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import pom.evaa.baseclass.EvvaChatBaseClass;
+import com.evaa.baseclass.EvvaChatBaseClass;
 
 public class BookAppointment extends EvvaChatBaseClass {
 	private WebDriver driver; // ✅ WebDriver instance
