@@ -1,185 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="6" passed="2" failed="2" skipped="0">
+<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-27T10:55:50 IST" name="Suite" finished-at="2025-05-27T11:00:14 IST" duration-ms="264498">
+  <suite started-at="2025-05-28T12:55:10 IST" name="Default suite" finished-at="2025-05-28T12:57:39 IST" duration-ms="148904">
     <groups>
     </groups>
-    <test started-at="2025-05-27T10:55:50 IST" name="Test" finished-at="2025-05-27T11:00:14 IST" duration-ms="264498">
-      <class name="com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest">
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest@2538bc06]" started-at="2025-05-27T10:55:50 IST" name="startBrowser" finished-at="2025-05-27T10:55:52 IST" duration-ms="1996" status="PASS">
+    <test started-at="2025-05-28T12:55:10 IST" name="Default test" finished-at="2025-05-28T12:57:39 IST" duration-ms="148904">
+      <class name="com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest@2538bc06]" started-at="2025-05-28T12:55:10 IST" name="startBrowser" finished-at="2025-05-28T12:55:18 IST" duration-ms="7630" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest@2538bc06]" started-at="2025-05-27T10:55:52 IST" name="setUp" finished-at="2025-05-27T10:55:52 IST" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest@2538bc06]" started-at="2025-05-28T12:55:18 IST" name="setUp" finished-at="2025-05-28T12:55:18 IST" duration-ms="3" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest.Enable_ensurance_required_from_admin() throws java.lang.Exception]]>
+                <![CDATA[public void com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest.Test_book_appointment_without_insurance() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Enable_ensurance_required_from_admin()[pri:1, instance:com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest@2538bc06]" started-at="2025-05-27T10:55:52 IST" name="Enable_ensurance_required_from_admin" finished-at="2025-05-27T10:56:12 IST" duration-ms="20201" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Enable_ensurance_required_from_admin -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest@2538bc06]" started-at="2025-05-27T10:56:12 IST" name="tearDown" finished-at="2025-05-27T10:56:12 IST" duration-ms="9" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Enable_ensurance_required_from_admin status=SUCCESS method=BookAppointmentWithInsuranceTest.Enable_ensurance_required_from_admin()[pri:1, instance:com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest@2538bc06] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest@2538bc06]" started-at="2025-05-27T10:56:12 IST" name="setUp" finished-at="2025-05-27T10:56:12 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest.Test_book_appointment_with_insurance() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="Test_book_appointment_with_insurance()[pri:2, instance:com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest@2538bc06]" started-at="2025-05-27T10:56:12 IST" name="Test_book_appointment_with_insurance" finished-at="2025-05-27T10:58:03 IST" duration-ms="111418" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of element located by By.id: insuranceCN (tried for 70 second(s) with 500 milliseconds interval)
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'FIC-I7KL93', ip: '172.19.2.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.40 (84781974514a..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54128}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54128/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 30220279c9e43cab33a7a8d0424ed395]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: insuranceCN (tried for 70 second(s) with 500 milliseconds interval)
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'FIC-I7KL93', ip: '172.19.2.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.40 (84781974514a..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54128}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54128/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 30220279c9e43cab33a7a8d0424ed395
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest.fillInsuranceDetails(BookAppointmentWithInsuranceTest.java:116)
-at com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest.Test_book_appointment_with_insurance(BookAppointmentWithInsuranceTest.java:102)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Test_book_appointment_with_insurance -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest@2538bc06]" started-at="2025-05-27T10:58:03 IST" name="tearDown" finished-at="2025-05-27T10:58:04 IST" duration-ms="218" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Test_book_appointment_with_insurance status=FAILURE method=BookAppointmentWithInsuranceTest.Test_book_appointment_with_insurance()[pri:2, instance:com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest@2538bc06] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest@2538bc06]" started-at="2025-05-27T10:58:04 IST" name="closeBrowser" finished-at="2025-05-27T10:58:04 IST" duration-ms="870" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- com.evaa.chatbot.bookappointment.BookAppointmentWithInsuranceTest -->
-      <class name="com.evaa.chatbot.bookappointment.book_appointment_suceessfuly">
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.evaa.chatbot.bookappointment.book_appointment_suceessfuly@9e33a6a]" started-at="2025-05-27T10:58:04 IST" name="startBrowser" finished-at="2025-05-27T10:58:06 IST" duration-ms="1061" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- startBrowser -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.evaa.chatbot.bookappointment.book_appointment_suceessfuly@9e33a6a]" started-at="2025-05-27T10:58:06 IST" name="setUp" finished-at="2025-05-27T10:58:06 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.evaa.chatbot.bookappointment.book_appointment_suceessfuly.Disable_ensurance_required_from_admin() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="Disable_ensurance_required_from_admin()[pri:1, instance:com.evaa.chatbot.bookappointment.book_appointment_suceessfuly@9e33a6a]" started-at="2025-05-27T10:58:06 IST" name="Disable_ensurance_required_from_admin" finished-at="2025-05-27T10:58:27 IST" duration-ms="21031" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Disable_ensurance_required_from_admin -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.evaa.chatbot.bookappointment.book_appointment_suceessfuly@9e33a6a]" started-at="2025-05-27T10:58:27 IST" name="tearDown" finished-at="2025-05-27T10:58:27 IST" duration-ms="2" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Disable_ensurance_required_from_admin status=SUCCESS method=book_appointment_suceessfuly.Disable_ensurance_required_from_admin()[pri:1, instance:com.evaa.chatbot.bookappointment.book_appointment_suceessfuly@9e33a6a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.evaa.chatbot.bookappointment.book_appointment_suceessfuly@9e33a6a]" started-at="2025-05-27T10:58:27 IST" name="setUp" finished-at="2025-05-27T10:58:27 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.evaa.chatbot.bookappointment.book_appointment_suceessfuly.Test_book_appointment_without_insurance() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="Test_book_appointment_without_insurance()[pri:2, instance:com.evaa.chatbot.bookappointment.book_appointment_suceessfuly@9e33a6a]" started-at="2025-05-27T10:58:27 IST" name="Test_book_appointment_without_insurance" finished-at="2025-05-27T11:00:14 IST" duration-ms="107138" status="FAIL">
+        <test-method signature="Test_book_appointment_without_insurance()[pri:2, instance:com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest@2538bc06]" started-at="2025-05-28T12:55:18 IST" name="Test_book_appointment_without_insurance" finished-at="2025-05-28T12:57:38 IST" duration-ms="140146" status="FAIL">
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
               <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: (//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[1] (tried for 70 second(s) with 500 milliseconds interval)
 Build info: version: '4.1.4', revision: '535d840ee2'
 System info: host: 'FIC-I7KL93', ip: '172.19.2.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.40 (84781974514a..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54417}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54417/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b8a06837e3068e3589365a325bf0eb87]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57295}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57295/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ea6a0d0801003d4587d2a38c4bda74ba]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[1] (tried for 70 second(s) with 500 milliseconds interval)
 Build info: version: '4.1.4', revision: '535d840ee2'
 System info: host: 'FIC-I7KL93', ip: '172.19.2.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.40 (84781974514a..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54417}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54417/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b8a06837e3068e3589365a325bf0eb87
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57295}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57295/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ea6a0d0801003d4587d2a38c4bda74ba
 at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
 at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at com.evaa.chatbot.bookappointment.book_appointment_suceessfuly.fillAppointmentDetails(book_appointment_suceessfuly.java:193)
-at com.evaa.chatbot.bookappointment.book_appointment_suceessfuly.Test_book_appointment_without_insurance(book_appointment_suceessfuly.java:103)
+at com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest.fillAppointmentDetails(BookAppointmentSuccessfullyTest.java:192)
+at com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest.Test_book_appointment_without_insurance(BookAppointmentSuccessfullyTest.java:102)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -212,22 +75,22 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test_book_appointment_without_insurance -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.evaa.chatbot.bookappointment.book_appointment_suceessfuly@9e33a6a]" started-at="2025-05-27T11:00:14 IST" name="tearDown" finished-at="2025-05-27T11:00:14 IST" duration-ms="194" status="PASS">
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest@2538bc06]" started-at="2025-05-28T12:57:38 IST" name="tearDown" finished-at="2025-05-28T12:57:38 IST" duration-ms="218" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Test_book_appointment_without_insurance status=FAILURE method=book_appointment_suceessfuly.Test_book_appointment_without_insurance()[pri:2, instance:com.evaa.chatbot.bookappointment.book_appointment_suceessfuly@9e33a6a] output={null}]]]>
+                <![CDATA[[TestResult name=Test_book_appointment_without_insurance status=FAILURE method=BookAppointmentSuccessfullyTest.Test_book_appointment_without_insurance()[pri:2, instance:com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest@2538bc06] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.evaa.chatbot.bookappointment.book_appointment_suceessfuly@9e33a6a]" started-at="2025-05-27T11:00:14 IST" name="closeBrowser" finished-at="2025-05-27T11:00:14 IST" duration-ms="323" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest@2538bc06]" started-at="2025-05-28T12:57:38 IST" name="closeBrowser" finished-at="2025-05-28T12:57:39 IST" duration-ms="876" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-      </class> <!-- com.evaa.chatbot.bookappointment.book_appointment_suceessfuly -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+      </class> <!-- com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

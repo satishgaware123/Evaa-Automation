@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary">Evaa Automation Test Report</span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">May 27, 2025 10:55:52 AM</span></a>
+<a href="#"><span class="badge badge-primary">May 28, 2025 12:55:17 PM</span></a>
 </li>
 </ul>
 </div>
@@ -66,9 +66,7 @@
 <li class="dropdown">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
-<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
 <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
-<a class="dropdown-item" status="warning" href="#"><span>Warning</span><span class="status warning"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -76,25 +74,25 @@
 </ul>
 </div>    <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item"  status="pass" test-id="1"
+        <li class="test-item"  status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Enable_ensurance_required_from_admin</p>
+            <p class="name">Test_book_appointment_without_insurance</p>
             <p class="text-sm">
-              <span>10:55:52 AM</span> / <span>00:00:20:206</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>12:55:18 PM</span> / <span>00:02:20:371</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Enable_ensurance_required_from_admin</h5>
-<span class='badge badge-success'>05.27.2025 10:55:52 AM</span>
-<span class='badge badge-danger'>05.27.2025 10:56:12 AM</span>
-<span class='badge badge-default'>00:00:20:206</span>
+<h5 class="test-status text-fail">Test_book_appointment_without_insurance</h5>
+<span class='badge badge-success'>05.28.2025 12:55:18 PM</span>
+<span class='badge badge-danger'>05.28.2025 12:57:38 PM</span>
+<span class='badge badge-default'>00:02:20:371</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
 <span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
@@ -105,177 +103,24 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:56:12 AM</td>
-        <td>
-          <b>✅ Test Passed:</b> Enable_ensurance_required_from_admin
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="2"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Test_book_appointment_with_insurance</p>
-            <p class="text-sm">
-              <span>10:56:12 AM</span> / <span>00:01:51:639</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">Test_book_appointment_with_insurance</h5>
-<span class='badge badge-success'>05.27.2025 10:56:12 AM</span>
-<span class='badge badge-danger'>05.27.2025 10:58:04 AM</span>
-<span class='badge badge-default'>00:01:51:639</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
         <td><span class="badge log fail-bg">Fail</span></td>
-        <td>10:58:04 AM</td>
-        <td>
-          <b>❌ Test Failed:</b> Test_book_appointment_with_insurance<br><b>💥 Reason:</b> Expected condition failed: waiting for visibility of element located by By.id: insuranceCN (tried for 70 second(s) with 500 milliseconds interval)
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'FIC-I7KL93', ip: '172.19.2.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.40 (84781974514a..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54128}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54128/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 30220279c9e43cab33a7a8d0424ed395
-    <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\Satish_G\eclipse-workspace\EVAA_Automation/screenshots/Test_book_appointment_with_insurance_20250527_105803.png' src="C:\Users\Satish_G\eclipse-workspace\EVAA_Automation/screenshots/Test_book_appointment_with_insurance_20250527_105803.png">
-    
-    </div></div>
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log warning-bg">Warning</span></td>
-        <td>10:58:04 AM</td>
-        <td>
-          <details><summary>📜 View Logs</summary><pre>2025-05-27 10:58:04 [main] ERROR EvvaChatBaseClass - ❌ Test Failed: Test_book_appointment_with_insurance | Reason: Expected condition failed: waiting for visibility of element located by By.id: insuranceCN (tried for 70 second(s) with 500 milliseconds interval)
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'FIC-I7KL93', ip: '172.19.2.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.40 (84781974514a..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54128}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54128/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 30220279c9e43cab33a7a8d0424ed395</pre></details>
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="warning" test-id="3"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Disable_ensurance_required_from_admin</p>
-            <p class="text-sm">
-              <span>10:58:06 AM</span> / <span>00:00:21:034</span>
-              <span class="badge warning-bg log float-right">Warning</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-warning">Disable_ensurance_required_from_admin</h5>
-<span class='badge badge-success'>05.27.2025 10:58:06 AM</span>
-<span class='badge badge-danger'>05.27.2025 10:58:27 AM</span>
-<span class='badge badge-default'>00:00:21:034</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>10:58:27 AM</td>
-        <td>
-          <b>✅ Test Passed:</b> Disable_ensurance_required_from_admin
-        </td>
-      </tr>
-      <tr class="event-row">
-        <td><span class="badge log warning-bg">Warning</span></td>
-        <td>10:58:27 AM</td>
-        <td>
-          <details><summary>📜 View Logs</summary><pre>2025-05-27 10:58:04 [main] ERROR EvvaChatBaseClass - ❌ Test Failed: Test_book_appointment_with_insurance | Reason: Expected condition failed: waiting for visibility of element located by By.id: insuranceCN (tried for 70 second(s) with 500 milliseconds interval)
-Build info: version: '4.1.4', revision: '535d840ee2'
-System info: host: 'FIC-I7KL93', ip: '172.19.2.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.40 (84781974514a..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54128}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54128/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 30220279c9e43cab33a7a8d0424ed395</pre></details>
-        </td>
-      </tr>
-  </tbody>
-</table>
-</div>
-          </div>
-        </li>
-        <li class="test-item"  status="fail" test-id="4"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">Test_book_appointment_without_insurance</p>
-            <p class="text-sm">
-              <span>10:58:27 AM</span> / <span>00:01:47:332</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-fail">Test_book_appointment_without_insurance</h5>
-<span class='badge badge-success'>05.27.2025 10:58:27 AM</span>
-<span class='badge badge-danger'>05.27.2025 11:00:14 AM</span>
-<span class='badge badge-default'>00:01:47:332</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
-<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
-<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
-</div>
-</div>
-</div><div class="detail-body mt-4">
-<table class="table table-sm">
-  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
-  <tbody>
-      <tr class="event-row">
-        <td><span class="badge log fail-bg">Fail</span></td>
-        <td>11:00:14 AM</td>
+        <td>12:57:38 PM</td>
         <td>
           <b>❌ Test Failed:</b> Test_book_appointment_without_insurance<br><b>💥 Reason:</b> Expected condition failed: waiting for element to be clickable: By.xpath: (//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[1] (tried for 70 second(s) with 500 milliseconds interval)
 Build info: version: '4.1.4', revision: '535d840ee2'
 System info: host: 'FIC-I7KL93', ip: '172.19.2.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.40 (84781974514a..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54417}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54417/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b8a06837e3068e3589365a325bf0eb87
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57295}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57295/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ea6a0d0801003d4587d2a38c4bda74ba
     <div class="row mb-3"><div class="col-md-3">
-<img data-featherlight='C:\Users\Satish_G\eclipse-workspace\EVAA_Automation/screenshots/Test_book_appointment_without_insurance_20250527_110014.png' src="C:\Users\Satish_G\eclipse-workspace\EVAA_Automation/screenshots/Test_book_appointment_without_insurance_20250527_110014.png">
+<img data-featherlight='C:\Users\Satish_G\eclipse-workspace\EVAA_Automation/screenshots/Test_book_appointment_without_insurance_20250528_125738.png' src="C:\Users\Satish_G\eclipse-workspace\EVAA_Automation/screenshots/Test_book_appointment_without_insurance_20250528_125738.png">
     
     </div></div>
         </td>
       </tr>
       <tr class="event-row">
         <td><span class="badge log warning-bg">Warning</span></td>
-        <td>11:00:14 AM</td>
+        <td>12:57:38 PM</td>
         <td>
           <details><summary>📜 View Logs</summary><pre>2025-05-27 10:58:04 [main] ERROR EvvaChatBaseClass - ❌ Test Failed: Test_book_appointment_with_insurance | Reason: Expected condition failed: waiting for visibility of element located by By.id: insuranceCN (tried for 70 second(s) with 500 milliseconds interval)
 Build info: version: '4.1.4', revision: '535d840ee2'
@@ -292,7 +137,103 @@ Build info: version: '4.1.4', revision: '535d840ee2'
 System info: host: 'FIC-I7KL93', ip: '172.19.2.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.40 (84781974514a..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54417}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54417/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b8a06837e3068e3589365a325bf0eb87</pre></details>
+Session ID: b8a06837e3068e3589365a325bf0eb87
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2025-05-27 12:17:10 [main] ERROR EvvaChatBaseClass - ❌ Test Failed: Test_Reschedule_an_appointment_for_new_user | Reason: no such element: Unable to locate element: {"method":"xpath","selector":"//div[text()='Upcoming Appointment']"}
+  (Session info: chrome=137.0.7151.41)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.19.2.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e17e5711d7e4209b7a7c3f57a391c9b5, findElement {using=xpath, value=//div[text()='Upcoming Appointment']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.40 (84781974514a..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58978}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58978/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e17e5711d7e4209b7a7c3f57a391c9b5
+
+
+
+2025-05-27 13:06:37 [main] ERROR EvvaChatBaseClass - ❌ Test Failed: TestRescheduleAppointmentDisabled | Reason: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(text(),'don\'t have')] (tried for 70 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.19.2.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.40 (84781974514a..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64031}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64031/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 896982a33b7d13b704ce423fa11954f8
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2025-05-27 13:58:14 [main] ERROR EvvaChatBaseClass - ❌ Test Failed: TestRescheduleAppointmentDisabled | Reason: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(text(),'do not have') or contains(text(),'sorry, but I don\'t have the capability')] (tried for 70 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.19.2.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.40 (84781974514a..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49299}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49299/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3e6a79df8686c5fe8b74a318f23df9e8
+
+
+
+2025-05-27 14:06:00 [main] ERROR EvvaChatBaseClass - ❌ Test Failed: TestRescheduleAppointmentDisabled | Reason: Expected error message not found expected [true] but found [false]
+
+
+
+2025-05-27 14:07:50 [main] ERROR EvvaChatBaseClass - ❌ Test Failed: TestRescheduleAppointmentDisabled | Reason: Expected error message not found expected [true] but found [false]
+
+
+
+2025-05-27 14:10:20 [main] ERROR EvvaChatBaseClass - ❌ Test Failed: TestRescheduleAppointmentDisabled | Reason: Expected error message not found expected [true] but found [false]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2025-05-28 12:57:38 [main] ERROR EvvaChatBaseClass - ❌ Test Failed: Test_book_appointment_without_insurance | Reason: Expected condition failed: waiting for element to be clickable: By.xpath: (//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[1] (tried for 70 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.19.2.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57295}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57295/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ea6a0d0801003d4587d2a38c4bda74ba</pre></details>
         </td>
       </tr>
   </tbody>
@@ -314,25 +255,25 @@ Session ID: b8a06837e3068e3589365a325bf0eb87</pre></details>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>May 27, 2025 10:55:52 AM</h3>
+<h3>May 28, 2025 12:55:17 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>May 27, 2025 11:00:14 AM</h3>
+<h3>May 28, 2025 12:57:38 PM</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>1</h3>
+<h3>0</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>2</h3>
+<h3>1</h3>
 </div></div>
 </div>
 </div>
@@ -348,13 +289,13 @@ Session ID: b8a06837e3068e3589365a325bf0eb87</pre></details>
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='25%'>
-<b>1</b> tests passed
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='50%'><b>2</b> tests failed,
-<b>0</b> skipped, <b data-tooltip='25%'>1</b> others
+<small data-tooltip='100%'><b>1</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
 </div>
@@ -371,10 +312,10 @@ Session ID: b8a06837e3068e3589365a325bf0eb87</pre></details>
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='28%'><b>2</b> events passed</small></div>
+<div><small data-tooltip='0%'><b>0</b> events passed</small></div>
 <div>
-<small data-tooltip='28%'><b>2</b> events failed,
-<b data-tooltip='%'>3</b> others
+<small data-tooltip='50%'><b>1</b> events failed,
+<b data-tooltip='%'>1</b> others
 </small>
 </div>
 </div>
@@ -390,7 +331,7 @@ Session ID: b8a06837e3068e3589365a325bf0eb87</pre></details>
 </div></div>
 <script>
 var timeline = {
-"Enable_ensurance_required_from_admin":20.206,"Test_book_appointment_with_insurance":111.639,"Disable_ensurance_required_from_admin":21.034,"Test_book_appointment_without_insurance":107.332
+"Test_book_appointment_without_insurance":140.371
 };
 </script>
 <div class="row">
@@ -429,9 +370,9 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 1,
-failParent: 2,
-warningParent: 1,
+passParent: 0,
+failParent: 1,
+warningParent: 0,
 skipParent: 0,
 childCount: 5,
 passChild: 0,
@@ -446,9 +387,9 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 2,
-failEvents: 2,
-warningEvents: 3,
+passEvents: 0,
+failEvents: 1,
+warningEvents: 1,
 skipEvents: 0,
 infoEvents: 0
 };
