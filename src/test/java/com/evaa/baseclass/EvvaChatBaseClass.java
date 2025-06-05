@@ -112,23 +112,26 @@ public class EvvaChatBaseClass {
 
 	@AfterMethod
 	public void tearDown(ITestResult result) {
-		if (result.getStatus() == ITestResult.FAILURE) {
-			String screenshotPath = ScreenshotUtil.captureScreenshot(driver, result.getName());
-			test.fail(
-					"<b>❌ Test Failed:</b> " + result.getName() + "<br><b>💥 Reason:</b> "
-							+ result.getThrowable().getMessage(),
-					MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
-			log.error("❌ Test Failed: " + result.getName() + " | Reason: " + result.getThrowable().getMessage());
+	    if (result.getStatus() == ITestResult.FAILURE) {
+	        String screenshotPath = ScreenshotUtil.captureScreenshot(driver, result.getName());
+	        test.fail(
+	            "<b>❌ Test Failed:</b> " + result.getName() + "<br><b>💥 Reason:</b> " + result.getThrowable().getMessage(),
+	            MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build()
+	        );
 
-		} else if (result.getStatus() == ITestResult.SUCCESS) {
-			test.pass("<b>✅ Test Passed:</b> " + result.getName());
-			log.info("✅ Test Passed: " + result.getName());
-		} else {
-			test.skip("<b>⚠️ Test Skipped:</b> " + result.getName());
-			log.warn("⚠️ Test Skipped: " + result.getName());
-		}
+	        // Log only on failure
+	        log.error("❌ Test Failed: " + result.getName() + " | Reason: " + result.getThrowable().getMessage());
 
-		attachLogsToExtentReport();
+	        // Optional: Add logs to report
+	        attachLogsToExtentReport();
+
+	    } else if (result.getStatus() == ITestResult.SUCCESS) {
+	        test.pass("<b>✅ Test Passed:</b> " + result.getName());
+	        // No logging for success
+	    } else {
+	        test.skip("<b>⚠️ Test Skipped:</b> " + result.getName());
+	        // No logging for skipped
+	    }
 	}
 
 	@AfterClass
@@ -148,15 +151,15 @@ public class EvvaChatBaseClass {
 	private void attachLogsToExtentReport() {
 		try {
 			String logContent = new String(Files.readAllBytes(Paths.get(LOG_FILE_PATH)));
-			String filteredLogs = logContent.replaceAll("(?m)^.*INFO.*$", "").trim();
+
+			// Filter to include only ERROR level logs (or CRITICAL if defined)
+			String filteredLogs = logContent.replaceAll("(?m)^((?!ERROR).)*$", "").trim();
 
 			if (!filteredLogs.isEmpty()) {
-				test.log(Status.WARNING,
-						"<details><summary>📜 View Logs</summary><pre>" + filteredLogs + "</pre></details>");
+				test.log(Status.FAIL, "<details><summary>📜 View Error Logs</summary><pre>" + filteredLogs + "</pre></details>");
 			}
 		} catch (IOException e) {
 			log.error("⚠️ Error reading log file: " + e.getMessage());
-//			test.log(Status.WARNING, "⚠️ Could not attach logs due to error: " + e.getMessage());
 		}
 	}
 }

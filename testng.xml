@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<listeners>
+<listeners>
 		<listener class-name="com.evaa.utils.RetryListener"/>
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
+      <class name="com.evaa.chatbot.AppointmentStatusTest"/>
+      <class name="com.evaa.baseclass.EvvaChatBaseClass"/>
       <class name="com.evaa.chatbot.BookAppointmentSuccessfullyWithInsuranceTest"/>
-      <class name="com.evaa.chatbot.RescheduleAppointmentTest"/>
       <class name="com.evaa.chatbot.BookAppointmentSuccessfullyTest"/>
+      <class name="com.evaa.chatbot.RescheduleAppointmentTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

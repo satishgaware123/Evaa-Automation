@@ -3,15 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest">
+      <class name="com.evaa.chatbot.AppointmentStatusTest">
         <methods>
           <include name="closeBrowser"/>
-          <include name="Test_book_appointment_without_insurance"/>
           <include name="tearDown"/>
+          <include name="Test_book_appointment_without_insurance"/>
           <include name="startBrowser"/>
+          <include name="Test_appointment_status_for_existing_patient"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest -->
+      </class> <!-- com.evaa.chatbot.AppointmentStatusTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
