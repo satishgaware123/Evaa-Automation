@@ -45,8 +45,8 @@ public class EvvaChatBaseClass {
 	private static final String LOG_FILE_PATH = "logs/test-execution.log"; // Path to Log4j log file
 
 	// Declare user details variables
-	protected String firstName;
-	protected String lastName;
+	protected String userName;
+	protected String userPassword;
 	protected String dob;
 	protected String phone;
 	protected String email;
@@ -54,7 +54,9 @@ public class EvvaChatBaseClass {
 	protected String maximeyesURL;
 	protected String maxUserName;
 	protected String maxUserPass;
-
+	protected String adminURL;
+	protected String URL;
+	
 	@SuppressWarnings("deprecation")
 	@BeforeClass
 	public void startBrowser() {
@@ -92,8 +94,8 @@ public class EvvaChatBaseClass {
 		config = new ConfigReader();
 		wait = new WebDriverWait(driver, Duration.ofSeconds(70));
 
-		firstName = config.getProperty("firstName");
-		lastName = config.getProperty("lastName");
+		userName = config.getProperty("Username");
+		userPassword = config.getProperty("UserPassword");
 		dob = config.getProperty("dob");
 		phone = config.getProperty("phone");
 		email = config.getProperty("email");
@@ -101,7 +103,8 @@ public class EvvaChatBaseClass {
 		maximeyesURL = config.getProperty("maximeyesURL");
 		maxUserName = config.getProperty("MaxUserName");
 		maxUserPass = config.getProperty("MaxUserName");
-
+		adminURL = config.getProperty("adminURL");
+		URL = config.getProperty("URL");
 		extent = ExtentManager.getReportInstance();
 	}
 
@@ -123,7 +126,7 @@ public class EvvaChatBaseClass {
 	        log.error("❌ Test Failed: " + result.getName() + " | Reason: " + result.getThrowable().getMessage());
 
 	        // Optional: Add logs to report
-	        attachLogsToExtentReport();
+	        attachLogsToExtentReport(); 
 
 	    } else if (result.getStatus() == ITestResult.SUCCESS) {
 	        test.pass("<b>✅ Test Passed:</b> " + result.getName());
