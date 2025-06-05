@@ -31,30 +31,24 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 
 		Assert.assertTrue(
 				txtmsg.contains("Online appointment booking is only for routine exam and follow up appointments"));
-
+ 
 	}
 
 	@Test(priority = 1)
 	public void Enable_ensurance_required_from_admin() throws Exception {
 
-		driver.get("https://assistant2-pinecone-admin.evaa.ai/");
-		driver.findElement(By.xpath("//button[text()=' MaximEyes']")).click();
-		driver.findElement(By.id("Username")).sendKeys("satishG");
-		driver.findElement(By.id("Password")).sendKeys("Admin@1234");
-		driver.findElement(By.id("MaximEyeURL")).sendKeys("burneteyecarepinecone");
-		driver.findElement(By.xpath("//button[text()='Login']")).click();
-
+		driver.get(adminURL);
+		pom.loginWithMaximEyes();
+		pom.enterUsername().sendKeys(userName);
+		pom.enterPassword().sendKeys(userPassword);
+		pom.enterURL().sendKeys(URL);;
+		pom.clickOnLogin();
 		WebElement botDropdown = wait
 				.until(ExpectedConditions.elementToBeClickable((By.xpath("//select[@id='AccountId']"))));
 		Select dropdown = new Select(botDropdown);
 		dropdown.selectByIndex(0);
-		WebElement settings = wait
-				.until(ExpectedConditions.elementToBeClickable((By.xpath("//a[@id='settingsLinkOld']"))));
-		settings.click();
-
-		WebElement preferences = wait
-				.until(ExpectedConditions.elementToBeClickable((By.xpath("//span[text()='Preferences  ']"))));
-		preferences.click();
+		pom.clickOnSettings();
+		pom.clickOnSettingsPreferences();
 		Thread.sleep(5000);
 		WebElement checkbox1 = wait.until(ExpectedConditions.elementToBeClickable(By.id("UploadInsCardId")));
 		if (!checkbox1.isSelected()) {
