@@ -22,7 +22,7 @@ public class BookAppointment extends EvvaChatBaseClass {
 	}
 
 	public void waitForElementVisible(WebElement element) {
-		new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.visibilityOf(element));
+		new WebDriverWait(driver, Duration.ofSeconds(50)).until(ExpectedConditions.visibilityOf(element));
 	}
 
 	// ✅ Using @FindBy for cleaner locator management
@@ -155,9 +155,6 @@ public class BookAppointment extends EvvaChatBaseClass {
 		return allowInsuranceRequiredCheckBox;
 	}
 	
-	
-	
-	
 	@FindBy(how = How.ID, using = "insuranceID")
 	private WebElement insuranceId;
 
@@ -224,7 +221,101 @@ public class BookAppointment extends EvvaChatBaseClass {
 		loginWithMaximEyes.click();
 	}
 	
+	//cancel appointment on chatbot
 	
+	@FindBy(how = How.XPATH, using = "(//div[@id='appointmentsContainer']//following::span[contains(text(),'Cancel')])[1]")
+	private WebElement cancelRescheduleAppointmentButton;
+	public void cancelRescheduleAppointmentButton() {
+		waitForElementVisible(cancelRescheduleAppointmentButton);
+		cancelRescheduleAppointmentButton.click();
+	}
+	
+	@FindBy(how = How.XPATH, using = "(//div[@id='apptContainer']//input[@name='appointment'])[1]")
+	private WebElement selectAppointment;
+	public void selectAppointmentForCancel() {
+		waitForElementVisible(selectAppointment);
+		selectAppointment.click();
+	}
+	@FindBy(how = How.XPATH, using = "(//div[@id='apptContainer']//following::span[contains(text(),'Cancel')])[1]")
+	private WebElement cancelAppointment;
+	public void cancelAppointment() {
+		waitForElementVisible(cancelAppointment);
+		cancelAppointment.click();
+	}
+	// chatbot
+	@FindBy(how = How.XPATH, using = "//div[contains(text(),'Online appointment booking is only for routine exam')]")
+	private WebElement firstMsg;
+	public WebElement firstMsg() {
+		return firstMsg;
+	}
+	
+	
+	
+	//choose Time Slot
+	@FindBy(how = How.XPATH, using = "(//div[@class='confirmtime']//following::div//div//div/div)[1]")
+	private WebElement chooseTimeSlot;
+	public void chooseTimeSlot() {
+		waitForElementVisible(chooseTimeSlot);
+		chooseTimeSlot.click();
+	}
+	
+	@FindBy(how = How.XPATH, using = "//div[@class='confirmtime']//following::span[contains(text(),'Finish Booking') or contains(text(),'Next')]")
+	private WebElement submitTimeSlot;
+	public void submitTimeSlot() {
+		waitForElementVisible(submitTimeSlot);
+		submitTimeSlot.click();
+	}
+	
+	// appointment details - location, provider, reason
+	
+	@FindBy(how = How.XPATH, using = "(//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[1]")
+	private WebElement openLocationDropdown;
+	public void openLocationDropdown() {
+		waitForElementVisible(openLocationDropdown);
+		openLocationDropdown.click();
+	}
+	@FindBy(how = How.XPATH, using = "//div[text()='Pune']")
+	private WebElement selectLocation;
+	public void selectLocation() {
+		waitForElementVisible(selectLocation);
+		selectLocation.click();
+	}
+	
+	
+	@FindBy(how = How.XPATH, using = "(//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[2]")
+	private WebElement openProviderDropdown;
+	public void openProviderDropdown() {
+		waitForElementVisible(openProviderDropdown);
+		openProviderDropdown.click();
+	}
+	
+	@FindBy(how = How.XPATH, using = "(//div[text()='Dr Smith'])[2]")
+	private WebElement selectProvider;
+	public void selectProvider() {
+		waitForElementVisible(selectProvider);
+		selectProvider.click();
+	}
+	
+	@FindBy(how = How.XPATH, using = "(//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[3]")
+	private WebElement openReasonDropdown;
+	public void openReasonDropdown() {
+		waitForElementVisible(openReasonDropdown);
+		openReasonDropdown.click();
+	}
+	@FindBy(how = How.XPATH, using = "//div[text()='Vision Exam -Comprehensive Eye Exam']")
+	private WebElement selectReasonForBooking;
+	public void selectReasonForBooking() {
+		waitForElementVisible(selectReasonForBooking);
+		selectReasonForBooking.click();
+	}
+	
+	@FindBy(how = How.XPATH, using = "//div[@class='pr-4 pl-4']//div[@class='v-select__slot']//following::span[text()='NEXT']")
+	private WebElement saveAppointmentDetails;
+	public void saveAppointmentDetails() {
+		waitForElementVisible(saveAppointmentDetails);
+		saveAppointmentDetails.click();
+	}
+	//@FindBy(how = How.XPATH, using = "//div[@class='confirmtime']//following::span[contains(text(),'Finish Booking')]")	
 	
 	
 	@FindBy(how = How.CSS, using = "#chat-widget-push-to-talk > img")

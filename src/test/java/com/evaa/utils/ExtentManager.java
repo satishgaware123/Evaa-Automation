@@ -30,8 +30,8 @@ public class ExtentManager {
 			// ✅ Add environment details
 			extent.setSystemInfo("QA Engineer", "Satish Gaware");
 			extent.setSystemInfo("Environment", "QA");
-			extent.setSystemInfo("OS", System.getProperty("Windows 10 Pro"));
-			extent.setSystemInfo("Java Version", System.getProperty("21"));
+			extent.setSystemInfo("OS", "Windows 10 Pro");
+			extent.setSystemInfo("Java Version", "21");
 			extent.setSystemInfo("Browser", "Chrome");
 		}
 		return extent;

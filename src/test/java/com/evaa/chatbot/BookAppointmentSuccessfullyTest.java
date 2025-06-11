@@ -37,17 +37,16 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 	@Test(priority = 1)
 	public void Disable_ensurance_required_from_admin() throws Exception {
  
-
 		driver.get(adminURL);
 		pom.loginWithMaximEyes();
 		pom.enterUsername().sendKeys(userName);
 		pom.enterPassword().sendKeys(userPassword);
 		pom.enterURL().sendKeys("burneteyecarepinecone");;
 		pom.clickOnLogin();
-		WebElement botDropdown = wait
-				.until(ExpectedConditions.elementToBeClickable((By.xpath("//select[@id='AccountId']"))));
-		Select dropdown = new Select(botDropdown);
-		dropdown.selectByIndex(0);
+//		WebElement botDropdown = wait
+//				.until(ExpectedConditions.elementToBeClickable((By.xpath("//select[@id='AccountId']"))));
+//		Select dropdown = new Select(botDropdown);
+//		dropdown.selectByIndex(0);
 		pom.clickOnSettings();
 		pom.clickOnSettingsPreferences();
 		Thread.sleep(5000);
