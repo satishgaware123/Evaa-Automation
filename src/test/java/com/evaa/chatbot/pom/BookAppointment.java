@@ -22,7 +22,7 @@ public class BookAppointment extends EvvaChatBaseClass {
 	}
 
 	public void waitForElementVisible(WebElement element) {
-		new WebDriverWait(driver, Duration.ofSeconds(60)).until(ExpectedConditions.visibilityOf(element));
+		new WebDriverWait(driver, Duration.ofSeconds(50)).until(ExpectedConditions.visibilityOf(element));
 	}
 
 	// ✅ Using @FindBy for cleaner locator management
@@ -95,7 +95,66 @@ public class BookAppointment extends EvvaChatBaseClass {
 	public void enterInsuranceCompanyName(String companyName) {
 		insuranceCompanyName.sendKeys("Cigna");
 	}
-
+///// login with maximeyes 
+	@FindBy(how = How.ID, using = "Username")
+	private WebElement enterUsername;
+	public WebElement enterUsername() {
+		return enterUsername;
+	}
+	
+	@FindBy(how = How.ID, using = "Password")
+	private WebElement enterPassword;
+	public WebElement enterPassword() {
+		return enterPassword;
+	}
+	
+	@FindBy(how = How.ID, using = "MaximEyeURL")
+	private WebElement enterURL;
+	public WebElement enterURL() {
+		return enterURL;
+	}
+	
+	@FindBy(how = How.XPATH, using = "//button[text()='Login']")
+	private WebElement clickOnLogin;
+	public void clickOnLogin() {
+		waitForElementVisible(clickOnLogin);
+		clickOnLogin.click();
+	}
+	
+// EVAA Admin DashBoard
+	
+	@FindBy(how = How.XPATH, using = "//a[@id='settingsLinkOld']")
+	private WebElement clickOnSettings;
+	public void clickOnSettings() {
+		waitForElementVisible(clickOnSettings);
+		clickOnSettings.click();
+	}	
+	@FindBy(how = How.XPATH, using = "//span[text()='Preferences  ']")
+	private WebElement clickOnSettingsPreferences;
+	public void clickOnSettingsPreferences() {
+		waitForElementVisible(clickOnSettingsPreferences);
+		clickOnSettingsPreferences.click();
+	}	
+	
+	//preferences
+	@FindBy(how = How.ID, using = "AppointmentCancelingId")
+	private WebElement AppointmentCancelCheckBox;
+	public WebElement AppointmentCancelCheckBox() {
+		return AppointmentCancelCheckBox;
+	}
+	
+	@FindBy(how = How.ID, using = "ShowAppointmentBookingId")
+	private WebElement allowAppointmentBookingCheckBox;
+	public WebElement allowAppointmentBookingCheckBox() {
+		return allowAppointmentBookingCheckBox;
+	}
+	
+	@FindBy(how = How.ID, using = "UploadInsCardId")
+	private WebElement allowInsuranceRequiredCheckBox;
+	public WebElement allowInsuranceRequiredCheckBox() {
+		return allowInsuranceRequiredCheckBox;
+	}
+	
 	@FindBy(how = How.ID, using = "insuranceID")
 	private WebElement insuranceId;
 
@@ -127,11 +186,17 @@ public class BookAppointment extends EvvaChatBaseClass {
 		return appointmentDetails();
 	}
 
-	@FindBy(how = How.XPATH, using = "(//div[text()='Available insurance'])[1]")
+	@FindBy(how = How.XPATH, using = "//div//textarea[@id='chatbox']")
+	public WebElement chatMSG;
+	public WebElement chatMSG() {
+		waitForElementVisible(chatMSG);
+		return chatMSG();
+	}
+	
+	
+	@FindBy(how = How.XPATH, using = "//div//textarea[@id='chatbox']")
 	private WebElement availableInsurance;
-
 	public WebElement availableInsurance() {
-		waitForElementVisible(availableInsurance);
 		return availableInsurance();
 	}
 
@@ -145,10 +210,119 @@ public class BookAppointment extends EvvaChatBaseClass {
 
 	@FindBy(how = How.XPATH, using = "//input[@id='ddlReasons']")
 	private WebElement selectReason;
-
 	public void selectReason() {
 		waitForElementVisible(selectReason);
 		selectReason.click();
+	}
+	@FindBy(how = How.XPATH, using = "//button[text()=' MaximEyes']")
+	private WebElement loginWithMaximEyes;
+	public void loginWithMaximEyes() {
+		waitForElementVisible(loginWithMaximEyes);
+		loginWithMaximEyes.click();
+	}
+	
+	//cancel appointment on chatbot
+	
+	@FindBy(how = How.XPATH, using = "(//div[@id='appointmentsContainer']//following::span[contains(text(),'Cancel')])[1]")
+	private WebElement cancelRescheduleAppointmentButton;
+	public void cancelRescheduleAppointmentButton() {
+		waitForElementVisible(cancelRescheduleAppointmentButton);
+		cancelRescheduleAppointmentButton.click();
+	}
+	
+	@FindBy(how = How.XPATH, using = "(//div[@id='apptContainer']//input[@name='appointment'])[1]")
+	private WebElement selectAppointment;
+	public void selectAppointmentForCancel() {
+		waitForElementVisible(selectAppointment);
+		selectAppointment.click();
+	}
+	@FindBy(how = How.XPATH, using = "(//div[@id='apptContainer']//following::span[contains(text(),'Cancel')])[1]")
+	private WebElement cancelAppointment;
+	public void cancelAppointment() {
+		waitForElementVisible(cancelAppointment);
+		cancelAppointment.click();
+	}
+	// chatbot
+	@FindBy(how = How.XPATH, using = "//div[contains(text(),'Online appointment booking is only for routine exam')]")
+	private WebElement firstMsg;
+	public WebElement firstMsg() {
+		return firstMsg;
+	}
+	
+	
+	
+	//choose Time Slot
+	@FindBy(how = How.XPATH, using = "(//div[@class='confirmtime']//following::div//div//div/div)[1]")
+	private WebElement chooseTimeSlot;
+	public void chooseTimeSlot() {
+		waitForElementVisible(chooseTimeSlot);
+		chooseTimeSlot.click();
+	}
+	
+	@FindBy(how = How.XPATH, using = "//div[@class='confirmtime']//following::span[contains(text(),'Finish Booking') or contains(text(),'Next')]")
+	private WebElement submitTimeSlot;
+	public void submitTimeSlot() {
+		waitForElementVisible(submitTimeSlot);
+		submitTimeSlot.click();
+	}
+	
+	// appointment details - location, provider, reason
+	
+	@FindBy(how = How.XPATH, using = "(//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[1]")
+	private WebElement openLocationDropdown;
+	public void openLocationDropdown() {
+		waitForElementVisible(openLocationDropdown);
+		openLocationDropdown.click();
+	}
+	@FindBy(how = How.XPATH, using = "//div[text()='Pune']")
+	private WebElement selectLocation;
+	public void selectLocation() {
+		waitForElementVisible(selectLocation);
+		selectLocation.click();
+	}
+	
+	
+	@FindBy(how = How.XPATH, using = "(//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[2]")
+	private WebElement openProviderDropdown;
+	public void openProviderDropdown() {
+		waitForElementVisible(openProviderDropdown);
+		openProviderDropdown.click();
+	}
+	
+	@FindBy(how = How.XPATH, using = "(//div[text()='Dr Smith'])[2]")
+	private WebElement selectProvider;
+	public void selectProvider() {
+		waitForElementVisible(selectProvider);
+		selectProvider.click();
+	}
+	
+	@FindBy(how = How.XPATH, using = "(//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[3]")
+	private WebElement openReasonDropdown;
+	public void openReasonDropdown() {
+		waitForElementVisible(openReasonDropdown);
+		openReasonDropdown.click();
+	}
+	@FindBy(how = How.XPATH, using = "//div[text()='Vision Exam -Comprehensive Eye Exam']")
+	private WebElement selectReasonForBooking;
+	public void selectReasonForBooking() {
+		waitForElementVisible(selectReasonForBooking);
+		selectReasonForBooking.click();
+	}
+	
+	@FindBy(how = How.XPATH, using = "//div[@class='pr-4 pl-4']//div[@class='v-select__slot']//following::span[text()='NEXT']")
+	private WebElement saveAppointmentDetails;
+	public void saveAppointmentDetails() {
+		waitForElementVisible(saveAppointmentDetails);
+		saveAppointmentDetails.click();
+	}
+	//@FindBy(how = How.XPATH, using = "//div[@class='confirmtime']//following::span[contains(text(),'Finish Booking')]")	
+	
+	
+	@FindBy(how = How.CSS, using = "#chat-widget-push-to-talk > img")
+	private WebElement openChatBot;
+	public void openChatBot() {
+		waitForElementVisible(openChatBot);
+		openChatBot.click();
 	}
 
 	@FindBy(how = How.XPATH, using = "//div[@id='list-item-53-0']")
@@ -182,6 +356,14 @@ public class BookAppointment extends EvvaChatBaseClass {
 		waitForElementVisible(submit);
 		submit.click();
 	}
+	
+	@FindBy(how = How.XPATH, using = "//button[@id='chat_submit']")
+	private WebElement chatSubmit;
+	public void chatSubmit() {
+		waitForElementVisible(chatSubmit);
+		chatSubmit.click();
+	}
+	
 
 	@FindBy(how = How.XPATH, using = "(//span[text()='NEXT'])[4]")
 	private WebElement clickNextOncalander;

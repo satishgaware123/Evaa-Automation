@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 28 12:55:10 IST 2025</td>
+<td>Started on:</td><td>Wed Jun 11 15:04:14 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>148 seconds (148904 ms)</td>
+<tr><td>Total time:</td><td>175 seconds (175735 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,17 +75,34 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest.Test_book_appointment_without_insurance()'><b>Test_book_appointment_without_insurance</b><br>Test class: com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//div[@class=&apos;pr-4 pl-4&apos;]//div[@class=&apos;v-select__slot&apos;])[1] (tried for 70 second(s) with 500 milliseconds interval)
+<td title='com.evaa.chatbot.AppointmentCancelTest.DisableCancelAppointmentSettingsInPreferences()'><b>DisableCancelAppointmentSettingsInPreferences</b><br>Test class: com.evaa.chatbot.AppointmentCancelTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span class=&quot;menu-title preferences submenu-title&quot;&gt;...&lt;/span&gt; is not clickable at point (102, 397). Other element would receive the click: &lt;nav class=&quot;sidebar sidebar-offcanvas&quot; id=&quot;sidebar&quot; style=&quot;&quot;&gt;...&lt;/nav&gt;
+  (Session info: chrome=137.0.7151.69)
 Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
-System info: host: &apos;FIC-I7KL93&apos;, ip: &apos;172.19.2.119&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+System info: host: &apos;FIC-I7KL93&apos;, ip: &apos;172.20.10.13&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57295}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57295/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ea6a0d0801003d4587d2a38c4bda74ba
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest.fillAppointmentDetails(BookAppointmentSuccessfullyTest.java:192)
-	at com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest.Test_book_appointment_without_insurance(BookAppointmentSuccessfullyTest.java:102)
+Command: [dca64864884bfd449e67a5690fda0e4d, clickElement {id=f.86508923CD93F7B3C842C77B1AE66D1B.d.3C56096EFA23B0EFAFA0A0C76A5410CF.e.40}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53865}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53865/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (dca64864884bfd449e67a5690fda0e4d)] -&gt; xpath: //span[text()=&apos;Preferences  &apos;]]
+Session ID: dca64864884bfd449e67a5690fda0e4d
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.click(Unknown Source)
+	at com.evaa.chatbot.pom.BookAppointment.clickOnSettingsPreferences(BookAppointment.java:136)
+	at com.evaa.chatbot.AppointmentCancelTest.DisableCancelAppointmentSettingsInPreferences(AppointmentCancelTest.java:138)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -112,17 +129,34 @@ Session ID: ea6a0d0801003d4587d2a38c4bda74ba
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace161573617", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace161573617'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: (//div[@class=&apos;pr-4 pl-4&apos;]//div[@class=&apos;v-select__slot&apos;])[1] (tried for 70 second(s) with 500 milliseconds interval)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1807402813", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1807402813'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span class=&quot;menu-title preferences submenu-title&quot;&gt;...&lt;/span&gt; is not clickable at point (102, 397). Other element would receive the click: &lt;nav class=&quot;sidebar sidebar-offcanvas&quot; id=&quot;sidebar&quot; style=&quot;&quot;&gt;...&lt;/nav&gt;
+  (Session info: chrome=137.0.7151.69)
 Build info: version: &apos;4.1.4&apos;, revision: &apos;535d840ee2&apos;
-System info: host: &apos;FIC-I7KL93&apos;, ip: &apos;172.19.2.119&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
+System info: host: &apos;FIC-I7KL93&apos;, ip: &apos;172.20.10.13&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.6&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.41, chrome: {chromedriverVersion: 137.0.7151.55 (254bc711794d..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57295}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57295/devtoo..., se:cdpVersion: 137.0.7151.41, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ea6a0d0801003d4587d2a38c4bda74ba
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-	at com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest.fillAppointmentDetails(BookAppointmentSuccessfullyTest.java:192)
-	at com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest.Test_book_appointment_without_insurance(BookAppointmentSuccessfullyTest.java:102)
+Command: [dca64864884bfd449e67a5690fda0e4d, clickElement {id=f.86508923CD93F7B3C842C77B1AE66D1B.d.3C56096EFA23B0EFAFA0A0C76A5410CF.e.40}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53865}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53865/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (dca64864884bfd449e67a5690fda0e4d)] -&gt; xpath: //span[text()=&apos;Preferences  &apos;]]
+Session ID: dca64864884bfd449e67a5690fda0e4d
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy33.click(Unknown Source)
+	at com.evaa.chatbot.pom.BookAppointment.clickOnSettingsPreferences(BookAppointment.java:136)
+	at com.evaa.chatbot.AppointmentCancelTest.DisableCancelAppointmentSettingsInPreferences(AppointmentCancelTest.java:138)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -150,8 +184,41 @@ Session ID: ea6a0d0801003d4587d2a38c4bda74ba
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>140</td>
-<td>com.evaa.chatbot.bookappointment.BookAppointmentSuccessfullyTest@2538bc06</td></tr>
+<td>3</td>
+<td>com.evaa.chatbot.AppointmentCancelTest@7235f92b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.evaa.chatbot.AppointmentCancelTest.bookAppointment()'><b>bookAppointment</b><br>Test class: com.evaa.chatbot.AppointmentCancelTest</td>
+<td></td>
+<td>46</td>
+<td>com.evaa.chatbot.AppointmentCancelTest@7235f92b</td></tr>
+<tr>
+<td title='com.evaa.chatbot.AppointmentCancelTest.cancelAppointmentForExistingPatient()'><b>cancelAppointmentForExistingPatient</b><br>Test class: com.evaa.chatbot.AppointmentCancelTest</td>
+<td></td>
+<td>25</td>
+<td>com.evaa.chatbot.AppointmentCancelTest@7235f92b</td></tr>
+<tr>
+<td title='com.evaa.chatbot.AppointmentCancelTest.TestCancelAppointmentDisable()'><b>TestCancelAppointmentDisable</b><br>Test class: com.evaa.chatbot.AppointmentCancelTest</td>
+<td></td>
+<td>29</td>
+<td>com.evaa.chatbot.AppointmentCancelTest@7235f92b</td></tr>
+<tr>
+<td title='com.evaa.chatbot.AppointmentCancelTest.cancelAppointmentForNewPatient()'><b>cancelAppointmentForNewPatient</b><br>Test class: com.evaa.chatbot.AppointmentCancelTest</td>
+<td></td>
+<td>43</td>
+<td>com.evaa.chatbot.AppointmentCancelTest@7235f92b</td></tr>
+<tr>
+<td title='com.evaa.chatbot.AppointmentCancelTest.enableCancelAppointmentSettingsFromAdmin()'><b>enableCancelAppointmentSettingsFromAdmin</b><br>Test class: com.evaa.chatbot.AppointmentCancelTest</td>
+<td></td>
+<td>22</td>
+<td>com.evaa.chatbot.AppointmentCancelTest@7235f92b</td></tr>
 </table><p>
 </body>
 </html>

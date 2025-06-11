@@ -36,25 +36,19 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 
 	@Test(priority = 1)
 	public void Disable_ensurance_required_from_admin() throws Exception {
-
-		driver.get("https://assistant2-pinecone-admin.evaa.ai/");
-		driver.findElement(By.xpath("//button[text()=' MaximEyes']")).click();
-		driver.findElement(By.id("Username")).sendKeys("satishG");
-		driver.findElement(By.id("Password")).sendKeys("Admin@1234");
-		driver.findElement(By.id("MaximEyeURL")).sendKeys("burneteyecarepinecone");
-		driver.findElement(By.xpath("//button[text()='Login']")).click();
-
-		WebElement botDropdown = wait
-				.until(ExpectedConditions.elementToBeClickable((By.xpath("//select[@id='AccountId']"))));
-		Select dropdown = new Select(botDropdown);
-		dropdown.selectByIndex(0);
-		WebElement settings = wait
-				.until(ExpectedConditions.elementToBeClickable((By.xpath("//a[@id='settingsLinkOld']"))));
-		settings.click();
-
-		WebElement preferences = wait
-				.until(ExpectedConditions.elementToBeClickable((By.xpath("//span[text()='Preferences  ']"))));
-		preferences.click();
+ 
+		driver.get(adminURL);
+		pom.loginWithMaximEyes();
+		pom.enterUsername().sendKeys(userName);
+		pom.enterPassword().sendKeys(userPassword);
+		pom.enterURL().sendKeys("burneteyecarepinecone");;
+		pom.clickOnLogin();
+//		WebElement botDropdown = wait
+//				.until(ExpectedConditions.elementToBeClickable((By.xpath("//select[@id='AccountId']"))));
+//		Select dropdown = new Select(botDropdown);
+//		dropdown.selectByIndex(0);
+		pom.clickOnSettings();
+		pom.clickOnSettingsPreferences();
 		Thread.sleep(5000);
 		WebElement checkbox1 = wait.until(ExpectedConditions.elementToBeClickable(By.id("UploadInsCardId")));
 		if (checkbox1.isSelected()) {
@@ -74,7 +68,7 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, dependsOnMethods = {"Disable_ensurance_required_from_admin"})
 	public void Test_book_appointment_without_insurance() throws Exception {
 
 		driver.get(botUrl);
@@ -129,7 +123,7 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 		System.out.println("✅ Appointment confirmation message verified successfully.");
 	}
 
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = false, dependsOnMethods = {"Test_book_appointment_without_insurance"})
 	public void verify_detail_on_maximeyes_site() throws Exception {
 //		driver.get("https://hheyeqainternalmysql.maximeyes.com/Account/Login");
 		driver.get(maximeyesURL);

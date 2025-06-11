@@ -31,30 +31,24 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 
 		Assert.assertTrue(
 				txtmsg.contains("Online appointment booking is only for routine exam and follow up appointments"));
-
+ 
 	}
 
 	@Test(priority = 1)
 	public void Enable_ensurance_required_from_admin() throws Exception {
 
-		driver.get("https://assistant2-pinecone-admin.evaa.ai/");
-		driver.findElement(By.xpath("//button[text()=' MaximEyes']")).click();
-		driver.findElement(By.id("Username")).sendKeys("satishG");
-		driver.findElement(By.id("Password")).sendKeys("Admin@1234");
-		driver.findElement(By.id("MaximEyeURL")).sendKeys("burneteyecarepinecone");
-		driver.findElement(By.xpath("//button[text()='Login']")).click();
-
-		WebElement botDropdown = wait
-				.until(ExpectedConditions.elementToBeClickable((By.xpath("//select[@id='AccountId']"))));
-		Select dropdown = new Select(botDropdown);
-		dropdown.selectByIndex(0);
-		WebElement settings = wait
-				.until(ExpectedConditions.elementToBeClickable((By.xpath("//a[@id='settingsLinkOld']"))));
-		settings.click();
-
-		WebElement preferences = wait
-				.until(ExpectedConditions.elementToBeClickable((By.xpath("//span[text()='Preferences  ']"))));
-		preferences.click();
+		driver.get(adminURL);
+		pom.loginWithMaximEyes();
+		pom.enterUsername().sendKeys(userName);
+		pom.enterPassword().sendKeys(userPassword);
+		pom.enterURL().sendKeys(URL);;
+		pom.clickOnLogin();
+//		WebElement botDropdown = wait
+//				.until(ExpectedConditions.elementToBeClickable((By.xpath("//select[@id='AccountId']"))));
+//		Select dropdown = new Select(botDropdown);
+//		dropdown.selectByIndex(0);
+		pom.clickOnSettings();
+		pom.clickOnSettingsPreferences();
 		Thread.sleep(5000);
 		WebElement checkbox1 = wait.until(ExpectedConditions.elementToBeClickable(By.id("UploadInsCardId")));
 		if (!checkbox1.isSelected()) {
@@ -74,22 +68,21 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 2, enabled = true)
+	@Test(priority = 2, enabled = true) 
 	public void Test_book_appointment_with_insurance() throws Exception {
-
 		driver.get(botUrl);
-		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#chat-widget-push-to-talk > img"))).click();
-		driver.switchTo().frame(0);
-		WebElement bookAppointment = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//textarea[@id='chatbox']")));
-		bookAppointment.sendKeys("book appointment");
-		WebElement send_button = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='chat_submit']")));
-		send_button.click();
+		pom.openChatBot();
+		driver.switchTo().frame(0); 
+
+		pom.chatMSG.sendKeys("book appointment");
+		pom.chatSubmit();
 		Thread.sleep(1000);
-		check_the_response();
-		bookAppointment.sendKeys("yes");
-		send_button.click();
+
+		verifyRoutineAppointmentMessage();  
+
+		pom.chatMSG.sendKeys("yes");
+		pom.chatSubmit();  
+
 		PrimanryInformationPage();
 
 		driver.findElement(By.id("otp1")).sendKeys("9753");
@@ -98,18 +91,37 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		System.out.println("Expected: " + expectedFirstName);
 		System.out.println("Actual  : " + expectedLastName);
 
-		fillInsuranceDetails();
-
-		// appoitment detail page - select location, provider, reason
 		fillAppointmentDetails();
 		selectTomorrowDate();
 		selectTimeSlot();
 		Thread.sleep(3000);
+		fillInsuranceDetails();
 		verifyTheDetials();
 		Thread.sleep(3000);
 
 	}
+	private void verifyRoutineAppointmentMessage() {
+		WebElement msg = wait.until(ExpectedConditions.elementToBeClickable(
+				By.xpath("//div[contains(text(),'Online appointment booking is only for routine exam')]")));
+		String txtMsg = msg.getText();
+		Assert.assertTrue(
+				txtMsg.contains("Online appointment booking is only for routine exam and follow up appointments"));
+	}  
+	
+	public void verifyDetalsForNewUser() {
+		
+		WebElement noAppointmentElement = driver.findElement(By.xpath("//div[contains(text(),'No appointments')]"));
+		String extractedText = noAppointmentElement.getText().trim();
 
+		Assert.assertTrue(
+		    extractedText.toLowerCase().contains("no appointment"),
+		    "Expected text to contain 'no appointment' but found: " + extractedText
+		);
+		
+		
+	}
+	
+	
 	public void fillInsuranceDetails() {
 
 		WebElement insuranceCN = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("insuranceCN")));
@@ -123,6 +135,8 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 
 		WebElement finish_Booking = wait
 				.until(ExpectedConditions.elementToBeClickable((By.xpath("//span[text()='Finish Booking']"))));
+		
+
 		finish_Booking.click();
 
 	}
@@ -148,7 +162,7 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		System.out.println("✅ Appointment confirmation message verified successfully.");
 	}
 
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 5, enabled = false, dependsOnMethods = {"Test_book_appointment_with_insurance"})
 	public void verify_detail_on_maximeyes_site() throws Exception {
 //		driver.get("https://hheyeqainternalmysql.maximeyes.com/Account/Login");
 		driver.get(maximeyesURL);
@@ -205,7 +219,14 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		enterText(pom.getEmailField(), "QA" + email);
 		pom.next_button_on_primary_page();
 	}
-
+	public void PrimanryInformationPage2() {
+		enterText(pom.getFirstNameField(), "QA"+expectedFirstName);
+		enterText(pom.getLastNameField(), "QA"+expectedLastName);
+		enterText(pom.getDobField(), dob);
+		enterText(pom.getPhoneNumberField(), expectedNumber);
+		enterText(pom.getEmailField(), "QA" + email);
+		pom.next_button_on_primary_page();
+	}
 	public void fillAppointmentDetails() throws Exception {
 
 		WebElement locationdropdown = wait.until(ExpectedConditions
@@ -240,14 +261,9 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 
 	}
 
-	public void selectTimeSlot() throws Exception {
-		WebElement timeSlot = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("(//div[@class='confirmtime']//following::div//div//div/div)[1]")));
-		timeSlot.click();
-
-		WebElement clickOnsubmit = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//div[@class='confirmtime']//following::span[text()='SUBMIT']")));
-		clickOnsubmit.click();
+	private void selectTimeSlot() throws Exception {  
+		pom.chooseTimeSlot(); 
+		pom.submitTimeSlot(); 
 	}
 
 	private void enterText(WebElement webElement, String text) {
