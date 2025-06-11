@@ -12,9 +12,10 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.evaa.baseclass.EvvaChatBaseClass;
+import com.evaa.chatbot.pom.AppText;
 import com.github.javafaker.Faker;
 
-public class AppointmentStatusTest extends EvvaChatBaseClass{
+public class AppointmentStatusTest extends EvvaChatBaseClass {
 	String chatMessage;
 	private static final Faker faker = new Faker();
 
@@ -24,14 +25,10 @@ public class AppointmentStatusTest extends EvvaChatBaseClass{
 	private final String expectedNumber = faker.number().digits(10);
 
 	public void check_the_response() {
-
-		WebElement msg = wait.until(ExpectedConditions.elementToBeClickable(
-				By.xpath("//div[contains(text(),'Online appointment booking is only for routine exam')]")));
-		String txtmsg = msg.getText();
-
-		Assert.assertTrue(
-				txtmsg.contains("Online appointment booking is only for routine exam and follow up appointments"));
-
+//		WebElement msg = wait.until(ExpectedConditions.elementToBeClickable(
+//				By.xpath("//div[contains(text(),'Online appointment booking is only for routine exam')]")));
+		String txtmsg = pom.firstMsg().getText();
+		Assert.assertTrue(txtmsg.contains(AppText.APPOINTMENT_MSG));
 	}
 
 	@Test(priority = 1)
@@ -41,24 +38,27 @@ public class AppointmentStatusTest extends EvvaChatBaseClass{
 		pom.loginWithMaximEyes();
 		pom.enterUsername().sendKeys(userName);
 		pom.enterPassword().sendKeys(userPassword);
-		pom.enterURL().sendKeys(URL);;
+		pom.enterURL().sendKeys(URL);
+		;
 		pom.clickOnLogin();
-		WebElement botDropdown = wait
-				.until(ExpectedConditions.elementToBeClickable((By.xpath("//select[@id='AccountId']"))));
-		Select dropdown = new Select(botDropdown);
-		dropdown.selectByIndex(0);
+//		WebElement botDropdown = wait
+//				.until(ExpectedConditions.elementToBeClickable((By.xpath("//select[@id='AccountId']"))));
+//		Select dropdown = new Select(botDropdown);
+//		dropdown.selectByIndex(0);
 		pom.clickOnSettings();
 		pom.clickOnSettingsPreferences();
 		Thread.sleep(5000);
-		WebElement checkbox1 = wait.until(ExpectedConditions.elementToBeClickable(By.id("AppointmentStatusCheckingId")));
+		WebElement checkbox1 = wait
+				.until(ExpectedConditions.elementToBeClickable(By.id("AppointmentStatusCheckingId")));
 		if (!checkbox1.isSelected()) {
 			checkbox1.click();
 			System.out.println("Enable the Appointment Status Checking");
 		} else {
 			System.out.println("Allready Enable Enable the Appointment Status Checking");
 		}
-		
-		WebElement ShowAppointmentBookingId = wait.until(ExpectedConditions.elementToBeClickable(By.id("ShowAppointmentBookingId")));
+
+		WebElement ShowAppointmentBookingId = wait
+				.until(ExpectedConditions.elementToBeClickable(By.id("ShowAppointmentBookingId")));
 		if (!ShowAppointmentBookingId.isSelected()) {
 			ShowAppointmentBookingId.click();
 			System.out.println("Enable the Appointment Booking");
@@ -75,6 +75,7 @@ public class AppointmentStatusTest extends EvvaChatBaseClass{
 
 		Thread.sleep(5000);
 	}
+
 	@Test(priority = 2)
 	public void Test_book_appointment_without_insurance() throws Exception {
 
@@ -103,7 +104,7 @@ public class AppointmentStatusTest extends EvvaChatBaseClass{
 		Thread.sleep(3000);
 
 	}
-	
+
 	@Test(priority = 3, enabled = true)
 	public void Test_appointment_status_for_existing_patient() throws Exception {
 
@@ -120,11 +121,12 @@ public class AppointmentStatusTest extends EvvaChatBaseClass{
 		PrimanryInformationPage();
 
 		driver.findElement(By.id("otp1")).sendKeys("9753");
-		pom.next_button_on_otp_page().click();		
+		pom.next_button_on_otp_page().click();
 		verifyTheDetials();
 		Thread.sleep(3000);
 
 	}
+
 	@Test(priority = 4, enabled = true)
 	public void Test_appointment_status_for_new_patient() throws Exception {
 
@@ -140,28 +142,28 @@ public class AppointmentStatusTest extends EvvaChatBaseClass{
 		Thread.sleep(1000);
 		PrimanryInformationPage2();
 		driver.findElement(By.id("otp1")).sendKeys("9753");
-		pom.next_button_on_otp_page().click();		
+		pom.next_button_on_otp_page().click();
 		verifyDetalsForNewUser();
 		Thread.sleep(3000);
 	}
+
 	public void verifyDetalsForNewUser() {
-		
+
 		WebElement noAppointmentElement = driver.findElement(By.xpath("//div[contains(text(),'No appointments')]"));
 		String extractedText = noAppointmentElement.getText().trim();
-		Assert.assertTrue(
-		    extractedText.toLowerCase().contains("no appointment"),
-		    "Expected text to contain 'no appointment' but found: " + extractedText
-		);			
+		Assert.assertTrue(extractedText.toLowerCase().contains("no appointment"),
+				"Expected text to contain 'no appointment' but found: " + extractedText);
 	}
-	
+
 	public void PrimanryInformationPage2() {
-		enterText(pom.getFirstNameField(), "QA"+expectedFirstName);
-		enterText(pom.getLastNameField(), "QA"+expectedLastName);
+		enterText(pom.getFirstNameField(), "QA" + expectedFirstName);
+		enterText(pom.getLastNameField(), "QA" + expectedLastName);
 		enterText(pom.getDobField(), dob);
 		enterText(pom.getPhoneNumberField(), expectedNumber);
 		enterText(pom.getEmailField(), "QA" + email);
 		pom.next_button_on_primary_page();
 	}
+
 	public void PrimanryInformationPage() {
 		enterText(pom.getFirstNameField(), expectedFirstName);
 		enterText(pom.getLastNameField(), expectedLastName);
@@ -170,10 +172,12 @@ public class AppointmentStatusTest extends EvvaChatBaseClass{
 		enterText(pom.getEmailField(), "QA" + email);
 		pom.next_button_on_primary_page();
 	}
+
 	private void enterText(WebElement webElement, String text) {
 		wait.until(ExpectedConditions.visibilityOf(webElement)).clear();
 		webElement.sendKeys(text);
 	}
+
 	public void verifyTheDetials() {
 
 		try {
@@ -194,6 +198,7 @@ public class AppointmentStatusTest extends EvvaChatBaseClass{
 
 		System.out.println("✅ Appointment confirmation message verified successfully.");
 	}
+
 	public void selectTomorrowDate() throws Exception {
 		int tomorrow = LocalDate.now().plusDays(3).getDayOfMonth();
 		String xpath = String.format("//button//div[text()='%d']", tomorrow);
@@ -202,9 +207,11 @@ public class AppointmentStatusTest extends EvvaChatBaseClass{
 		dateElement.click();
 
 	}
+
 	public void waitForElementVisible2(WebElement element) {
 		new WebDriverWait(driver, Duration.ofSeconds(90)).until(ExpectedConditions.visibilityOf(element));
 	}
+
 	public void fillAppointmentDetails() throws Exception {
 
 		WebElement locationdropdown = wait.until(ExpectedConditions
@@ -231,17 +238,17 @@ public class AppointmentStatusTest extends EvvaChatBaseClass{
 				By.xpath("//div[@class='pr-4 pl-4']//div[@class='v-select__slot']//following::span[text()='NEXT']")));
 		next.click();
 	}
+
 	public void selectTimeSlot() throws Exception {
 		WebElement timeSlot = wait.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("(//div[@class='confirmtime']//following::div//div//div/div)[1]")));
 		timeSlot.click();
-		WebElement clickOnsubmit = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//div[@class='confirmtime']//following::span[contains(text(),'Submit')]")));
-		clickOnsubmit.click();
 //		WebElement clickOnsubmit = wait.until(ExpectedConditions
-//				.elementToBeClickable(By.xpath("//div[@data-index='0']//following::span[contains(text(),'Finish Booking')]")));
+//				.elementToBeClickable(By.xpath("//div[@class='confirmtime']//following::span[contains(text(),'Submit')]")));
 //		clickOnsubmit.click();
+		WebElement clickOnsubmit = wait.until(ExpectedConditions.elementToBeClickable(
+				By.xpath("//div[@data-index='0']//following::span[contains(text(),'Finish Booking')]")));
+		clickOnsubmit.click();
 	}
-
 
 }

@@ -43,10 +43,10 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		pom.enterPassword().sendKeys(userPassword);
 		pom.enterURL().sendKeys(URL);;
 		pom.clickOnLogin();
-		WebElement botDropdown = wait
-				.until(ExpectedConditions.elementToBeClickable((By.xpath("//select[@id='AccountId']"))));
-		Select dropdown = new Select(botDropdown);
-		dropdown.selectByIndex(0);
+//		WebElement botDropdown = wait
+//				.until(ExpectedConditions.elementToBeClickable((By.xpath("//select[@id='AccountId']"))));
+//		Select dropdown = new Select(botDropdown);
+//		dropdown.selectByIndex(0);
 		pom.clickOnSettings();
 		pom.clickOnSettingsPreferences();
 		Thread.sleep(5000);
@@ -68,22 +68,21 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		Thread.sleep(5000);
 	}
 
-	@Test(priority = 2, enabled = true, dependsOnMethods = {"Enable_ensurance_required_from_admin"})
+	@Test(priority = 2, enabled = true) 
 	public void Test_book_appointment_with_insurance() throws Exception {
-
 		driver.get(botUrl);
-		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#chat-widget-push-to-talk > img"))).click();
-		driver.switchTo().frame(0);
-		WebElement bookAppointment = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//textarea[@id='chatbox']")));
-		bookAppointment.sendKeys("book appointment");
-		WebElement send_button = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='chat_submit']")));
-		send_button.click();
+		pom.openChatBot();
+		driver.switchTo().frame(0); 
+
+		pom.chatMSG.sendKeys("book appointment");
+		pom.chatSubmit();
 		Thread.sleep(1000);
-		check_the_response();
-		bookAppointment.sendKeys("yes");
-		send_button.click();
+
+		verifyRoutineAppointmentMessage();  
+
+		pom.chatMSG.sendKeys("yes");
+		pom.chatSubmit();  
+
 		PrimanryInformationPage();
 
 		driver.findElement(By.id("otp1")).sendKeys("9753");
@@ -92,7 +91,6 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		System.out.println("Expected: " + expectedFirstName);
 		System.out.println("Actual  : " + expectedLastName);
 
-		// appoitment detail page - select location, provider, reason
 		fillAppointmentDetails();
 		selectTomorrowDate();
 		selectTimeSlot();
@@ -102,7 +100,13 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		Thread.sleep(3000);
 
 	}
-
+	private void verifyRoutineAppointmentMessage() {
+		WebElement msg = wait.until(ExpectedConditions.elementToBeClickable(
+				By.xpath("//div[contains(text(),'Online appointment booking is only for routine exam')]")));
+		String txtMsg = msg.getText();
+		Assert.assertTrue(
+				txtMsg.contains("Online appointment booking is only for routine exam and follow up appointments"));
+	}  
 	
 	public void verifyDetalsForNewUser() {
 		
@@ -257,17 +261,9 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 
 	}
 
-	public void selectTimeSlot() throws Exception {
-		WebElement timeSlot = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("(//div[@class='confirmtime']//following::div//div//div/div)[1]")));
-		timeSlot.click();
-
-//		WebElement clickOnsubmit = wait.until(ExpectedConditions
-//				.elementToBeClickable(By.xpath("//div[@class='confirmtime']//following::span[text()='SUBMIT']")));
-//		clickOnsubmit.click();
-		WebElement clickOnsubmit = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//div[@data-index='0']//following::span[contains(text(),'Finish Booking')]")));
-		clickOnsubmit.click();
+	private void selectTimeSlot() throws Exception {  
+		pom.chooseTimeSlot(); 
+		pom.submitTimeSlot(); 
 	}
 
 	private void enterText(WebElement webElement, String text) {

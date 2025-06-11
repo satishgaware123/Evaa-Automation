@@ -7,7 +7,6 @@ import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,25 +15,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.*;
 import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.Status;
 import com.evaa.chatbot.pom.BookAppointment;
 import com.evaa.utils.ConfigReader;
 import com.evaa.utils.ExtentManager;
 import com.evaa.utils.ScreenshotUtil;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-
 public class EvvaChatBaseClass {
+
 	protected WebDriver driver;
-//	protected EvaaChatPom pom;
 	protected BookAppointment pom;
 	protected WebDriverWait wait;
 	protected static ExtentReports extent;
@@ -42,9 +35,9 @@ public class EvvaChatBaseClass {
 	protected static ConfigReader config;
 
 	private static final Logger log = LogManager.getLogger(EvvaChatBaseClass.class);
-	private static final String LOG_FILE_PATH = "logs/test-execution.log"; // Path to Log4j log file
+	private static final String LOG_FILE_PATH = "logs/test-execution.log";
 
-	// Declare user details variables
+	// User Details
 	protected String userName;
 	protected String userPassword;
 	protected String dob;
@@ -56,19 +49,49 @@ public class EvvaChatBaseClass {
 	protected String maxUserPass;
 	protected String adminURL;
 	protected String URL;
-	
-	@SuppressWarnings("deprecation")
+
+	@BeforeSuite
+	public void cleanScreenshotFolder() {
+	     String screenshotPath = System.getProperty("user.dir") + File.separator + "screenshots";
+	        File folder = new File(screenshotPath);
+
+	        if (folder.exists() && folder.isDirectory()) {
+	            for (File file : folder.listFiles()) {
+	                if (file.isFile()) {
+	                    file.delete();
+	                }
+	            }
+	            System.out.println("All screenshots deleted.");
+	        } else {
+	            System.out.println("Screenshot folder does not exist.");
+	        }
+	        
+	        String AllurReport = System.getProperty("user.dir") + File.separator + "allure-results";
+	        File folder2 = new File(AllurReport);
+
+	        if (folder2.exists() && folder2.isDirectory()) {
+	            for (File file1 : folder2.listFiles()) {
+	                if (file1.isFile()) {
+	                    file1.delete();
+	                }
+	            }
+	            System.out.println("All screenshots deleted.");
+	        } else {
+	            System.out.println("Screenshot folder does not exist.");
+	        }
+	        
+	    }
+
+
 	@BeforeClass
 	public void startBrowser() {
 		WebDriverManager.chromedriver().setup();
 
 		ChromeOptions options = new ChromeOptions();
-
-		// Corrected headless flag check
-		boolean isHeadless = System.getProperty("headless", "false").equalsIgnoreCase("true");
+		boolean isHeadless = System.getProperty("headless", "true").equalsIgnoreCase("true");
 
 		if (isHeadless) {
-			options.addArguments("--headless=new"); // new headless mode for modern Chrome
+			options.addArguments("--headless=new");
 			options.addArguments("--disable-gpu");
 			options.addArguments("--window-size=1920,1080");
 			options.addArguments("--no-sandbox");
@@ -78,22 +101,22 @@ public class EvvaChatBaseClass {
 			log.info("🖥 Running tests in NORMAL mode");
 		}
 
-		// This argument helps resolve websocket connection issues with newer Chrome
 		options.addArguments("--remote-allow-origins=*");
 
 		driver = new ChromeDriver(options);
 
-//		driver.get("https://brunetcroma.eyeclinic.ai/");
-		driver.manage().deleteAllCookies();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-//		driver.manage().timeouts().implicitlyWait(60, driver);
+		if (!isHeadless) {
+			driver.manage().window().maximize();
+		}
 
-//		pom = new EvaaChatPom(driver);
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+
 		pom = new BookAppointment(driver);
 		config = new ConfigReader();
-		wait = new WebDriverWait(driver, Duration.ofSeconds(70));
+		wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 
+		// Load config values
 		userName = config.getProperty("Username");
 		userPassword = config.getProperty("UserPassword");
 		dob = config.getProperty("dob");
@@ -102,49 +125,47 @@ public class EvvaChatBaseClass {
 		botUrl = config.getProperty("botUrl");
 		maximeyesURL = config.getProperty("maximeyesURL");
 		maxUserName = config.getProperty("MaxUserName");
-		maxUserPass = config.getProperty("MaxUserName");
+		maxUserPass = config.getProperty("MaxUserPass"); // 🔁 Fixed typo here
 		adminURL = config.getProperty("adminURL");
 		URL = config.getProperty("URL");
+
 		extent = ExtentManager.getReportInstance();
 	}
 
 	@BeforeMethod
 	public void setUp(Method method) {
-		test = extent.createTest(method.getName()); // Start test in Extent Report
+		test = extent.createTest(method.getName());
 	}
 
 	@AfterMethod
 	public void tearDown(ITestResult result) {
-	    if (result.getStatus() == ITestResult.FAILURE) {
-	        String screenshotPath = ScreenshotUtil.captureScreenshot(driver, result.getName());
-	        test.fail(
-	            "<b>❌ Test Failed:</b> " + result.getName() + "<br><b>💥 Reason:</b> " + result.getThrowable().getMessage(),
-	            MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build()
-	        );
+		if (result.getStatus() == ITestResult.FAILURE) {
+			String screenshotPath = ScreenshotUtil.captureScreenshot(driver, result.getName());
+			test.fail(
+					"<b>❌ Test Failed:</b> " + result.getName() + "<br><b>💥 Reason:</b> "
+							+ result.getThrowable().getMessage(),
+					MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+			log.error("❌ Test Failed: " + result.getName() + " | Reason: " + result.getThrowable().getMessage());
+			attachLogsToExtentReport();
 
-	        // Log only on failure
-	        log.error("❌ Test Failed: " + result.getName() + " | Reason: " + result.getThrowable().getMessage());
-
-	        // Optional: Add logs to report
-	        attachLogsToExtentReport(); 
-
-	    } else if (result.getStatus() == ITestResult.SUCCESS) {
-	        test.pass("<b>✅ Test Passed:</b> " + result.getName());
-	        // No logging for success
-	    } else {
-	        test.skip("<b>⚠️ Test Skipped:</b> " + result.getName());
-	        // No logging for skipped
-	    }
+		} else if (result.getStatus() == ITestResult.SUCCESS) {
+			test.pass("<b>✅ Test Passed:</b> " + result.getName());
+		} else {
+			test.skip("<b>⚠️ Test Skipped:</b> " + result.getName());
+		}
 	}
 
 	@AfterClass
 	public void closeBrowser() {
-		driver.quit();
+		if (driver != null) {
+			driver.manage().deleteAllCookies();
+			driver.quit();
+		}
 		extent.flush();
 
-		String reportPath = System.getProperty("user.dir") + "/reports/ExtentReport.html";
-		File reportFile = new File(reportPath);
 		try {
+			String reportPath = System.getProperty("user.dir") + "/reports/ExtentReport.html";
+			File reportFile = new File(reportPath);
 			Desktop.getDesktop().browse(reportFile.toURI());
 		} catch (IOException e) {
 			log.error("⚠️ Error opening Extent Report: " + e.getMessage());
@@ -154,12 +175,11 @@ public class EvvaChatBaseClass {
 	private void attachLogsToExtentReport() {
 		try {
 			String logContent = new String(Files.readAllBytes(Paths.get(LOG_FILE_PATH)));
-
-			// Filter to include only ERROR level logs (or CRITICAL if defined)
 			String filteredLogs = logContent.replaceAll("(?m)^((?!ERROR).)*$", "").trim();
 
 			if (!filteredLogs.isEmpty()) {
-				test.log(Status.FAIL, "<details><summary>📜 View Error Logs</summary><pre>" + filteredLogs + "</pre></details>");
+				test.log(Status.FAIL,
+						"<details><summary>📜 View Error Logs</summary><pre>" + filteredLogs + "</pre></details>");
 			}
 		} catch (IOException e) {
 			log.error("⚠️ Error reading log file: " + e.getMessage());

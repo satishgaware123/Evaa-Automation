@@ -7,9 +7,10 @@
         <methods>
           <include name="closeBrowser"/>
           <include name="tearDown"/>
+          <include name="cleanScreenshotFolder"/>
           <include name="startBrowser"/>
           <include name="setUp"/>
-          <include name="Enable_cancel_appointment_settings_from_admin"/>
+          <include name="DisableCancelAppointmentSettingsInPreferences"/>
         </methods>
       </class> <!-- com.evaa.chatbot.AppointmentCancelTest -->
     </classes>
