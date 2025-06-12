@@ -37,7 +37,7 @@ public class AppointmentCancelTest extends EvvaChatBaseClass {
 
 		pom.clickOnSettings();
 		pom.clickOnSettingsPreferences();
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 
 		if (!pom.AppointmentCancelCheckBox().isSelected()) {
 			pom.AppointmentCancelCheckBox().click();
@@ -49,6 +49,9 @@ public class AppointmentCancelTest extends EvvaChatBaseClass {
 			pom.allowInsuranceRequiredCheckBox().click();
 		}
 		Thread.sleep(5000);
+		pom.clickOnUserProfile();
+		pom.clickOnLogout();
+		Thread.sleep(1000);
 	}
 
 	@Test(priority = 2)
@@ -124,11 +127,11 @@ public class AppointmentCancelTest extends EvvaChatBaseClass {
 	@Test(priority = 5)
 	public void DisableCancelAppointmentSettingsInPreferences() throws Exception {
 		driver.get(adminURL);
-//		pom.loginWithMaximEyes();
-//		pom.enterUsername().sendKeys(userName);
-//		pom.enterPassword().sendKeys(userPassword);
-//		pom.enterURL().sendKeys(URL);
-//		pom.clickOnLogin();
+		pom.loginWithMaximEyes();
+		pom.enterUsername().sendKeys(userName);
+		pom.enterPassword().sendKeys(userPassword);
+		pom.enterURL().sendKeys(URL);
+		pom.clickOnLogin();
 
 //		WebElement botDropdown = wait
 //				.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='AccountId']")));

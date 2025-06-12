@@ -79,7 +79,7 @@ public class EvvaChatBaseClass {
 		} else {
 			System.out.println(" Report folder does not exist.");
 		}
-		driver.manage().deleteAllCookies();
+
 	}
 
 	@BeforeClass

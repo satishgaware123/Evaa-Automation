@@ -36,39 +36,30 @@ public class RescheduleAppointmentTest extends EvvaChatBaseClass {
 //		dropdown.selectByIndex(0);
 		pom.clickOnSettings();
 		pom.clickOnSettingsPreferences();
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 		
-
 		WebElement AppointmentRescheduling = wait.until(ExpectedConditions.elementToBeClickable(By.id("AppointmentReschedulingId")));
-		if (!AppointmentRescheduling.isSelected()) {
+		if (AppointmentRescheduling.isSelected()) {
 			AppointmentRescheduling.click();
-			System.out.println("insuranceReqApptId checkbox was Unselected. Now checked.");
-		} else {
-			System.out.println("insuranceReqApptId checkbox was already selected.");
 		}
 		Thread.sleep(3000);
+		pom.clickOnUserProfile();
+		pom.clickOnLogout();
+		Thread.sleep(1000);
 	}   
     
     @Test(priority = 2)
     public void Test_Reschedule_an_appointment_for_new_user() throws Exception {
-
-        driver.get(botUrl);
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#chat-widget-push-to-talk > img"))).click();
-        driver.switchTo().frame(0);
-        WebElement bookAppointment = wait
-                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//textarea[@id='chatbox']")));
-        bookAppointment.sendKeys("reschedule appointment");
-        WebElement send_button = wait
-                .until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='chat_submit']")));
-        send_button.click();
+		driver.get(botUrl);
+		pom.openChatBot();
+		driver.switchTo().frame(0);
+		pom.chatMSG.sendKeys("reschedule appointment");
+		pom.chatSubmit();
         Thread.sleep(1000);
 		PrimaryInformationPage();
-        System.out.println("i am on otp page");
         driver.findElement(By.id("otp1")).sendKeys("9753");
-        pom.next_button_on_otp_page().click();          
-        WebElement upcomingAppointment = driver.findElement(By.xpath("(//div[contains(text(),'Upcoming Appointment')])[1]"));       
-        String title = upcomingAppointment.getText();
-        Assert.assertEquals(title, "upcoming Appointment ");
+        pom.next_button_on_otp_page().click();      
+        Assert.assertEquals(pom.noUpcommingApptMsg().getText(), "You have no upcoming appointments scheduled.");
         Thread.sleep(5000);
     }
 
@@ -113,7 +104,10 @@ public class RescheduleAppointmentTest extends EvvaChatBaseClass {
    		fillPrimaryInformationPage();
    		driver.findElement(By.id("otp1")).sendKeys("9753");
    		pom.next_button_on_otp_page().click();
-
+   		pom.clickOnRescheduleButton();
+   		pom.selectAppointment();
+   		pom.rescheduleAppt();
+   		
    		fillAppointmentDetails();
    		selectTomorrowDate();
    		selectTimeSlot();
@@ -122,9 +116,6 @@ public class RescheduleAppointmentTest extends EvvaChatBaseClass {
    		verifyAppointmentDetails();
    		Thread.sleep(3000);
    	}
-    ///
-    
-    
     
     
     private void verifyAppointmentDetails() {
@@ -180,56 +171,40 @@ public class RescheduleAppointmentTest extends EvvaChatBaseClass {
 	private void waitForElementVisible2(WebElement element) {
 		new WebDriverWait(driver, Duration.ofSeconds(90)).until(ExpectedConditions.visibilityOf(element));
 	}
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void Disable_Reschedule_from_admin() throws Exception {
 
-		driver.get("https://assistant2-pinecone-admin.evaa.ai/");
-		driver.findElement(By.xpath("//button[text()=' MaximEyes']")).click();
-		driver.findElement(By.id("Username")).sendKeys("satishG");
-		driver.findElement(By.id("Password")).sendKeys("Admin@1234");
-		driver.findElement(By.id("MaximEyeURL")).sendKeys("burneteyecarepinecone");
-		driver.findElement(By.xpath("//button[text()='Login']")).click();
-
-//		WebElement botDropdown = wait
-//				.until(ExpectedConditions.elementToBeClickable((By.xpath("//select[@id='AccountId']"))));
-//		Select dropdown = new Select(botDropdown);
-//		dropdown.selectByIndex(0);
-		WebElement settings = wait
-				.until(ExpectedConditions.elementToBeClickable((By.xpath("//a[@id='settingsLinkOld']"))));
-		settings.click();
-
-		WebElement preferences = wait
-				.until(ExpectedConditions.elementToBeClickable((By.xpath("//span[text()='Preferences  ']"))));
-		preferences.click();
+		driver.get(adminURL);
+		pom.loginWithMaximEyes();
+		pom.enterUsername().sendKeys(userName);
+		pom.enterPassword().sendKeys(userPassword);
+		pom.enterURL().sendKeys(URL);
+		pom.clickOnLogin();
+		pom.clickOnSettings();
+		pom.clickOnSettingsPreferences();
 		Thread.sleep(5000);
-
 
 		WebElement AppointmentRescheduling = wait.until(ExpectedConditions.elementToBeClickable(By.id("AppointmentReschedulingId")));
 		if (AppointmentRescheduling.isSelected()) {
 			AppointmentRescheduling.click();
 			System.out.println("insurance Req Appt checkbox was selected. Now Unchecked.");
-		} else {
-			System.out.println("insurance Req Appt  checkbox was already Unselected.");
 		}
 		Thread.sleep(3000);
+		pom.clickOnUserProfile();
+		pom.clickOnLogout();
 	}
 
 
-	@Test(priority = 5)
+	@Test(priority = 6)
 	public void TestRescheduleAppointmentDisabled() throws Exception {
 
-		driver.get(botUrl);
-		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#chat-widget-push-to-talk > img"))).click();
-		driver.switchTo().frame(0);
-		WebElement bookAppointment = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//textarea[@id='chatbox']")));
-		bookAppointment.sendKeys("reschedule appointment");
-		WebElement send_button = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='chat_submit']")));
-		send_button.click();
+   		driver.get(botUrl);
+   		pom.openChatBot();
+   		driver.switchTo().frame(0); 
+   		pom.chatMSG.sendKeys("reschedule an appointment");
+   		pom.chatSubmit();
 		Thread.sleep(1000);
  
-		// Wait for either message to appear
 		WebElement message = wait.until(ExpectedConditions.visibilityOfElementLocated(
 				By.xpath("//div[contains(text(),'do not have') or contains(text(),'capability')]")));
 

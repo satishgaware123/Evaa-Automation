@@ -34,10 +34,6 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 		pom.enterPassword().sendKeys(userPassword);
 		pom.enterURL().sendKeys("burneteyecarepinecone");;
 		pom.clickOnLogin();
-//		WebElement botDropdown = wait
-//				.until(ExpectedConditions.elementToBeClickable((By.xpath("//select[@id='AccountId']"))));
-//		Select dropdown = new Select(botDropdown);
-//		dropdown.selectByIndex(0);
 		pom.clickOnSettings();
 		pom.clickOnSettingsPreferences();
 		Thread.sleep(5000);
@@ -139,6 +135,29 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 		Thread.sleep(5000);
 
 	}
+	
+	
+	@Test(priority = 4)
+	public void  While_booking_an_appointment_clicking_No_should_display_a_message_with_a_Contact_Us_link() throws Exception {
+		driver.get(botUrl);
+		pom.openChatBot();
+		driver.switchTo().frame(0); 
+
+		pom.chatMSG.sendKeys("book appointment");
+		pom.chatSubmit();
+		Thread.sleep(1000);
+
+		verifyRoutineAppointmentMessage();
+
+		pom.chatMSG.sendKeys("No");
+		pom.chatSubmit();
+		
+		String contactMSG =  pom.contactMsg().getText().trim();
+		Assert.assertEquals(contactMSG, "You can find our location and contact details here: https://brunetpinecone.eyeclinic.ai/contact-us/ . We’re happy to help!");
+		
+
+	}
+	
 	private void verifyRoutineAppointmentMessage() {
 		WebElement msg = wait.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//div[contains(text(),'Online appointment booking is only for routine exam')]")));

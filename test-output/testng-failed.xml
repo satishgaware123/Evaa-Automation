@@ -3,16 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.evaa.chatbot.SendTranscriptionTest">
+      <class name="com.evaa.chatbot.AppointmentCancelTest">
         <methods>
+          <include name="TestCancelAppointmentDisable"/>
           <include name="closeBrowser"/>
           <include name="tearDown"/>
+          <include name="cancelAppointmentForExistingPatient"/>
           <include name="cleanScreenshotFolder"/>
           <include name="startBrowser"/>
+          <include name="bookAppointment"/>
           <include name="setUp"/>
-          <include name="Test_send_transcription_is_working"/>
+          <include name="cancelAppointmentForNewPatient"/>
+          <include name="DisableCancelAppointmentSettingsInPreferences"/>
         </methods>
-      </class> <!-- com.evaa.chatbot.SendTranscriptionTest -->
+      </class> <!-- com.evaa.chatbot.AppointmentCancelTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
