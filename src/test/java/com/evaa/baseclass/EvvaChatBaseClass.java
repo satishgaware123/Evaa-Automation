@@ -25,6 +25,7 @@ import com.evaa.utils.ExtentManager;
 import com.evaa.utils.ScreenshotUtil;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class EvvaChatBaseClass {
 
 	protected WebDriver driver;
@@ -52,43 +53,41 @@ public class EvvaChatBaseClass {
 
 	@BeforeSuite
 	public void cleanScreenshotFolder() {
-	     String screenshotPath = System.getProperty("user.dir") + File.separator + "screenshots";
-	        File folder = new File(screenshotPath);
+		String screenshotPath = System.getProperty("user.dir") + File.separator + "screenshots";
+		File folder = new File(screenshotPath);
+		if (folder.exists() && folder.isDirectory()) {
+			for (File file : folder.listFiles()) {
+				if (file.isFile()) {
+					file.delete();
+				}
+			}
+			System.out.println("All screenshots deleted.");
+		} else {
+			System.out.println("Screenshot folder does not exist.");
+		}
 
-	        if (folder.exists() && folder.isDirectory()) {
-	            for (File file : folder.listFiles()) {
-	                if (file.isFile()) {
-	                    file.delete();
-	                }
-	            }
-	            System.out.println("All screenshots deleted.");
-	        } else {
-	            System.out.println("Screenshot folder does not exist.");
-	        }
-	        
-	        String AllurReport = System.getProperty("user.dir") + File.separator + "allure-results";
-	        File folder2 = new File(AllurReport);
+		String AllurReport = System.getProperty("user.dir") + File.separator + "allure-results";
+		File folder2 = new File(AllurReport);
 
-	        if (folder2.exists() && folder2.isDirectory()) {
-	            for (File file1 : folder2.listFiles()) {
-	                if (file1.isFile()) {
-	                    file1.delete();
-	                }
-	            }
-	            System.out.println("All screenshots deleted.");
-	        } else {
-	            System.out.println("Screenshot folder does not exist.");
-	        }
-	        
-	    }
-
+		if (folder2.exists() && folder2.isDirectory()) {
+			for (File file1 : folder2.listFiles()) {
+				if (file1.isFile()) {
+					file1.delete();
+				}
+			}
+			System.out.println("All old Report are deleted.");
+		} else {
+			System.out.println(" Report folder does not exist.");
+		}
+		driver.manage().deleteAllCookies();
+	}
 
 	@BeforeClass
 	public void startBrowser() {
 		WebDriverManager.chromedriver().setup();
 
 		ChromeOptions options = new ChromeOptions();
-		boolean isHeadless = System.getProperty("headless", "true").equalsIgnoreCase("true");
+		boolean isHeadless = System.getProperty("headless", "false").equalsIgnoreCase("true");
 
 		if (isHeadless) {
 			options.addArguments("--headless=new");

@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-<listeners>
+	<listeners>
 		<listener class-name="com.evaa.utils.RetryListener"/>
 		 <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-     <class name="com.evaa.chatbot.AppointmentCancelTest"/>
+      <class name="com.evaa.chatbot.SendTranscriptionTest"/>
+      <class name="com.evaa.chatbot.AppointmentCancelTest"/>
       <class name="com.evaa.chatbot.AppointmentStatusTest"/>
+      <class name="com.evaa.chatbot.OpticalOrderCheckTest"/>
       <class name="com.evaa.chatbot.BookAppointmentSuccessfullyWithInsuranceTest"/>
       <class name="com.evaa.chatbot.BookAppointmentSuccessfullyTest"/>
       <class name="com.evaa.chatbot.RescheduleAppointmentTest"/>

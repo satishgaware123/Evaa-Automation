@@ -143,11 +143,51 @@ public class BookAppointment extends EvvaChatBaseClass {
 		return AppointmentCancelCheckBox;
 	}
 	
+	@FindBy(how = How.ID, using = "OpticalOrderChecksId")
+	private WebElement opticalOrderCheckBox;
+	public WebElement opticalOrderCheckBox() {
+		return opticalOrderCheckBox;
+	}
+	
+	
+	@FindBy(how = How.ID, using = "//div//p[contains(text(),'don')]")
+	private WebElement permissionMsg;
+	public WebElement permissionMsg() {
+		return permissionMsg;
+	}
+	
+		
+	@FindBy(how = How.ID, using = "AppointmentStatusCheckingId")
+	private WebElement AppointmentStatusCheckBox;
+	public WebElement AppointmentStatusCheckBox() {
+		return AppointmentStatusCheckBox;
+	}
+	
+	
 	@FindBy(how = How.ID, using = "ShowAppointmentBookingId")
 	private WebElement allowAppointmentBookingCheckBox;
 	public WebElement allowAppointmentBookingCheckBox() {
 		return allowAppointmentBookingCheckBox;
 	}
+	@FindBy(how = How.XPATH, using = "//div[contains(text(),'Still')]")
+	private WebElement areYouStillThereMSG;
+	public WebElement areYouStillThereMSG() {
+		return areYouStillThereMSG;
+	}
+	
+	@FindBy(how = How.XPATH, using = "//div[contains(text(),'transcription')]")
+	private WebElement sentTranscription;
+	public WebElement sentTranscription() {
+		waitForElementVisible(sentTranscription);
+		return sentTranscription;
+	}
+	
+	@FindBy(how = How.XPATH, using = "//div[@id='emailError']")
+	private WebElement emailError;
+	public WebElement emailError() {
+		return emailError;
+	}
+	
 	
 	@FindBy(how = How.ID, using = "UploadInsCardId")
 	private WebElement allowInsuranceRequiredCheckBox;
@@ -221,7 +261,35 @@ public class BookAppointment extends EvvaChatBaseClass {
 		loginWithMaximEyes.click();
 	}
 	
-	//cancel appointment on chatbot
+	
+	@FindBy(how = How.XPATH, using = "//a[@id='menuToggle']")
+	private WebElement clickSortMenu;
+	public void clickSortMenu() {
+		waitForElementVisible(clickSortMenu);
+		clickSortMenu.click();
+	}
+
+	@FindBy(how = How.XPATH, using = "//a[text()='Email Transcription']")
+	private WebElement clickEmailTranscription;
+	public void clickEmailTranscription() {
+		waitForElementVisible(clickEmailTranscription);
+		clickEmailTranscription.click();
+	}
+	
+	
+	@FindBy(how = How.ID, using = "recipientEmail")
+	private WebElement enterEmail;
+	public WebElement enterEmail() {
+		waitForElementVisible(enterEmail);
+		return enterEmail;
+	}
+	
+	@FindBy(how = How.XPATH, using = "//button[@id='emailSendBtn']")
+	private WebElement sendTranscription;
+	public void sendTranscription() {
+		waitForElementVisible(sendTranscription);
+		sendTranscription.click();
+	}
 	
 	@FindBy(how = How.XPATH, using = "(//div[@id='appointmentsContainer']//following::span[contains(text(),'Cancel')])[1]")
 	private WebElement cancelRescheduleAppointmentButton;
@@ -383,10 +451,15 @@ public class BookAppointment extends EvvaChatBaseClass {
 
 	@FindBy(how = How.XPATH, using = "(//div[text()='Available insurance'])[1]")
 	private WebElement insurancePageTitle;
-
 	public WebElement insurancePageTitle() {
 		return insurancePageTitle;
 	}
+	@FindBy(how = How.XPATH, using = "//div[contains(text(),'No Optical')]")
+	private WebElement noOpticalOrderMsg;
+	public WebElement noOpticalOrderMsg() {
+		return noOpticalOrderMsg;
+	}
+	
 
 	public WebElement getLastNameField() {
 		return lastNameField;
