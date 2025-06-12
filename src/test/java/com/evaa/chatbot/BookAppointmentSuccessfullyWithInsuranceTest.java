@@ -1,4 +1,4 @@
-package com.evaa.chatbot;
+	package com.evaa.chatbot;
 
 import java.time.Duration;
 import java.time.LocalDate;
@@ -227,38 +227,14 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		enterText(pom.getEmailField(), "QA" + email);
 		pom.next_button_on_primary_page();
 	}
-	public void fillAppointmentDetails() throws Exception {
-
-		WebElement locationdropdown = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("(//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[1]")));
-
-		locationdropdown.click();
-
-		WebElement location = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Pune']")));
-		location.click();
-
-		WebElement ProviderDropdown = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("(//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[2]")));
-
-		ProviderDropdown.click();
-
-		WebElement Provider = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[text()='Dr Smith'])[2]")));
-		Provider.click();
-
-		WebElement resonDropdown = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("(//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[3]")));
-
-		resonDropdown.click();
-
-		WebElement reason = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//div[text()='Vision Exam -Comprehensive Eye Exam']")));
-		reason.click();
-
-		WebElement next = wait.until(ExpectedConditions.elementToBeClickable(
-				By.xpath("//div[@class='pr-4 pl-4']//div[@class='v-select__slot']//following::span[text()='NEXT']")));
-		next.click();
-
+	private void fillAppointmentDetails() throws Exception {
+		pom.openLocationDropdown();
+		pom.selectLocation();
+		pom.openProviderDropdown();
+		pom.selectProvider();
+		pom.openReasonDropdown();
+		pom.selectReasonForBooking();
+		pom.saveAppointmentDetails();
 	}
 
 	private void selectTimeSlot() throws Exception {  

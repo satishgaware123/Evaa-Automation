@@ -23,16 +23,7 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 	final String expectedLastName = faker.name().lastName();
 	final String expectedNumber = faker.number().digits(10);
 
-	public void check_the_response() {
 
-		WebElement msg = wait.until(ExpectedConditions.elementToBeClickable(
-				By.xpath("//div[contains(text(),'Online appointment booking is only for routine exam')]")));
-		String txtmsg = msg.getText();
-
-		Assert.assertTrue(
-				txtmsg.contains("Online appointment booking is only for routine exam and follow up appointments"));
-
-	}
 
 	@Test(priority = 1)
 	public void Disable_ensurance_required_from_admin() throws Exception {
@@ -70,20 +61,18 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 
 	@Test(priority = 2, dependsOnMethods = {"Disable_ensurance_required_from_admin"})
 	public void Test_book_appointment_without_insurance() throws Exception {
-
 		driver.get(botUrl);
-		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#chat-widget-push-to-talk > img"))).click();
-		driver.switchTo().frame(0);
-		WebElement bookAppointment = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//textarea[@id='chatbox']")));
-		bookAppointment.sendKeys("book appointment");
-		WebElement send_button = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='chat_submit']")));
-		send_button.click();
+		pom.openChatBot();
+		driver.switchTo().frame(0); 
+
+		pom.chatMSG.sendKeys("book appointment");
+		pom.chatSubmit();
 		Thread.sleep(1000);
-		check_the_response();
-		bookAppointment.sendKeys("yes");
-		send_button.click();
+
+		verifyRoutineAppointmentMessage();
+
+		pom.chatMSG.sendKeys("yes");
+		pom.chatSubmit();
 		PrimaryInformationPage();
 
 		driver.findElement(By.id("otp1")).sendKeys("9753");
@@ -92,7 +81,6 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 		System.out.println("Expected: " + expectedFirstName);
 		System.out.println("Actual  : " + expectedLastName);
 
-		// appoitment detail page - select location, provider, reason
 		fillAppointmentDetails();
 		selectTomorrowDate();
 		selectTimeSlot();
@@ -151,6 +139,13 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 		Thread.sleep(5000);
 
 	}
+	private void verifyRoutineAppointmentMessage() {
+		WebElement msg = wait.until(ExpectedConditions.elementToBeClickable(
+				By.xpath("//div[contains(text(),'Online appointment booking is only for routine exam')]")));
+		String txtMsg = msg.getText();
+		Assert.assertTrue(
+				txtMsg.contains("Online appointment booking is only for routine exam and follow up appointments"));
+	}
 
 	public void waitForElementVisible2(WebElement element) {
 		new WebDriverWait(driver, Duration.ofSeconds(90)).until(ExpectedConditions.visibilityOf(element));
@@ -181,38 +176,14 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 		pom.next_button_on_primary_page();
 	}
 
-	public void fillAppointmentDetails() throws Exception {
-
-		WebElement locationdropdown = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("(//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[1]")));
-
-		locationdropdown.click();
-
-		WebElement location = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[text()='Pune']")));
-		location.click();
-
-		WebElement ProviderDropdown = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("(//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[2]")));
-
-		ProviderDropdown.click();
-
-		WebElement Provider = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[text()='Dr Smith'])[2]")));
-		Provider.click();
-
-		WebElement resonDropdown = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("(//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[3]")));
-
-		resonDropdown.click();
-
-		WebElement reason = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//div[text()='Vision Exam -Comprehensive Eye Exam']")));
-		reason.click();
-
-		WebElement next = wait.until(ExpectedConditions.elementToBeClickable(
-				By.xpath("//div[@class='pr-4 pl-4']//div[@class='v-select__slot']//following::span[text()='NEXT']")));
-		next.click();
-
+	private void fillAppointmentDetails() throws Exception {
+		pom.openLocationDropdown();
+		pom.selectLocation();
+		pom.openProviderDropdown();
+		pom.selectProvider();
+		pom.openReasonDropdown();
+		pom.selectReasonForBooking();
+		pom.saveAppointmentDetails();
 	}
 
 	public void selectTimeSlot() throws Exception {

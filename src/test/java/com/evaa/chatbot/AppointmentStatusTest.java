@@ -48,23 +48,14 @@ public class AppointmentStatusTest extends EvvaChatBaseClass {
 		pom.clickOnSettings();
 		pom.clickOnSettingsPreferences();
 		Thread.sleep(5000);
-		WebElement checkbox1 = wait
-				.until(ExpectedConditions.elementToBeClickable(By.id("AppointmentStatusCheckingId")));
-		if (!checkbox1.isSelected()) {
-			checkbox1.click();
+		if (!pom.AppointmentStatusCheckBox().isSelected()) {
+			pom.AppointmentStatusCheckBox().click();
 			System.out.println("Enable the Appointment Status Checking");
-		} else {
-			System.out.println("Allready Enable Enable the Appointment Status Checking");
-		}
+		} 
 
-		WebElement ShowAppointmentBookingId = wait
-				.until(ExpectedConditions.elementToBeClickable(By.id("ShowAppointmentBookingId")));
-		if (!ShowAppointmentBookingId.isSelected()) {
-			ShowAppointmentBookingId.click();
-			System.out.println("Enable the Appointment Booking");
-		} else {
-			System.out.println("Allready Enable Enable the Appointment Booking");
-		}
+		if (!pom.allowAppointmentBookingCheckBox().isSelected()) {
+			pom.allowAppointmentBookingCheckBox().click();
+		} 
 		WebElement ensurance = wait.until(ExpectedConditions.elementToBeClickable(By.id("UploadInsCardId")));
 		if (ensurance.isSelected()) {
 			ensurance.click();

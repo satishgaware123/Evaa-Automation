@@ -683,3 +683,52 @@ System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.a
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55999}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55999/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
 Session ID: 5d58da7a7ff3d6f3c27d4c162a6bc007
+2025-06-11 16:56:32 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_send_transcription_is_working | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: #chat-widget-push-to-talk > img' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-11 17:40:47 ERROR EvvaChatBaseClass - ❌ Test Failed: check_optical_order_status_for_new_user | Reason: expected [true] but found [false]
+2025-06-11 17:43:29 ERROR EvvaChatBaseClass - ❌ Test Failed: check_optical_order_status_for_new_user | Reason: expected [true] but found [false]
+2025-06-11 18:00:14 ERROR EvvaChatBaseClass - ❌ Test Failed: checkOpticlOrderShouldNotInitiateAfterDisableFromEvaaAdmin | Reason: no such element: Unable to locate element: {"method":"css selector","selector":"#\/\/div\/\/p\[contains\(text\(\)\,\'don\'\)\]"}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '192.168.35.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3f2aa944e1bfd287381a8865141d48c9, findElement {using=id, value=//div//p[contains(text(),'don')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65490}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65490/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3f2aa944e1bfd287381a8865141d48c9
+2025-06-11 18:03:16 ERROR EvvaChatBaseClass - ❌ Test Failed: checkOpticlOrderShouldNotInitiateAfterDisableFromEvaaAdmin | Reason: no such element: Unable to locate element: {"method":"css selector","selector":"#\/\/div\/\/p\[contains\(text\(\)\,\'don\'\)\]"}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '192.168.35.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e8226ff3b77858061f996c06618bee69, findElement {using=id, value=//div//p[contains(text(),'don')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49392}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49392/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e8226ff3b77858061f996c06618bee69
+2025-06-11 18:04:48 ERROR EvvaChatBaseClass - ❌ Test Failed: checkOpticlOrderShouldNotInitiateAfterDisableFromEvaaAdmin | Reason: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (73f1a4f0538eddf487197032d1cdbcdb)] -> css selector: #chat-widget-push-to-talk > img] (tried for 50 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '192.168.35.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49630}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49630/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 73f1a4f0538eddf487197032d1cdbcdb
+2025-06-11 18:06:57 ERROR EvvaChatBaseClass - ❌ Test Failed: checkOpticlOrderShouldNotInitiateAfterDisableFromEvaaAdmin | Reason: no such element: Unable to locate element: {"method":"css selector","selector":"#\/\/div\/\/p\[contains\(text\(\)\,\'don\'\)\]"}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '192.168.35.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [993b4ba2ffe60acd319dfaf6920116c6, findElement {using=id, value=//div//p[contains(text(),'don')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49769}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49769/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 993b4ba2ffe60acd319dfaf6920116c6
+2025-06-12 10:33:13 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_send_transcription_is_working | Reason: null
+2025-06-12 10:43:16 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_send_transcription_is_working | Reason: null
+2025-06-12 10:49:13 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_send_transcription_is_working | Reason: null
+2025-06-12 10:54:39 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_send_transcription_is_working | Reason: null
+2025-06-12 10:57:38 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_send_transcription_is_working | Reason: expected [true] but found [false]
+2025-06-12 10:57:59 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_send_transcription_is_working | Reason: null
+2025-06-12 11:03:20 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_send_transcription_is_working | Reason: expected [Your email transcription has been sent
+successfully.] but found [Your email transcription has been sent
+successfully.]
+2025-06-12 11:04:49 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_send_transcription_is_working | Reason: expected [Your email transcription has been sent successfully.] but found [Your email transcription has been sent
+successfully.]
+2025-06-12 11:06:27 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_send_transcription_is_working | Reason: expected [Your email transcription has been sent successfully.] but found [Your email transcription has been sent
+successfully.]
