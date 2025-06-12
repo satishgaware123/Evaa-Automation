@@ -28,13 +28,17 @@ public class OpticalOrderCheckTest extends EvvaChatBaseClass {
 
 		pom.clickOnSettings();
 		pom.clickOnSettingsPreferences();
-		Thread.sleep(5000);
+		Thread.sleep(4000);
 
 		if (!pom.opticalOrderCheckBox().isSelected()) {
 			pom.opticalOrderCheckBox().click();
 		}
 
 		Thread.sleep(5000);
+		pom.clickOnUserProfile();
+		pom.clickOnLogout();
+		Thread.sleep(1000);
+		
 	}
 
 	@Test(priority = 2)
@@ -71,6 +75,9 @@ public class OpticalOrderCheckTest extends EvvaChatBaseClass {
 		}
 
 		Thread.sleep(5000);
+		pom.clickOnUserProfile();
+		pom.clickOnLogout();
+		driver.manage().deleteAllCookies();
 	}
 
 	@Test(priority = 4)

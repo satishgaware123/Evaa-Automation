@@ -43,29 +43,21 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		pom.enterPassword().sendKeys(userPassword);
 		pom.enterURL().sendKeys(URL);;
 		pom.clickOnLogin();
-//		WebElement botDropdown = wait
-//				.until(ExpectedConditions.elementToBeClickable((By.xpath("//select[@id='AccountId']"))));
-//		Select dropdown = new Select(botDropdown);
-//		dropdown.selectByIndex(0);
 		pom.clickOnSettings();
 		pom.clickOnSettingsPreferences();
 		Thread.sleep(5000);
 		WebElement checkbox1 = wait.until(ExpectedConditions.elementToBeClickable(By.id("UploadInsCardId")));
 		if (!checkbox1.isSelected()) {
 			checkbox1.click();
-			System.out.println("Enable the insurance");
-		} else {
-			System.out.println("Allready Enable");
 		}
-
-		WebElement checkbox2 = wait.until(ExpectedConditions.elementToBeClickable(By.id("insuranceReqApptId")));
-		if (!checkbox2.isSelected()) {
-			checkbox2.click();
-			System.out.println("Enable the insurance");
-		} else {
-			System.out.println("Allready Enable");
+		if (!pom.allowInsuranceRequiredCheckBox().isSelected()) {
+			pom.allowInsuranceRequiredCheckBox().click();
+			
 		}
 		Thread.sleep(5000);
+		pom.clickOnUserProfile();
+		pom.clickOnLogout();
+		Thread.sleep(1000);
 	}
 
 	@Test(priority = 2, enabled = true) 

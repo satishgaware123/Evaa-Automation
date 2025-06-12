@@ -23,18 +23,18 @@ public class SendTranscriptionTest extends EvvaChatBaseClass {
 		pom.enterPassword().sendKeys(userPassword);
 		pom.enterURL().sendKeys(URL);
 		pom.clickOnLogin();
-
-
 		pom.clickOnSettings();
 		pom.clickOnSettingsPreferences();
-		Thread.sleep(5000);
-
+		Thread.sleep(4000);
 
 		if (!pom.AppointmentStatusCheckBox().isSelected()) {
 			pom.AppointmentStatusCheckBox().click();
 			System.out.println("Enable the Appointment Status Checking");
 		} 
 		Thread.sleep(5000);
+		pom.clickOnUserProfile();
+		pom.clickOnLogout();
+		Thread.sleep(1000);
 	}
 
 	@Test(priority = 2, enabled = true)
@@ -85,6 +85,7 @@ public class SendTranscriptionTest extends EvvaChatBaseClass {
 	
 	@Test(priority = 5, enabled = true)
 	public void Test_show_error_when_transcription_sent_with_invalid_email() throws Exception {
+		driver.navigate().refresh();
 		pom.openChatBot();
 		driver.switchTo().frame(0); 
 		pom.clickSortMenu();

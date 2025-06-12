@@ -39,50 +39,37 @@ public class AppointmentStatusTest extends EvvaChatBaseClass {
 		pom.enterUsername().sendKeys(userName);
 		pom.enterPassword().sendKeys(userPassword);
 		pom.enterURL().sendKeys(URL);
-		;
 		pom.clickOnLogin();
-//		WebElement botDropdown = wait
-//				.until(ExpectedConditions.elementToBeClickable((By.xpath("//select[@id='AccountId']"))));
-//		Select dropdown = new Select(botDropdown);
-//		dropdown.selectByIndex(0);
 		pom.clickOnSettings();
 		pom.clickOnSettingsPreferences();
 		Thread.sleep(5000);
 		if (!pom.AppointmentStatusCheckBox().isSelected()) {
 			pom.AppointmentStatusCheckBox().click();
-			System.out.println("Enable the Appointment Status Checking");
-		} 
-
+		}
 		if (!pom.allowAppointmentBookingCheckBox().isSelected()) {
 			pom.allowAppointmentBookingCheckBox().click();
-		} 
-		WebElement ensurance = wait.until(ExpectedConditions.elementToBeClickable(By.id("UploadInsCardId")));
-		if (ensurance.isSelected()) {
-			ensurance.click();
-			System.out.println("disable the insurance");
-		} else {
-			System.out.println("Allready disable");
 		}
+		if (pom.allowInsuranceRequiredCheckBox().isSelected()) {
+			pom.allowInsuranceRequiredCheckBox().click();
+		} 
 
 		Thread.sleep(5000);
+		pom.clickOnUserProfile();
+		pom.clickOnLogout();
+		Thread.sleep(1000);
 	}
 
 	@Test(priority = 2)
 	public void Test_book_appointment_without_insurance() throws Exception {
-
 		driver.get(botUrl);
-		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#chat-widget-push-to-talk > img"))).click();
+		pom.openChatBot();
 		driver.switchTo().frame(0);
-		WebElement bookAppointment = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//textarea[@id='chatbox']")));
-		bookAppointment.sendKeys("book appointment");
-		WebElement send_button = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='chat_submit']")));
-		send_button.click();
+		pom.chatMSG.sendKeys("book appointment");
+		pom.chatSubmit();
 		Thread.sleep(1000);
-		check_the_response();
-		bookAppointment.sendKeys("yes");
-		send_button.click();
+		verifyRoutineAppointmentMessage();
+		pom.chatMSG.sendKeys("yes");
+		pom.chatSubmit();
 		PrimanryInformationPage();
 
 		driver.findElement(By.id("otp1")).sendKeys("9753");
@@ -100,14 +87,10 @@ public class AppointmentStatusTest extends EvvaChatBaseClass {
 	public void Test_appointment_status_for_existing_patient() throws Exception {
 
 		driver.get(botUrl);
-		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#chat-widget-push-to-talk > img"))).click();
+		pom.openChatBot();
 		driver.switchTo().frame(0);
-		WebElement bookAppointment = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//textarea[@id='chatbox']")));
-		bookAppointment.sendKeys("book appointment status");
-		WebElement send_button = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='chat_submit']")));
-		send_button.click();
+		pom.chatMSG.sendKeys("appointment status");
+		pom.chatSubmit();
 		Thread.sleep(1000);
 		PrimanryInformationPage();
 
@@ -122,14 +105,10 @@ public class AppointmentStatusTest extends EvvaChatBaseClass {
 	public void Test_appointment_status_for_new_patient() throws Exception {
 
 		driver.get(botUrl);
-		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#chat-widget-push-to-talk > img"))).click();
+		pom.openChatBot();
 		driver.switchTo().frame(0);
-		WebElement bookAppointment = wait
-				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div//textarea[@id='chatbox']")));
-		bookAppointment.sendKeys("book appointment status");
-		WebElement send_button = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@id='chat_submit']")));
-		send_button.click();
+		pom.chatMSG.sendKeys("appointment status");
+		pom.chatSubmit();
 		Thread.sleep(1000);
 		PrimanryInformationPage2();
 		driver.findElement(By.id("otp1")).sendKeys("9753");
@@ -167,6 +146,14 @@ public class AppointmentStatusTest extends EvvaChatBaseClass {
 	private void enterText(WebElement webElement, String text) {
 		wait.until(ExpectedConditions.visibilityOf(webElement)).clear();
 		webElement.sendKeys(text);
+	}
+
+	private void verifyRoutineAppointmentMessage() {
+		WebElement msg = wait.until(ExpectedConditions.elementToBeClickable(
+				By.xpath("//div[contains(text(),'Online appointment booking is only for routine exam')]")));
+		String txtMsg = msg.getText();
+		Assert.assertTrue(
+				txtMsg.contains("Online appointment booking is only for routine exam and follow up appointments"));
 	}
 
 	public void verifyTheDetials() {

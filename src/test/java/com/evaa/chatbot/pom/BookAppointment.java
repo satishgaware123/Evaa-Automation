@@ -181,6 +181,15 @@ public class BookAppointment extends EvvaChatBaseClass {
 		waitForElementVisible(sentTranscription);
 		return sentTranscription;
 	}
+	// user profile 
+	
+	
+	@FindBy(how = How.XPATH, using = "//div[contains(text(),'contact') and contains(text(),'location')]")
+	private WebElement contactMsg;
+	public WebElement contactMsg() {
+		waitForElementVisible(contactMsg);
+		return contactMsg;
+	}
 	
 	@FindBy(how = How.XPATH, using = "//div[@id='emailError']")
 	private WebElement emailError;
@@ -298,12 +307,34 @@ public class BookAppointment extends EvvaChatBaseClass {
 		cancelRescheduleAppointmentButton.click();
 	}
 	
-	@FindBy(how = How.XPATH, using = "(//div[@id='apptContainer']//input[@name='appointment'])[1]")
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Confirm / Cancel / Reschedule Appointment')]")
+	private WebElement clickOnRescheduleButton;
+	public void clickOnRescheduleButton() {
+		waitForElementVisible(clickOnRescheduleButton);
+		clickOnRescheduleButton.click();
+	}
+	
+	@FindBy(how = How.XPATH, using = "//input[@name='appointment']")
 	private WebElement selectAppointment;
-	public void selectAppointmentForCancel() {
+	public void selectAppointment() {
 		waitForElementVisible(selectAppointment);
 		selectAppointment.click();
 	}
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'Reschedule Appt')]")
+	private WebElement rescheduleAppt;
+	public void rescheduleAppt() {
+		waitForElementVisible(rescheduleAppt);
+		rescheduleAppt.click();
+	}
+	
+	
+	@FindBy(how = How.XPATH, using = "(//div[@id='apptContainer']//input[@name='appointment'])[1]")
+	private WebElement selectAppointment1;
+	public void selectAppointmentForCancel() {
+		waitForElementVisible(selectAppointment1);
+		selectAppointment1.click();
+	}
+	
 	@FindBy(how = How.XPATH, using = "(//div[@id='apptContainer']//following::span[contains(text(),'Cancel')])[1]")
 	private WebElement cancelAppointment;
 	public void cancelAppointment() {
@@ -431,7 +462,20 @@ public class BookAppointment extends EvvaChatBaseClass {
 		waitForElementVisible(chatSubmit);
 		chatSubmit.click();
 	}
+	//user profile
+	@FindBy(how = How.ID, using = "UserDropdown")
+	private WebElement userProfile;
+	public void clickOnUserProfile() {
+		waitForElementVisible(userProfile);
+		userProfile.click();
+	}
 	
+	@FindBy(how = How.XPATH ,using = "//a[@onclick='logout();']")
+	private WebElement clickOnLogout;
+	public void clickOnLogout() {
+		waitForElementVisible(clickOnLogout);
+		clickOnLogout.click();
+	}
 
 	@FindBy(how = How.XPATH, using = "(//span[text()='NEXT'])[4]")
 	private WebElement clickNextOncalander;
@@ -452,13 +496,23 @@ public class BookAppointment extends EvvaChatBaseClass {
 	@FindBy(how = How.XPATH, using = "(//div[text()='Available insurance'])[1]")
 	private WebElement insurancePageTitle;
 	public WebElement insurancePageTitle() {
+		waitForElementVisible(insurancePageTitle);
 		return insurancePageTitle;
 	}
 	@FindBy(how = How.XPATH, using = "//div[contains(text(),'No Optical')]")
 	private WebElement noOpticalOrderMsg;
 	public WebElement noOpticalOrderMsg() {
+		waitForElementVisible(noOpticalOrderMsg);
 		return noOpticalOrderMsg;
 	}
+	
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'upcoming appointment')]")
+	private WebElement noUpcommingMsg;
+	public WebElement noUpcommingApptMsg() {
+		waitForElementVisible(noUpcommingMsg);
+		return noUpcommingMsg;
+	}
+	
 	
 
 	public WebElement getLastNameField() {

@@ -732,3 +732,84 @@ successfully.]
 successfully.]
 2025-06-12 11:06:27 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_send_transcription_is_working | Reason: expected [Your email transcription has been sent successfully.] but found [Your email transcription has been sent
 successfully.]
+2025-06-12 11:52:03 ERROR AllureLifecycle - Could not update test container: container with uuid 13373336-aa94-4607-9e30-20f8fa457ca7 not found
+2025-06-12 11:52:22 ERROR AllureLifecycle - Could not update test container: container with uuid 5d6f4822-443f-4db3-95ce-d97d939923d3 not found
+2025-06-12 16:54:21 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_time_out_msg_after_2_minutes | Reason: no such element: Unable to locate element: {"method":"xpath","selector":"//div//textarea[@id='chatbox']"}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c9c319a5a91916207c668cd2c5d254a6, findElement {using=xpath, value=//div//textarea[@id='chatbox']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51474}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51474/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c9c319a5a91916207c668cd2c5d254a6
+2025-06-12 16:57:50 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_send_transcription_is_working | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //a[@id='menuToggle']' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-12 17:01:22 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_show_error_when_transcription_sent_with_invalid_email | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: #chat-widget-push-to-talk > img' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-12 17:12:54 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_show_error_when_transcription_sent_with_invalid_email | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: #chat-widget-push-to-talk > img' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-12 17:16:59 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_book_appointment_without_insurance | Reason: element click intercepted: Element is not clickable at point (1398, 1062)
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [69eb6609c1ffde65054bbc9d50711944, clickElement {id=f.AF0D6EEAF42D419B5EFE6068DBAE278A.d.83D68A68EF8BE590C933C2778052B5FB.e.3142}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53040}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53040/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (69eb6609c1ffde65054bbc9d50711944)] -> xpath: //button[@id='chat_submit']]
+Session ID: 69eb6609c1ffde65054bbc9d50711944
+2025-06-12 17:19:39 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_appointment_status_for_existing_patient | Reason: Cannot invoke "String.contains(java.lang.CharSequence)" because "this.chatMessage" is null
+2025-06-12 17:25:24 ERROR EvvaChatBaseClass - ❌ Test Failed: DisableOpticalOrderCheckSettingsFromAdmin | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[text()=' MaximEyes']' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-12 17:27:48 ERROR EvvaChatBaseClass - ❌ Test Failed: checkOpticlOrderShouldNotInitiateAfterDisableFromEvaaAdmin | Reason: no such element: Unable to locate element: {"method":"css selector","selector":"#\/\/div\/\/p\[contains\(text\(\)\,\'don\'\)\]"}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9206b96a3a80ad8731ed716757acca9c, findElement {using=id, value=//div//p[contains(text(),'don')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53466}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53466/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9206b96a3a80ad8731ed716757acca9c
+2025-06-12 17:31:59 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_book_appointment_without_insurance | Reason: element click intercepted: Element <button id="chat_submit" class="btn p-2 pt-3" type="submit" name="submit" data-kt-element="send" disabled="disabled">...</button> is not clickable at point (398, 515). Other element would receive the click: <div class="col-1 p-0" style="display: flex; flex-direction: row;justify-content: flex-end;padding-right: 0;">...</div>
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a42a80d0be2e0af9d39f33a54744af50, clickElement {id=f.DA8E780598DABFE2611F5E809E5898DF.d.248C4CDF8CEBBD43886282CDB6C9F431.e.1608}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53955}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53955/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (a42a80d0be2e0af9d39f33a54744af50)] -> xpath: //button[@id='chat_submit']]
+Session ID: a42a80d0be2e0af9d39f33a54744af50
+2025-06-12 17:32:41 ERROR EvvaChatBaseClass - ❌ Test Failed: While_booking_an_appointment_clicking_No_should_display_a_message_with_a_Contact_Us_link | Reason: element click intercepted: Element <button id="chat_submit" class="btn p-2 pt-3" type="submit" name="submit" data-kt-element="send" disabled="disabled">...</button> is not clickable at point (398, 515). Other element would receive the click: <div class="col-1 p-0" style="display: flex; flex-direction: row;justify-content: flex-end;padding-right: 0;">...</div>
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a42a80d0be2e0af9d39f33a54744af50, clickElement {id=f.5175FD25C33497E04366168F9C5608D5.d.DA916F6D4240103F1B44FE24C4DF9E2F.e.3623}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53955}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53955/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (a42a80d0be2e0af9d39f33a54744af50)] -> xpath: //button[@id='chat_submit']]
+Session ID: a42a80d0be2e0af9d39f33a54744af50
+2025-06-12 17:34:19 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_Reschedule_an_appointment_for_new_user | Reason: expected [upcoming Appointment ] but found []
+2025-06-12 17:37:42 ERROR EvvaChatBaseClass - ❌ Test Failed: RescheduleAppointmentforExistingUser | Reason: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (462f6c4bfb2a8b8f672831b9c241e886)] -> xpath: (//div[@class='pr-4 pl-4']//div[@class='v-select__slot'])[1]] (tried for 50 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54163}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54163/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 462f6c4bfb2a8b8f672831b9c241e886
+2025-06-12 18:05:09 ERROR EvvaChatBaseClass - ❌ Test Failed: enableOpticalOrderCheckSettingsFromAdmin | Reason: element click intercepted: Element <a b-faofe836pu="" class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">...</a> is not clickable at point (1431, 28). Other element would receive the click: <div class="toast-body">...</div>
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [651754286923972daf4d7159a9031106, clickElement {id=f.21C505369AE6383A6CBE1C7E47B7998E.d.694CCA2185E2A66CF386E978A508B677.e.1031}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55745}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55745/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (651754286923972daf4d7159a9031106)] -> id: UserDropdown]
+Session ID: 651754286923972daf4d7159a9031106
+2025-06-12 18:44:03 ERROR EvvaChatBaseClass - ❌ Test Failed: RescheduleAppointmentforExistingUser | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //input[@name='appointment']' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-12 18:46:10 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_Reschedule_an_appointment_for_new_user | Reason: expected [upcoming Appointment ] but found []
+2025-06-12 18:58:20 ERROR EvvaChatBaseClass - ❌ Test Failed: bookAppointment | Reason: Cannot invoke "String.contains(java.lang.CharSequence)" because "this.chatMessage" is null
+2025-06-12 18:59:25 ERROR EvvaChatBaseClass - ❌ Test Failed: Enable_Reschedule_from_admin | Reason: element click intercepted: Element <a b-faofe836pu="" class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">...</a> is not clickable at point (1431, 28). Other element would receive the click: <div class="toast-body">...</div>
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ca56b446988a139d6b3b2542ddac15ed, clickElement {id=f.9A4C1E07A20AA23A7F879051ECC8D667.d.0CB8FF035ABC32A76BC366CEBFCF89A8.e.1048}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59149}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59149/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (ca56b446988a139d6b3b2542ddac15ed)] -> id: UserDropdown]
+Session ID: ca56b446988a139d6b3b2542ddac15ed
+2025-06-12 19:01:57 ERROR EvvaChatBaseClass - ❌ Test Failed: bookAppointment | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: #chat-widget-push-to-talk > img' (tried for 50 second(s) with 500 milliseconds interval)
