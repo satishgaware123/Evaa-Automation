@@ -54,8 +54,7 @@ public class AppointmentStatusTest extends EvvaChatBaseClass {
 		} 
 
 		Thread.sleep(5000);
-		pom.clickOnUserProfile();
-		pom.clickOnLogout();
+		logoutAdmin();
 		Thread.sleep(1000);
 	}
 
@@ -116,7 +115,13 @@ public class AppointmentStatusTest extends EvvaChatBaseClass {
 		verifyDetalsForNewUser();
 		Thread.sleep(3000);
 	}
-
+	public void logoutAdmin() throws Exception {	
+		pom.clickOnUserProfile();
+		pom.clickOnLogout();
+		pom.loginWithMaximEyes();
+		Thread.sleep(2000);
+	}
+	
 	public void verifyDetalsForNewUser() {
 
 		WebElement noAppointmentElement = driver.findElement(By.xpath("//div[contains(text(),'No appointments')]"));

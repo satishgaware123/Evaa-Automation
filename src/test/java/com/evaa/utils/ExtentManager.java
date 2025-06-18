@@ -23,6 +23,8 @@ public class ExtentManager {
 			sparkReporter.config().setReportName("Evaa Automation Test Report");
 			sparkReporter.config().setDocumentTitle("Test Execution Report");
 			sparkReporter.config().setTheme(Theme.STANDARD);
+			sparkReporter.config().setTimeStampFormat("dd MMM yyyy, HH:mm:ss");
+			
 
 			extent = new ExtentReports();
 			extent.attachReporter(sparkReporter);

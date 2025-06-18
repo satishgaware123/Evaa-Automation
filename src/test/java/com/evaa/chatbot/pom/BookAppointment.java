@@ -99,8 +99,15 @@ public class BookAppointment extends EvvaChatBaseClass {
 	@FindBy(how = How.ID, using = "Username")
 	private WebElement enterUsername;
 	public WebElement enterUsername() {
+		waitForElementVisible(enterUsername);
 		return enterUsername;
 	}
+	
+	public WebElement verifyUserIsLogout() {
+		waitForElementVisible(enterUsername);
+		return enterUsername;
+	}
+	
 	
 	@FindBy(how = How.ID, using = "Password")
 	private WebElement enterPassword;
@@ -129,6 +136,64 @@ public class BookAppointment extends EvvaChatBaseClass {
 		waitForElementVisible(clickOnSettings);
 		clickOnSettings.click();
 	}	
+	
+	
+	@FindBy(how = How.XPATH, using = "//span[contains(text(),'thumb_up')]")
+	private WebElement clickOnLikeButton;
+	public void clickOnLikeButton() {
+		waitForElementVisible(clickOnLikeButton);
+		clickOnLikeButton.click();
+	}	
+	@FindBy(how = How.XPATH, using = "//button[@id='restart_button']")
+	private WebElement restartButton;
+	public WebElement restartButton() {
+		waitForElementVisible(restartButton);
+		return restartButton;
+	}
+	
+	
+
+	
+	@FindBy(how = How.XPATH, using = "//p[text()='Do you need further Assistance?']//following::button[text()='No']")
+	private WebElement Click_On_No_do_you_need_futher_assistance;
+	public void click_On_No_do_you_need_futher_assistance() {
+		waitForElementVisible(Click_On_No_do_you_need_futher_assistance);
+		Click_On_No_do_you_need_futher_assistance.click();
+	}	
+	
+	@FindBy(how = How.XPATH, using = "//p[text()='Do you need further Assistance?']//following::button[text()='Yes']")
+	private WebElement Click_On_Yes_do_you_need_futher_assistance;
+	public void Click_On_Yes_do_you_need_futher_assistance() {
+		waitForElementVisible(Click_On_Yes_do_you_need_futher_assistance);
+		Click_On_Yes_do_you_need_futher_assistance.click();
+	}	
+	
+	
+	@FindBy(how = How.XPATH, using = "//p[contains(text(),'Was this conversation helpful to you?')] ")
+	private WebElement wasThisConverationHelpfull;
+	public WebElement wasThisConverationHelpfull() {
+		waitForElementVisible(wasThisConverationHelpfull);
+		return wasThisConverationHelpfull;
+	}
+	
+	@FindBy(how = How.XPATH, using = "//p[contains(text(),'How can') or contains(text(),'how can') or contains(text(),'Please let me')]")
+	private WebElement howCanAshowCanAssistYousistYou;
+	public WebElement howCanAshowCanAssistYousistYou() {
+		waitForElementVisible(howCanAshowCanAssistYousistYou);
+		return howCanAshowCanAssistYousistYou;
+	}
+	
+	@FindBy(how = How.XPATH, using = "//div[@class='validation-message']")
+	private WebElement validationMsgOnPrimaryInfo;
+	public WebElement validationMsgOnPrimaryInfo() {
+		waitForElementVisible(validationMsgOnPrimaryInfo);
+		return validationMsgOnPrimaryInfo;
+	}
+	
+	
+	
+	
+	
 	@FindBy(how = How.XPATH, using = "//span[text()='Preferences  ']")
 	private WebElement clickOnSettingsPreferences;
 	public void clickOnSettingsPreferences() {

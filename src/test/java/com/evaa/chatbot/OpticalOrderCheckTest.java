@@ -25,19 +25,14 @@ public class OpticalOrderCheckTest extends EvvaChatBaseClass {
 		pom.enterPassword().sendKeys(userPassword);
 		pom.enterURL().sendKeys(URL);
 		pom.clickOnLogin();
-
 		pom.clickOnSettings();
 		pom.clickOnSettingsPreferences();
 		Thread.sleep(4000);
-
 		if (!pom.opticalOrderCheckBox().isSelected()) {
 			pom.opticalOrderCheckBox().click();
 		}
-
-		Thread.sleep(5000);
-		pom.clickOnUserProfile();
-		pom.clickOnLogout();
-		Thread.sleep(1000);
+		Thread.sleep(4000);
+		logoutAdmin(); 
 		
 	}
 
@@ -75,13 +70,12 @@ public class OpticalOrderCheckTest extends EvvaChatBaseClass {
 		}
 
 		Thread.sleep(5000);
-		pom.clickOnUserProfile();
-		pom.clickOnLogout();
-		driver.manage().deleteAllCookies();
+		logoutAdmin();
 	}
 
 	@Test(priority = 4)
 	public void checkOpticlOrderShouldNotInitiateAfterDisableFromEvaaAdmin() throws Exception {
+		
 		driver.get(botUrl);
 		pom.openChatBot();
 		driver.switchTo().frame(0);
@@ -103,5 +97,12 @@ public class OpticalOrderCheckTest extends EvvaChatBaseClass {
 	private void enterText(WebElement webElement, String text) {
 		wait.until(ExpectedConditions.visibilityOf(webElement)).clear();
 		webElement.sendKeys(text);
+	}
+	
+	public void logoutAdmin() throws Exception {	
+		pom.clickOnUserProfile();
+		pom.clickOnLogout();
+		pom.loginWithMaximEyes();
+		Thread.sleep(2000);
 	}
 }

@@ -85,7 +85,6 @@ public class EvvaChatBaseClass {
 	@BeforeClass
 	public void startBrowser() {
 		WebDriverManager.chromedriver().setup();
-
 		ChromeOptions options = new ChromeOptions();
 		boolean isHeadless = System.getProperty("headless", "false").equalsIgnoreCase("true");
 
@@ -124,13 +123,18 @@ public class EvvaChatBaseClass {
 		botUrl = config.getProperty("botUrl");
 		maximeyesURL = config.getProperty("maximeyesURL");
 		maxUserName = config.getProperty("MaxUserName");
-		maxUserPass = config.getProperty("MaxUserPass"); // 🔁 Fixed typo here
+		maxUserPass = config.getProperty("MaxUserPass"); 
 		adminURL = config.getProperty("adminURL");
 		URL = config.getProperty("URL");
 
 		extent = ExtentManager.getReportInstance();
 	}
 
+	@AfterTest
+	public void refreshtheBrowserafterTest(Method method) {
+		driver.manage().deleteAllCookies();
+		driver.navigate().refresh();
+	}
 	@BeforeMethod
 	public void setUp(Method method) {
 		test = extent.createTest(method.getName());

@@ -32,9 +32,7 @@ public class SendTranscriptionTest extends EvvaChatBaseClass {
 			System.out.println("Enable the Appointment Status Checking");
 		} 
 		Thread.sleep(5000);
-		pom.clickOnUserProfile();
-		pom.clickOnLogout();
-		Thread.sleep(1000);
+		logoutAdmin();
 	}
 
 	@Test(priority = 2, enabled = true)
@@ -90,7 +88,7 @@ public class SendTranscriptionTest extends EvvaChatBaseClass {
 		driver.switchTo().frame(0); 
 		pom.clickSortMenu();
 		pom.clickEmailTranscription();
-		pom.enterEmail().sendKeys("");
+		pom.enterEmail().sendKeys("343");
 		pom.sendTranscription();
 		String errorMSG =  pom.emailError().getText().trim();
 		Assert.assertEquals(errorMSG, "Please enter a valid email format");
@@ -107,6 +105,12 @@ public class SendTranscriptionTest extends EvvaChatBaseClass {
 	private void enterText(WebElement webElement, String text) {
 		wait.until(ExpectedConditions.visibilityOf(webElement)).clear();
 		webElement.sendKeys(text);
+	}
+	public void logoutAdmin() throws Exception {	
+		pom.clickOnUserProfile();
+		pom.clickOnLogout();
+		pom.loginWithMaximEyes();
+		Thread.sleep(2000);
 	}
 	
 	
