@@ -813,3 +813,386 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
 Element: [[ChromeDriver: chrome on WINDOWS (ca56b446988a139d6b3b2542ddac15ed)] -> id: UserDropdown]
 Session ID: ca56b446988a139d6b3b2542ddac15ed
 2025-06-12 19:01:57 ERROR EvvaChatBaseClass - ❌ Test Failed: bookAppointment | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: #chat-widget-push-to-talk > img' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-12 19:22:19 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_show_error_when_transcription_sent_with_invalid_email | Reason: expected [Please enter a valid email format] but found [Please enter an email address]
+2025-06-12 19:27:19 ERROR EvvaChatBaseClass - ❌ Test Failed: cancelAppointmentForNewPatient | Reason: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (8f3d6cd8643068d02bf18ef9787eff8f)] -> css selector: #chat-widget-push-to-talk > img] (tried for 50 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60772}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:60772/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8f3d6cd8643068d02bf18ef9787eff8f
+2025-06-12 19:29:08 ERROR EvvaChatBaseClass - ❌ Test Failed: DisableCancelAppointmentSettingsInPreferences | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[text()=' MaximEyes']' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-13 10:20:33 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_show_error_when_transcription_sent_with_invalid_email | Reason: expected [Please enter a valid email format] but found [Please enter an email address]
+2025-06-13 10:24:25 ERROR EvvaChatBaseClass - ❌ Test Failed: cancelAppointmentForExistingPatient | Reason: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (c8b7c605bbf95e2583506af8b6b6ca73)] -> xpath: (//div[@id='apptContainer']//following::span[contains(text(),'Cancel')])[1]] (tried for 50 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '192.168.35.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62492}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62492/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c8b7c605bbf95e2583506af8b6b6ca73
+2025-06-13 10:26:44 ERROR EvvaChatBaseClass - ❌ Test Failed: cancelAppointmentForNewPatient | Reason: Expected condition failed: waiting for element to be clickable: By.xpath: //span[text()='You have no upcoming appointments scheduled.'] (tried for 50 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '192.168.35.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62492}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62492/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c8b7c605bbf95e2583506af8b6b6ca73
+2025-06-13 10:32:55 ERROR EvvaChatBaseClass - ❌ Test Failed: DisableOpticalOrderCheckSettingsFromAdmin | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[text()=' MaximEyes']' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-13 10:34:55 ERROR EvvaChatBaseClass - ❌ Test Failed: checkOpticlOrderShouldNotInitiateAfterDisableFromEvaaAdmin | Reason: no such element: Unable to locate element: {"method":"css selector","selector":"#\/\/div\/\/p\[contains\(text\(\)\,\'don\'\)\]"}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '192.168.35.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c256d4d72b901a9491ba5b7a59e1237c, findElement {using=id, value=//div//p[contains(text(),'don')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63053}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63053/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c256d4d72b901a9491ba5b7a59e1237c
+2025-06-13 10:39:19 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_book_appointment_without_insurance | Reason: element click intercepted: Element <button id="chat_submit" class="btn p-2 pt-3" type="submit" name="submit" data-kt-element="send" disabled="disabled">...</button> is not clickable at point (398, 515). Other element would receive the click: <div class="col-1 p-0" style="display: flex; flex-direction: row;justify-content: flex-end;padding-right: 0;">...</div>
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '192.168.35.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8c1e37ac18e849f98daf4cb23b338b53, clickElement {id=f.896143A3FCA848FA241958DF789B5BE8.d.C16F85D53E2133D3C1DCFFE3EBCD941F.e.1705}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63488}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63488/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (8c1e37ac18e849f98daf4cb23b338b53)] -> xpath: //button[@id='chat_submit']]
+Session ID: 8c1e37ac18e849f98daf4cb23b338b53
+2025-06-13 10:39:39 ERROR EvvaChatBaseClass - ❌ Test Failed: While_booking_an_appointment_clicking_No_should_display_a_message_with_a_Contact_Us_link | Reason: element click intercepted: Element <button id="chat_submit" class="btn p-2 pt-3" type="submit" name="submit" data-kt-element="send" disabled="disabled">...</button> is not clickable at point (398, 515). Other element would receive the click: <div class="col-1 p-0" style="display: flex; flex-direction: row;justify-content: flex-end;padding-right: 0;">...</div>
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '192.168.35.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8c1e37ac18e849f98daf4cb23b338b53, clickElement {id=f.A20803538DA0B10A3D3893F88521C1D5.d.B81FC65337AF5EFC6E8C48FC999AC702.e.1746}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63488}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63488/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (8c1e37ac18e849f98daf4cb23b338b53)] -> xpath: //button[@id='chat_submit']]
+Session ID: 8c1e37ac18e849f98daf4cb23b338b53
+2025-06-13 10:41:52 ERROR EvvaChatBaseClass - ❌ Test Failed: Enable_Reschedule_from_admin | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[text()=' MaximEyes']' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-13 10:45:49 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_Reschedule_an_appointment_for_new_user | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: idFirstName' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-13 10:50:31 ERROR EvvaChatBaseClass - ❌ Test Failed: RescheduleAppointmentforExistingUser | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.id: idFirstName' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-13 10:53:56 ERROR EvvaChatBaseClass - ❌ Test Failed: Disable_Reschedule_from_admin | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[text()=' MaximEyes']' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-13 10:59:34 ERROR EvvaChatBaseClass - ❌ Test Failed: Enable_Reschedule_from_admin | Reason: element click intercepted: Element <a b-faofe836pu="" class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">...</a> is not clickable at point (1431, 28). Other element would receive the click: <div class="toast-body">...</div>
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '192.168.35.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1ccf18c1ab513a941c55d890eb9628aa, clickElement {id=f.12A9D92ADC448519283F302C4259351B.d.CDAE0EB0E012F6B3E55F31CBFAB07396.e.198}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64577/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (1ccf18c1ab513a941c55d890eb9628aa)] -> id: UserDropdown]
+Session ID: 1ccf18c1ab513a941c55d890eb9628aa
+2025-06-13 11:01:44 ERROR EvvaChatBaseClass - ❌ Test Failed: RescheduleAppointmentforExistingUser | Reason: element click intercepted: Element <div class="v-select__selection v-select__selection--comma">...</div> is not clickable at point (57, 168). Other element would receive the click: <div class="v-list-item__title">...</div>
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '192.168.35.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1ccf18c1ab513a941c55d890eb9628aa, clickElement {id=f.88F4658B1934364D21C8194401FD0E21.d.975776D39499D5001F3BB5B0FECE2D53.e.112}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64577/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (1ccf18c1ab513a941c55d890eb9628aa)] -> xpath: //div[text()='Pune']]
+Session ID: 1ccf18c1ab513a941c55d890eb9628aa
+2025-06-13 11:03:29 ERROR EvvaChatBaseClass - ❌ Test Failed: Disable_Reschedule_from_admin | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[text()=' MaximEyes']' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-13 11:04:29 ERROR EvvaChatBaseClass - ❌ Test Failed: TestRescheduleAppointmentDisabled | Reason: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(text(),'do not have') or contains(text(),'capability')] (tried for 50 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '192.168.35.241', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64577}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64577/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1ccf18c1ab513a941c55d890eb9628aa
+2025-06-13 15:05:20 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3a97c109e94e67e774cb72417de25672, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55976}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55976/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3a97c109e94e67e774cb72417de25672
+2025-06-13 15:13:24 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [21e39232236098be4063587352857705, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56438}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56438/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 21e39232236098be4063587352857705
+2025-06-13 15:16:54 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_time_out_msg_after_2_minutes | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: #chat-widget-push-to-talk > img' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-13 15:20:43 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [4d26ba33f6aa59a33943b478c0de820b, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56711}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56711/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4d26ba33f6aa59a33943b478c0de820b
+2025-06-13 15:21:35 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [12e17bf15d54a876950f1263ff55174c, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56802}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56802/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 12e17bf15d54a876950f1263ff55174c
+2025-06-13 15:24:46 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [589b714d2342ce55ec9b3016de18bead, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56949}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:56949/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 589b714d2342ce55ec9b3016de18bead
+2025-06-13 15:26:34 ERROR EvvaChatBaseClass - ❌ Test Failed: cancelAppointmentForNewPatient | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: #chat-widget-push-to-talk > img' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-13 15:29:14 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f7e55b85f9d2bf3c07ad84509ca39528, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57144}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57144/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f7e55b85f9d2bf3c07ad84509ca39528
+2025-06-13 15:29:14 ERROR EvvaChatBaseClass - ⚠️ Error opening Extent Report: Failed to open file:/C:/Users/Satish_G/eclipse-workspace/EVAA_Automation/reports/ExtentReport.html. Error message: The system cannot find the file specified.
+
+2025-06-13 15:29:37 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [01a1f184dd48a73df020a41c0614ebd8, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57189}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57189/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 01a1f184dd48a73df020a41c0614ebd8
+2025-06-13 15:29:38 ERROR EvvaChatBaseClass - ⚠️ Error opening Extent Report: Failed to open file:/C:/Users/Satish_G/eclipse-workspace/EVAA_Automation/reports/ExtentReport.html. Error message: The system cannot find the file specified.
+
+2025-06-13 15:30:23 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a417a364ede32ccae9ff4cd9b4bf7b2d, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57260}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57260/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a417a364ede32ccae9ff4cd9b4bf7b2d
+2025-06-13 15:30:24 ERROR EvvaChatBaseClass - ⚠️ Error opening Extent Report: Failed to open file:/C:/Users/Satish_G/eclipse-workspace/EVAA_Automation/reports/ExtentReport.html. Error message: The system cannot find the file specified.
+
+2025-06-13 15:31:34 ERROR EvvaChatBaseClass - ⚠️ Error opening Extent Report: Failed to open file:/C:/Users/Satish_G/eclipse-workspace/EVAA_Automation/reports/ExtentReport.html. Error message: The system cannot find the file specified.
+
+2025-06-13 15:32:34 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [306ac234a2a10abaf63d000ae18c73f6, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57416}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57416/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 306ac234a2a10abaf63d000ae18c73f6
+2025-06-13 15:32:34 ERROR EvvaChatBaseClass - ⚠️ Error opening Extent Report: Failed to open file:/C:/Users/Satish_G/eclipse-workspace/EVAA_Automation/reports/ExtentReport.html. Error message: The system cannot find the file specified.
+
+2025-06-13 15:33:54 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [35575506b0d103bdff5a20d171063ea8, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57478}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57478/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 35575506b0d103bdff5a20d171063ea8
+2025-06-13 15:33:55 ERROR EvvaChatBaseClass - ⚠️ Error opening Extent Report: Failed to open file:/C:/Users/Satish_G/eclipse-workspace/EVAA_Automation/reports/ExtentReport.html. Error message: The system cannot find the file specified.
+
+2025-06-13 15:34:15 ERROR EvvaChatBaseClass - ❌ Test Failed: Enable_status_checking_from_admin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0b2f6fc580e8a68a2a82944db8bff434, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57520}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57520/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 0b2f6fc580e8a68a2a82944db8bff434
+2025-06-13 15:34:15 ERROR EvvaChatBaseClass - ⚠️ Error opening Extent Report: Failed to open file:/C:/Users/Satish_G/eclipse-workspace/EVAA_Automation/reports/ExtentReport.html. Error message: The system cannot find the file specified.
+
+2025-06-13 15:34:37 ERROR EvvaChatBaseClass - ❌ Test Failed: Disable_ensurance_required_from_admin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a2e4e37d5db415ec695375b93fc59d96, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57560}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57560/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a2e4e37d5db415ec695375b93fc59d96
+2025-06-13 15:36:26 ERROR EvvaChatBaseClass - ❌ Test Failed: While_booking_an_appointment_clicking_No_should_display_a_message_with_a_Contact_Us_link | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.cssSelector: #chat-widget-push-to-talk > img' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-13 15:36:27 ERROR EvvaChatBaseClass - ⚠️ Error opening Extent Report: Failed to open file:/C:/Users/Satish_G/eclipse-workspace/EVAA_Automation/reports/ExtentReport.html. Error message: The system cannot find the file specified.
+
+2025-06-13 15:39:32 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2f5c8afcc2ace8a437c2b5f189c6cdf3, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57867}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57867/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2f5c8afcc2ace8a437c2b5f189c6cdf3
+2025-06-13 15:43:03 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [63953f20b9591ac00e8c6c2348bb59b4, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58034}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58034/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 63953f20b9591ac00e8c6c2348bb59b4
+2025-06-13 15:43:31 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [91bec0a8e3ff75292f3b4b09c7f43572, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58095}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58095/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 91bec0a8e3ff75292f3b4b09c7f43572
+2025-06-13 15:44:15 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.69)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [d85f39c7207a464ee5a13d78652c66dd, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58151}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58151/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d85f39c7207a464ee5a13d78652c66dd
+2025-06-16 09:59:24 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.104)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c4de10532cde6cef514728caff1d4c97, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51428}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51428/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c4de10532cde6cef514728caff1d4c97
+2025-06-16 10:05:02 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.104)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3de09c84d7f7ebaa17cf450374b64a08, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51685}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51685/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3de09c84d7f7ebaa17cf450374b64a08
+2025-06-16 10:07:20 ERROR EvvaChatBaseClass - ❌ Test Failed: enableCancelAppointmentSettingsFromAdmin | Reason: unknown error: net::ERR_CONNECTION_RESET
+  (Session info: chrome=137.0.7151.104)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [daf4a1e9b1ac289d982852a7e684b3a6, get {url=https://assistant2-admin.evaa.ai/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51790}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51790/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: daf4a1e9b1ac289d982852a7e684b3a6
+2025-06-17 16:55:03 ERROR EvvaChatBaseClass - ❌ Test Failed: cancelAppointmentForExistingPatient | Reason: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (56b18ffbf53a844fb1e2bbd8d0cbc9c0)] -> xpath: (//div[@id='apptContainer']//following::span[contains(text(),'Cancel')])[1]] (tried for 50 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62783}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:62783/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 56b18ffbf53a844fb1e2bbd8d0cbc9c0
+2025-06-17 17:06:43 ERROR EvvaChatBaseClass - ❌ Test Failed: checkOpticlOrderShouldNotInitiateAfterDisableFromEvaaAdmin | Reason: no such element: Unable to locate element: {"method":"css selector","selector":"#\/\/div\/\/p\[contains\(text\(\)\,\'don\'\)\]"}
+  (Session info: chrome=137.0.7151.104)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [c9ea66f3157858c618f9da8f7b53784a, findElement {using=id, value=//div//p[contains(text(),'don')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63354}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63354/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: c9ea66f3157858c618f9da8f7b53784a
+2025-06-17 17:11:16 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_book_appointment_without_insurance | Reason: element click intercepted: Element <button id="chat_submit" class="btn p-2 pt-3" type="submit" name="submit" data-kt-element="send" disabled="disabled">...</button> is not clickable at point (398, 515). Other element would receive the click: <div class="col-1 p-0" style="display: flex; flex-direction: row;justify-content: flex-end;padding-right: 0;">...</div>
+  (Session info: chrome=137.0.7151.104)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7ee4acb94524623ffee6471ab56180bf, clickElement {id=f.0B1F8897AA3C075675832D065F41727E.d.C9F69E7562FED8EFA17DA23685C15277.e.43}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63888}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63888/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (7ee4acb94524623ffee6471ab56180bf)] -> xpath: //button[@id='chat_submit']]
+Session ID: 7ee4acb94524623ffee6471ab56180bf
+2025-06-17 17:12:07 ERROR EvvaChatBaseClass - ❌ Test Failed: While_booking_an_appointment_clicking_No_should_display_a_message_with_a_Contact_Us_link | Reason: element click intercepted: Element <button id="chat_submit" class="btn p-2 pt-3" type="submit" name="submit" data-kt-element="send" disabled="disabled">...</button> is not clickable at point (398, 515). Other element would receive the click: <div class="col-1 p-0" style="display: flex; flex-direction: row;justify-content: flex-end;padding-right: 0;">...</div>
+  (Session info: chrome=137.0.7151.104)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7ee4acb94524623ffee6471ab56180bf, clickElement {id=f.C6F6748B47DFF6B90736802589951310.d.5CFA509D9AB9C4270AAC324C4647ECB8.e.39}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63888}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:63888/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (7ee4acb94524623ffee6471ab56180bf)] -> xpath: //button[@id='chat_submit']]
+Session ID: 7ee4acb94524623ffee6471ab56180bf
+2025-06-17 17:15:07 ERROR EvvaChatBaseClass - ❌ Test Failed: Enable_Reschedule_from_admin | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[text()=' MaximEyes']' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-17 17:20:01 ERROR EvvaChatBaseClass - ❌ Test Failed: Disable_Reschedule_from_admin | Reason: element click intercepted: Element <span class="menu-title preferences submenu-title">...</span> is not clickable at point (102, 397). Other element would receive the click: <nav class="sidebar sidebar-offcanvas" id="sidebar" style="">...</nav>
+  (Session info: chrome=137.0.7151.104)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [11f8e6a646cc642144a6fe1ebb81c50c, clickElement {id=f.4DAECD6C30DA9D037CC7D9E371E40A59.d.7029A982165964393263934F16FAA720.e.355}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64136}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64136/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (11f8e6a646cc642144a6fe1ebb81c50c)] -> xpath: //span[text()='Preferences  ']]
+Session ID: 11f8e6a646cc642144a6fe1ebb81c50c
+2025-06-17 17:22:59 ERROR EvvaChatBaseClass - ❌ Test Failed: TestRescheduleAppointmentDisabled | Reason: Expected condition failed: waiting for visibility of element located by By.xpath: //div[contains(text(),'do not have') or contains(text(),'capability')] (tried for 50 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64136}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64136/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 11f8e6a646cc642144a6fe1ebb81c50c
+2025-06-17 17:48:50 ERROR EvvaChatBaseClass - ❌ Test Failed: cancelAppointmentForExistingPatient | Reason: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (d2c10a76c9770dc7d141972635f8418d)] -> xpath: (//div[@id='apptContainer']//following::span[contains(text(),'Cancel')])[1]] (tried for 50 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65172}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:65172/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d2c10a76c9770dc7d141972635f8418d
+2025-06-17 17:53:17 ERROR EvvaChatBaseClass - ❌ Test Failed: DisableCancelAppointmentSettingsInPreferences | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[text()=' MaximEyes']' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-17 17:59:34 ERROR EvvaChatBaseClass - ❌ Test Failed: enableOpticalOrderCheckSettingsFromAdmin | Reason: element click intercepted: Element <span class="menu-title preferences submenu-title">...</span> is not clickable at point (102, 397). Other element would receive the click: <nav class="sidebar sidebar-offcanvas" id="sidebar" style="">...</nav>
+  (Session info: chrome=137.0.7151.104)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8c161f557a85a2ed05a560a610acceb5, clickElement {id=f.6EF28E69D36DCCE5668D4DA8362B1EA5.d.DF49CC9B0DC34EFCFAB5F4D563CA4AE7.e.360}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49422}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:49422/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (8c161f557a85a2ed05a560a610acceb5)] -> xpath: //span[text()='Preferences  ']]
+Session ID: 8c161f557a85a2ed05a560a610acceb5
+2025-06-17 18:15:18 ERROR EvvaChatBaseClass - ❌ Test Failed: cancelAppointmentForExistingPatient | Reason: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (4f911e0b8d72794a2bcea105d062bea2)] -> xpath: (//div[@id='apptContainer']//following::span[contains(text(),'Cancel')])[1]] (tried for 50 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50243}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50243/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 4f911e0b8d72794a2bcea105d062bea2
+2025-06-17 18:18:49 ERROR EvvaChatBaseClass - ❌ Test Failed: DisableCancelAppointmentSettingsInPreferences | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[text()=' MaximEyes']' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-17 18:26:09 ERROR EvvaChatBaseClass - ❌ Test Failed: DisableOpticalOrderCheckSettingsFromAdmin | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[text()=' MaximEyes']' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-17 18:29:04 ERROR EvvaChatBaseClass - ❌ Test Failed: checkOpticlOrderShouldNotInitiateAfterDisableFromEvaaAdmin | Reason: no such element: Unable to locate element: {"method":"css selector","selector":"#\/\/div\/\/p\[contains\(text\(\)\,\'don\'\)\]"}
+  (Session info: chrome=137.0.7151.104)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8c31f8fa8f45eaeddb4fb710c7575cfe, findElement {using=id, value=//div//p[contains(text(),'don')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50786}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:50786/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8c31f8fa8f45eaeddb4fb710c7575cfe
+2025-06-17 18:34:03 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_book_appointment_without_insurance | Reason: element click intercepted: Element <button id="chat_submit" class="btn p-2 pt-3" type="submit" name="submit" data-kt-element="send" disabled="disabled">...</button> is not clickable at point (398, 721). Other element would receive the click: <div class="col-1 p-0" style="display: flex; flex-direction: row;justify-content: flex-end;padding-right: 0;">...</div>
+  (Session info: chrome=137.0.7151.104)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2dd03618f0eeab47e44f9a612bd5a16e, clickElement {id=f.B05A095AB3A0EEFA957C1270B8763267.d.65372502C470F4BD93E8C5E3539C74CB.e.42}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51555}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51555/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (2dd03618f0eeab47e44f9a612bd5a16e)] -> xpath: //button[@id='chat_submit']]
+Session ID: 2dd03618f0eeab47e44f9a612bd5a16e
+2025-06-17 18:34:32 ERROR EvvaChatBaseClass - ❌ Test Failed: While_booking_an_appointment_clicking_No_should_display_a_message_with_a_Contact_Us_link | Reason: element click intercepted: Element is not clickable at point (1887, 893)
+  (Session info: chrome=137.0.7151.104)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2dd03618f0eeab47e44f9a612bd5a16e, clickElement {id=f.7413E7880CE4BB612BA1301E019419B8.d.2A68ACD25CCAA5D1C7D0C3C8D51097F5.e.90}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51555}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51555/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (2dd03618f0eeab47e44f9a612bd5a16e)] -> xpath: //button[@id='chat_submit']]
+Session ID: 2dd03618f0eeab47e44f9a612bd5a16e
+2025-06-17 18:35:03 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_msg_after_successull_appointments | Reason: Expected condition failed: waiting for visibility of element located by By.id: insuranceCN (tried for 50 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51897}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51897/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9be6c9f900000894fd4e4bebf7c60352
+2025-06-17 18:38:22 ERROR EvvaChatBaseClass - ❌ Test Failed: Enable_Reschedule_from_admin | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //button[text()=' MaximEyes']' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-17 18:40:42 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_msg_after_successull_appointments | Reason: expected [Was this conversation helpful to you?] but found [Was this conversation helpful to you?
+(Like or Dislike)]
+2025-06-17 18:42:18 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_msg_after_successull_appointments | Reason: expected [Was this conversation helpful to you? (Like or Dislike)] but found [Was this conversation helpful to you?
+(Like or Dislike)]
+2025-06-17 18:44:55 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_msg_after_successull_appointments | Reason: expected [Was this conversation helpful to you?
+(Like or Dislike)] but found [Was this conversation helpful to you?
+(Like or Dislike)]
+2025-06-17 18:50:44 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_msg_after_successull_appointments | Reason: expected [Was this conversation helpful to you?
+(Like or Dislike)] but found [Was this conversation helpful to you?
+(Like or Dislike)]
+2025-06-17 18:55:07 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_msg_after_successull_appointments | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //p[text()='Do you need further Assistance?']//following::button[text()='No']' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-18 12:49:52 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_time_out_msg_after_2_minutes | Reason: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (dcffc53127b0b73c92b6acbafb2c7d4d)] -> css selector: #chat-widget-push-to-talk > img] (tried for 50 second(s) with 500 milliseconds interval)
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'FIC-I7KL93', ip: '172.20.10.13', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.104, chrome: {chromedriverVersion: 137.0.7151.70 (dfa4dc56b2ab..., userDataDir: C:\Users\Satish_G\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57866}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:57866/devtoo..., se:cdpVersion: 137.0.7151.104, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dcffc53127b0b73c92b6acbafb2c7d4d
+2025-06-18 17:25:33 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_msgs_after_successull_appointments_and_click_on_yes | Reason: expected [true] but found [false]
+2025-06-18 17:27:12 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_msgs_after_successull_appointments_and_click_on_yes | Reason: expected [true] but found [false]
+2025-06-18 17:31:34 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_msgs_after_successull_appointments_and_click_on_yes | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //p[contains(text(),'How can')]' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-18 17:34:04 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_msgs_after_successull_appointments_and_click_on_yes | Reason: expected [true] but found [false]
+2025-06-18 17:38:59 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_msgs_after_successull_appointments_and_click_on_yes | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //p[contains(text(),'How can') or contains(text(),'how can')]' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-18 17:42:52 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_msgs_after_successull_appointments_and_click_on_yes | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //p[text()='Do you need further Assistance?']//following::button[text()='Yes']' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-18 17:46:05 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_msgs_after_successull_appointments_and_click_on_yes | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //p[contains(text(),'How can') or contains(text(),'how can')]' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-18 17:49:02 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_msgs_after_successull_appointments_and_click_on_yes | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //p[contains(text(),'How can') or contains(text(),'how can' or contains(text(),'Please let me'))]' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-18 17:53:51 ERROR EvvaChatBaseClass - ❌ Test Failed: Test_ideal_msgs_after_successull_appointments_and_click_on_yes | Reason: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //p[contains(text(),'How can') or contains(text(),'how can') or contains(text(),'Please let me')]' (tried for 50 second(s) with 500 milliseconds interval)
+2025-06-18 17:54:09 ERROR EvvaChatBaseClass - ❌ Test Failed: cancelAppointmentForNewPatient | Reason: expected [Please fill all the mandatory fields*] but found [Please fill all the mandatory fields *]

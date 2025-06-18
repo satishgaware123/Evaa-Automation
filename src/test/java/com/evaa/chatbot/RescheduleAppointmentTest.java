@@ -39,13 +39,11 @@ public class RescheduleAppointmentTest extends EvvaChatBaseClass {
 		Thread.sleep(4000);
 		
 		WebElement AppointmentRescheduling = wait.until(ExpectedConditions.elementToBeClickable(By.id("AppointmentReschedulingId")));
-		if (AppointmentRescheduling.isSelected()) {
+		if (!AppointmentRescheduling.isSelected()) {
 			AppointmentRescheduling.click();
 		}
-		Thread.sleep(3000);
-		pom.clickOnUserProfile();
-		pom.clickOnLogout();
-		Thread.sleep(1000);
+		Thread.sleep(4000);
+		 logoutAdmin();
 	}   
     
     @Test(priority = 2)
@@ -190,8 +188,7 @@ public class RescheduleAppointmentTest extends EvvaChatBaseClass {
 			System.out.println("insurance Req Appt checkbox was selected. Now Unchecked.");
 		}
 		Thread.sleep(3000);
-		pom.clickOnUserProfile();
-		pom.clickOnLogout();
+		 logoutAdmin();
 	}
 
 
@@ -229,7 +226,12 @@ public class RescheduleAppointmentTest extends EvvaChatBaseClass {
 		webElement.sendKeys(text);
 	}
 	
-	
+	public void logoutAdmin() throws Exception {	
+		pom.clickOnUserProfile();
+		pom.clickOnLogout();
+		pom.loginWithMaximEyes();
+		Thread.sleep(2000);
+	}
 	
 
 }

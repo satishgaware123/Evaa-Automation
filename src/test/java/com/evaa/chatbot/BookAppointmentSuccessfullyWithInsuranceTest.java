@@ -46,18 +46,12 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		pom.clickOnSettings();
 		pom.clickOnSettingsPreferences();
 		Thread.sleep(5000);
-		WebElement checkbox1 = wait.until(ExpectedConditions.elementToBeClickable(By.id("UploadInsCardId")));
-		if (!checkbox1.isSelected()) {
-			checkbox1.click();
-		}
 		if (!pom.allowInsuranceRequiredCheckBox().isSelected()) {
 			pom.allowInsuranceRequiredCheckBox().click();
 			
 		}
 		Thread.sleep(5000);
-		pom.clickOnUserProfile();
-		pom.clickOnLogout();
-		Thread.sleep(1000);
+		logoutAdmin();
 	}
 
 	@Test(priority = 2, enabled = true) 
@@ -92,6 +86,13 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		Thread.sleep(3000);
 
 	}
+	public void logoutAdmin() throws Exception {	
+		pom.clickOnUserProfile();
+		pom.clickOnLogout();
+		pom.loginWithMaximEyes();
+		Thread.sleep(2000);
+	}
+	
 	private void verifyRoutineAppointmentMessage() {
 		WebElement msg = wait.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//div[contains(text(),'Online appointment booking is only for routine exam')]")));
@@ -108,9 +109,7 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		Assert.assertTrue(
 		    extractedText.toLowerCase().contains("no appointment"),
 		    "Expected text to contain 'no appointment' but found: " + extractedText
-		);
-		
-		
+		);	
 	}
 	
 	
@@ -128,9 +127,7 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 		WebElement finish_Booking = wait
 				.until(ExpectedConditions.elementToBeClickable((By.xpath("//span[text()='Finish Booking']"))));
 		
-
 		finish_Booking.click();
-
 	}
 
 	public void verifyTheDetials() {

@@ -30,11 +30,6 @@ public class AppointmentCancelTest extends EvvaChatBaseClass {
 		pom.enterPassword().sendKeys(userPassword);
 		pom.enterURL().sendKeys(URL);
 		pom.clickOnLogin();
-
-//		WebElement botDropdown = wait
-//				.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='AccountId']")));
-//		new Select(botDropdown).selectByIndex(0);
-
 		pom.clickOnSettings();
 		pom.clickOnSettingsPreferences();
 		Thread.sleep(4000);
@@ -49,12 +44,30 @@ public class AppointmentCancelTest extends EvvaChatBaseClass {
 			pom.allowInsuranceRequiredCheckBox().click();
 		}
 		Thread.sleep(5000);
-		pom.clickOnUserProfile();
-		pom.clickOnLogout();
+		logoutAdmin();
+	
+	}
+	@Test(priority = 2, enabled = true)
+	public void cancelAppointmentForNewPatient() throws Exception {
+		driver.get(botUrl);
+		pom.openChatBot();
+		driver.switchTo().frame(0);
+
+		pom.chatMSG.sendKeys("cancel appointment");
+		pom.chatSubmit();
 		Thread.sleep(1000);
+
+		fillPrimaryInformationPage();
+		driver.findElement(By.id("otp1")).sendKeys("9753");
+		pom.next_button_on_otp_page().click();
+
+		WebElement noAppointmentMsg = wait.until(ExpectedConditions
+				.elementToBeClickable(By.xpath("//span[text()='You have no upcoming appointments scheduled.']")));
+		Assert.assertEquals(noAppointmentMsg.getText().trim(), "You have no upcoming appointments scheduled.");
+		driver.manage().deleteAllCookies();
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void bookAppointment() throws Exception {
 		driver.get(botUrl);
 		pom.openChatBot();
@@ -82,7 +95,7 @@ public class AppointmentCancelTest extends EvvaChatBaseClass {
 		Thread.sleep(3000);
 	}
 
-	@Test(priority = 3, enabled = true)
+	@Test(priority = 4, enabled = true)
 	public void cancelAppointmentForExistingPatient() throws Exception {
 		driver.get(botUrl);
 		pom.openChatBot();
@@ -104,26 +117,14 @@ public class AppointmentCancelTest extends EvvaChatBaseClass {
 		Thread.sleep(3000);
 	}
 
-	@Test(priority = 4, enabled = true)
-	public void cancelAppointmentForNewPatient() throws Exception {
-		driver.get(botUrl);
-		pom.openChatBot();
-		driver.switchTo().frame(0);
-
-		pom.chatMSG.sendKeys("cancel appointment");
-		pom.chatSubmit();
-		Thread.sleep(1000);
-
-		fillPrimaryInformationPage();
-		driver.findElement(By.id("otp1")).sendKeys("9753");
-		pom.next_button_on_otp_page().click();
-
-		WebElement noAppointmentMsg = wait.until(ExpectedConditions
-				.elementToBeClickable(By.xpath("//span[text()='You have no upcoming appointments scheduled.']")));
-		Assert.assertEquals(noAppointmentMsg.getText().trim(), "You have no upcoming appointments scheduled.");
-		driver.manage().deleteAllCookies();
+	public void logoutAdmin() throws Exception {	
+		pom.clickOnUserProfile();
+		pom.clickOnLogout();
+		pom.loginWithMaximEyes();
+		Thread.sleep(2000);
 	}
-
+	
+	
 	@Test(priority = 5)
 	public void DisableCancelAppointmentSettingsInPreferences() throws Exception {
 		driver.get(adminURL);
@@ -132,11 +133,6 @@ public class AppointmentCancelTest extends EvvaChatBaseClass {
 		pom.enterPassword().sendKeys(userPassword);
 		pom.enterURL().sendKeys(URL);
 		pom.clickOnLogin();
-
-//		WebElement botDropdown = wait
-//				.until(ExpectedConditions.elementToBeClickable(By.xpath("//select[@id='AccountId']")));
-//		new Select(botDropdown).selectByIndex(0);
-
 		pom.clickOnSettings();
 		pom.clickOnSettingsPreferences();
 		Thread.sleep(5000);
@@ -145,6 +141,7 @@ public class AppointmentCancelTest extends EvvaChatBaseClass {
 			pom.AppointmentCancelCheckBox().click();
 		}
 		Thread.sleep(5000);
+		logoutAdmin();
 	}
 
 	@Test(priority = 6)

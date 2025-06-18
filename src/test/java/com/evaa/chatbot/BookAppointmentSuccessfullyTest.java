@@ -53,6 +53,7 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 			System.out.println("insuranceReqApptId checkbox was already unselected.");
 		}
 		Thread.sleep(5000);
+		logoutAdmin();
 	}
 
 	@Test(priority = 2, dependsOnMethods = {"Disable_ensurance_required_from_admin"})
@@ -60,17 +61,13 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 		driver.get(botUrl);
 		pom.openChatBot();
 		driver.switchTo().frame(0); 
-
 		pom.chatMSG.sendKeys("book appointment");
 		pom.chatSubmit();
 		Thread.sleep(1000);
-
 		verifyRoutineAppointmentMessage();
-
 		pom.chatMSG.sendKeys("yes");
 		pom.chatSubmit();
 		PrimaryInformationPage();
-
 		driver.findElement(By.id("otp1")).sendKeys("9753");
 		pom.next_button_on_otp_page().click();
 		System.out.println("i am on otp page");
@@ -146,18 +143,18 @@ public class BookAppointmentSuccessfullyTest extends EvvaChatBaseClass {
 		pom.chatMSG.sendKeys("book appointment");
 		pom.chatSubmit();
 		Thread.sleep(1000);
-
 		verifyRoutineAppointmentMessage();
-
 		pom.chatMSG.sendKeys("No");
 		pom.chatSubmit();
-		
 		String contactMSG =  pom.contactMsg().getText().trim();
-		Assert.assertEquals(contactMSG, "You can find our location and contact details here: https://brunetpinecone.eyeclinic.ai/contact-us/ . We’re happy to help!");
-		
-
+		Assert.assertEquals(contactMSG, "You can find our location and contact details here: https://brunetpinecone.eyeclinic.ai/contact-us/ . We’re happy to help!");		
 	}
-	
+	public void logoutAdmin() throws Exception {	
+		pom.clickOnUserProfile();
+		pom.clickOnLogout();
+		pom.loginWithMaximEyes();
+		Thread.sleep(2000);
+	}
 	private void verifyRoutineAppointmentMessage() {
 		WebElement msg = wait.until(ExpectedConditions.elementToBeClickable(
 				By.xpath("//div[contains(text(),'Online appointment booking is only for routine exam')]")));
