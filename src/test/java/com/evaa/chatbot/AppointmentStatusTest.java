@@ -6,7 +6,6 @@ import java.time.LocalDate;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -33,7 +32,7 @@ public class AppointmentStatusTest extends EvvaChatBaseClass {
 
 	@Test(priority = 1)
 	public void Enable_status_checking_from_admin() throws Exception {
-
+		openNewTabAndCloseOld(driver);
 		driver.get(adminURL);
 		pom.loginWithMaximEyes();
 		pom.enterUsername().sendKeys(userName);
@@ -60,6 +59,7 @@ public class AppointmentStatusTest extends EvvaChatBaseClass {
 
 	@Test(priority = 2)
 	public void Test_book_appointment_without_insurance() throws Exception {
+		openNewTabAndCloseOld(driver);
 		driver.get(botUrl);
 		pom.openChatBot();
 		driver.switchTo().frame(0);
@@ -84,7 +84,7 @@ public class AppointmentStatusTest extends EvvaChatBaseClass {
 
 	@Test(priority = 3, enabled = true)
 	public void Test_appointment_status_for_existing_patient() throws Exception {
-
+		openNewTabAndCloseOld(driver);
 		driver.get(botUrl);
 		pom.openChatBot();
 		driver.switchTo().frame(0);
@@ -102,7 +102,7 @@ public class AppointmentStatusTest extends EvvaChatBaseClass {
 
 	@Test(priority = 4, enabled = true)
 	public void Test_appointment_status_for_new_patient() throws Exception {
-
+		openNewTabAndCloseOld(driver);
 		driver.get(botUrl);
 		pom.openChatBot();
 		driver.switchTo().frame(0);
@@ -166,20 +166,16 @@ public class AppointmentStatusTest extends EvvaChatBaseClass {
 		try {
 			WebElement confirmationMsg = wait
 					.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='exampleInputName1']")));
-
 			chatMessage = confirmationMsg.getText();
 		} catch (Exception E) {
 			System.out.println("Your appointment has been booked: " + E);
 		}
-		System.out.println("Chat Confirmation Message: " + chatMessage);
 
 		// Assertions
 		Assert.assertTrue(chatMessage.contains(expectedFirstName), "First name not found in chat message.");
 		Assert.assertTrue(chatMessage.contains(expectedLastName), "Last name not found in chat message.");
 //		Assert.assertTrue(chatMessage.contains("appointment successfully"), "'appointment successfully' not found.");
 //		Assert.assertTrue(chatMessage.contains("confirmed"), "'confirmed' not found in chat message.");
-
-		System.out.println("✅ Appointment confirmation message verified successfully.");
 	}
 
 	public void selectTomorrowDate() throws Exception {

@@ -1,89 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-18T18:15:20 IST" name="Default suite" finished-at="2025-06-18T18:16:07 IST" duration-ms="46455">
+  <suite started-at="2025-06-23T13:13:56 IST" name="Default suite" finished-at="2025-06-23T13:14:51 IST" duration-ms="55476">
     <groups>
     </groups>
-    <test started-at="2025-06-18T18:15:20 IST" name="Default test" finished-at="2025-06-18T18:16:07 IST" duration-ms="46455">
-      <class name="com.evaa.chatbot.PrimaryInformationValidationTest">
-        <test-method is-config="true" signature="cleanScreenshotFolder()[pri:0, instance:com.evaa.chatbot.PrimaryInformationValidationTest@2ead6ba4]" started-at="2025-06-18T18:15:20 IST" name="cleanScreenshotFolder" finished-at="2025-06-18T18:15:20 IST" duration-ms="21" status="PASS">
+    <test started-at="2025-06-23T13:13:56 IST" name="Default test" finished-at="2025-06-23T13:14:51 IST" duration-ms="55476">
+      <class name="com.evaa.chatbot.BookAppointmentSuccessfullyTest">
+        <test-method is-config="true" signature="cleanScreenshotFolder()[pri:0, instance:com.evaa.chatbot.BookAppointmentSuccessfullyTest@6215366a]" started-at="2025-06-23T13:13:56 IST" name="cleanScreenshotFolder" finished-at="2025-06-23T13:13:56 IST" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- cleanScreenshotFolder -->
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.evaa.chatbot.PrimaryInformationValidationTest@2ead6ba4]" started-at="2025-06-18T18:15:20 IST" name="startBrowser" finished-at="2025-06-18T18:15:22 IST" duration-ms="2053" status="PASS">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:com.evaa.chatbot.BookAppointmentSuccessfullyTest@6215366a]" started-at="2025-06-23T13:13:56 IST" name="startBrowser" finished-at="2025-06-23T13:13:58 IST" duration-ms="2163" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startBrowser -->
-        <test-method is-config="true" signature="setUp(java.lang.reflect.Method)[pri:0, instance:com.evaa.chatbot.PrimaryInformationValidationTest@2ead6ba4]" started-at="2025-06-18T18:15:22 IST" name="setUp" finished-at="2025-06-18T18:15:22 IST" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void com.evaa.chatbot.PrimaryInformationValidationTest.validating_error_msg_on_primary_information_page_for_all_mandatory_fields() throws java.lang.Exception]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="Test_book_appointment_without_insurance()[pri:2, instance:com.evaa.chatbot.BookAppointmentSuccessfullyTest@6215366a]" started-at="2025-06-23T13:13:58 IST" name="Test_book_appointment_without_insurance" finished-at="2025-06-23T13:14:50 IST" duration-ms="52192" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="validating_error_msg_on_primary_information_page_for_all_mandatory_fields()[pri:2, instance:com.evaa.chatbot.PrimaryInformationValidationTest@2ead6ba4]" started-at="2025-06-18T18:15:22 IST" name="validating_error_msg_on_primary_information_page_for_all_mandatory_fields" finished-at="2025-06-18T18:16:06 IST" duration-ms="43365" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validating_error_msg_on_primary_information_page_for_all_mandatory_fields -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.evaa.chatbot.PrimaryInformationValidationTest@2ead6ba4]" started-at="2025-06-18T18:16:06 IST" name="tearDown" finished-at="2025-06-18T18:16:06 IST" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validating_error_msg_on_primary_information_page_for_all_mandatory_fields status=SUCCESS method=PrimaryInformationValidationTest.validating_error_msg_on_primary_information_page_for_all_mandatory_fields()[pri:2, instance:com.evaa.chatbot.PrimaryInformationValidationTest@2ead6ba4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.evaa.chatbot.PrimaryInformationValidationTest@2ead6ba4]" started-at="2025-06-18T18:16:06 IST" name="closeBrowser" finished-at="2025-06-18T18:16:07 IST" duration-ms="930" status="PASS">
+        </test-method> <!-- Test_book_appointment_without_insurance -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.evaa.chatbot.BookAppointmentSuccessfullyTest@6215366a]" started-at="2025-06-23T13:14:50 IST" name="closeBrowser" finished-at="2025-06-23T13:14:51 IST" duration-ms="1005" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="refreshtheBrowserafterTest(java.lang.reflect.Method)[pri:0, instance:com.evaa.chatbot.PrimaryInformationValidationTest@2ead6ba4]" started-at="2025-06-18T18:16:07 IST" name="refreshtheBrowserafterTest" finished-at="1970-01-01T05:30:00 IST" duration-ms="-1750250767191" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Can inject only one of <ITestContext, XmlTest> into a @AfterTest annotated refreshtheBrowserafterTest.
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Can inject only one of <ITestContext, XmlTest> into a @AfterTest annotated refreshtheBrowserafterTest.
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:439)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:353)
-at org.testng.internal.Parameters.createParameters(Parameters.java:708)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
-at org.testng.TestRunner.afterRun(TestRunner.java:877)
-at org.testng.TestRunner.run(TestRunner.java:599)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- refreshtheBrowserafterTest -->
-      </class> <!-- com.evaa.chatbot.PrimaryInformationValidationTest -->
+      </class> <!-- com.evaa.chatbot.BookAppointmentSuccessfullyTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

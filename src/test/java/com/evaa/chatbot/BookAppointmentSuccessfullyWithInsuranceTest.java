@@ -6,7 +6,6 @@ import java.time.LocalDate;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -36,7 +35,7 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 
 	@Test(priority = 1)
 	public void Enable_ensurance_required_from_admin() throws Exception {
-
+		openNewTabAndCloseOld(driver);
 		driver.get(adminURL);
 		pom.loginWithMaximEyes();
 		pom.enterUsername().sendKeys(userName);
@@ -56,27 +55,22 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 
 	@Test(priority = 2, enabled = true) 
 	public void Test_book_appointment_with_insurance() throws Exception {
+		openNewTabAndCloseOld(driver);
 		driver.get(botUrl);
 		pom.openChatBot();
 		driver.switchTo().frame(0); 
-
 		pom.chatMSG.sendKeys("book appointment");
 		pom.chatSubmit();
 		Thread.sleep(1000);
-
 		verifyRoutineAppointmentMessage();  
-
 		pom.chatMSG.sendKeys("yes");
 		pom.chatSubmit();  
-
 		PrimanryInformationPage();
-
 		driver.findElement(By.id("otp1")).sendKeys("9753");
 		pom.next_button_on_otp_page().click();
 		System.out.println("i am on otp page");
 		System.out.println("Expected: " + expectedFirstName);
 		System.out.println("Actual  : " + expectedLastName);
-
 		fillAppointmentDetails();
 		selectTomorrowDate();
 		selectTimeSlot();
@@ -153,7 +147,7 @@ public class BookAppointmentSuccessfullyWithInsuranceTest extends EvvaChatBaseCl
 
 	@Test(priority = 5, enabled = false, dependsOnMethods = {"Test_book_appointment_with_insurance"})
 	public void verify_detail_on_maximeyes_site() throws Exception {
-//		driver.get("https://hheyeqainternalmysql.maximeyes.com/Account/Login");
+		openNewTabAndCloseOld(driver);
 		driver.get(maximeyesURL);
 		WebElement userName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("UserName")));
 		userName.sendKeys("satishG");

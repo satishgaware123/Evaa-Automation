@@ -3,117 +3,55 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <listeners>
     <listener class-name="com.evaa.utils.RetryListener"/>
-    <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    <listener class-name="com.evaa.utils.Listener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.evaa.chatbot.OpticalOrderCheckTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="tearDown"/>
-          <include name="enableOpticalOrderCheckSettingsFromAdmin"/>
-          <include name="DisableOpticalOrderCheckSettingsFromAdmin"/>
-          <include name="refreshtheBrowserafterTest"/>
-          <include name="cleanScreenshotFolder"/>
-          <include name="startBrowser"/>
-          <include name="checkOpticlOrderShouldNotInitiateAfterDisableFromEvaaAdmin"/>
-          <include name="check_optical_order_status_for_new_user"/>
-          <include name="setUp"/>
-          <include name="refreshtheBrowser"/>
-        </methods>
-      </class> <!-- com.evaa.chatbot.OpticalOrderCheckTest -->
       <class name="com.evaa.chatbot.BookAppointmentSuccessfullyTest">
         <methods>
           <include name="Test_book_appointment_without_insurance"/>
           <include name="closeBrowser"/>
-          <include name="Disable_ensurance_required_from_admin"/>
-          <include name="tearDown"/>
           <include name="While_booking_an_appointment_clicking_No_should_display_a_message_with_a_Contact_Us_link"/>
-          <include name="refreshtheBrowserafterTest"/>
           <include name="cleanScreenshotFolder"/>
           <include name="startBrowser"/>
-          <include name="setUp"/>
-          <include name="refreshtheBrowser"/>
         </methods>
       </class> <!-- com.evaa.chatbot.BookAppointmentSuccessfullyTest -->
-      <class name="com.evaa.chatbot.AppointmentCancelTest">
+      <class name="com.evaa.chatbot.OpticalOrderCheckTest">
         <methods>
           <include name="closeBrowser"/>
-          <include name="enableCancelAppointmentSettingsFromAdmin"/>
-          <include name="tearDown"/>
-          <include name="cancelAppointmentForExistingPatient"/>
-          <include name="TestCancelAppointmentDisable"/>
-          <include name="refreshtheBrowserafterTest"/>
+          <include name="enableOpticalOrderCheckSettingsFromAdmin"/>
+          <include name="DisableOpticalOrderCheckSettingsFromAdmin"/>
           <include name="cleanScreenshotFolder"/>
           <include name="startBrowser"/>
-          <include name="bookAppointment"/>
-          <include name="setUp"/>
-          <include name="cancelAppointmentForNewPatient"/>
-          <include name="refreshtheBrowser"/>
-          <include name="DisableCancelAppointmentSettingsInPreferences"/>
+          <include name="checkOpticlOrderShouldNotInitiateAfterDisableFromEvaaAdmin"/>
         </methods>
-      </class> <!-- com.evaa.chatbot.AppointmentCancelTest -->
+      </class> <!-- com.evaa.chatbot.OpticalOrderCheckTest -->
       <class name="com.evaa.chatbot.RescheduleAppointmentTest">
         <methods>
           <include name="closeBrowser"/>
           <include name="TestRescheduleAppointmentDisabled"/>
-          <include name="Enable_Reschedule_from_admin"/>
-          <include name="tearDown"/>
-          <include name="Test_Reschedule_an_appointment_for_new_user"/>
-          <include name="bookAppointment"/>
-          <include name="RescheduleAppointmentforExistingUser"/>
           <include name="Disable_Reschedule_from_admin"/>
-          <include name="refreshtheBrowserafterTest"/>
           <include name="cleanScreenshotFolder"/>
           <include name="startBrowser"/>
-          <include name="setUp"/>
-          <include name="refreshtheBrowser"/>
         </methods>
       </class> <!-- com.evaa.chatbot.RescheduleAppointmentTest -->
-      <class name="com.evaa.chatbot.SendTranscriptionTest">
+      <class name="com.evaa.chatbot.AppointmentCancelTest">
         <methods>
+          <include name="closeBrowser"/>
           <include name="enableCancelAppointmentSettingsFromAdmin"/>
-          <include name="closeBrowser"/>
-          <include name="Test_ideal_time_out_msg_after_2_minutes"/>
-          <include name="Test_show_error_when_transcription_sent_with_invalid_email"/>
-          <include name="tearDown"/>
-          <include name="refreshtheBrowserafterTest"/>
+          <include name="disableCancelAppointmentSettingsInPreferences"/>
           <include name="cleanScreenshotFolder"/>
           <include name="startBrowser"/>
-          <include name="Test_show_error_when_sending_transcription_with_empty_email"/>
-          <include name="setUp"/>
-          <include name="refreshtheBrowser"/>
-          <include name="Test_send_transcription_is_working"/>
         </methods>
-      </class> <!-- com.evaa.chatbot.SendTranscriptionTest -->
-      <class name="com.evaa.chatbot.BookAppointmentSuccessfullyWithInsuranceTest">
+      </class> <!-- com.evaa.chatbot.AppointmentCancelTest -->
+      <class name="com.evaa.chatbot.AfterBookAppointmentTestMsgTest">
         <methods>
-          <include name="Enable_ensurance_required_from_admin"/>
+          <include name="Test_ideal_msgs_after_successull_appointments_and_click_on_yes"/>
           <include name="closeBrowser"/>
-          <include name="tearDown"/>
-          <include name="Test_book_appointment_with_insurance"/>
-          <include name="refreshtheBrowserafterTest"/>
           <include name="cleanScreenshotFolder"/>
           <include name="startBrowser"/>
-          <include name="setUp"/>
-          <include name="refreshtheBrowser"/>
         </methods>
-      </class> <!-- com.evaa.chatbot.BookAppointmentSuccessfullyWithInsuranceTest -->
-      <class name="com.evaa.chatbot.AppointmentStatusTest">
-        <methods>
-          <include name="closeBrowser"/>
-          <include name="tearDown"/>
-          <include name="Test_appointment_status_for_new_patient"/>
-          <include name="Test_book_appointment_without_insurance"/>
-          <include name="refreshtheBrowserafterTest"/>
-          <include name="cleanScreenshotFolder"/>
-          <include name="startBrowser"/>
-          <include name="Enable_status_checking_from_admin"/>
-          <include name="Test_appointment_status_for_existing_patient"/>
-          <include name="setUp"/>
-          <include name="refreshtheBrowser"/>
-        </methods>
-      </class> <!-- com.evaa.chatbot.AppointmentStatusTest -->
+      </class> <!-- com.evaa.chatbot.AfterBookAppointmentTestMsgTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

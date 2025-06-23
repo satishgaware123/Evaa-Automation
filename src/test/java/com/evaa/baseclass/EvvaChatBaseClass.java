@@ -3,189 +3,167 @@ package com.evaa.baseclass;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Duration;
+import java.util.ArrayList;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.ITestResult;
 import org.testng.annotations.*;
 
-import com.aventstack.extentreports.*;
-import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.Status;
 import com.evaa.chatbot.pom.BookAppointment;
 import com.evaa.utils.ConfigReader;
 import com.evaa.utils.ExtentManager;
-import com.evaa.utils.ScreenshotUtil;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class EvvaChatBaseClass {
 
-	protected WebDriver driver;
-	protected BookAppointment pom;
-	protected WebDriverWait wait;
-	protected static ExtentReports extent;
-	protected static ExtentTest test;
-	protected static ConfigReader config;
+    // Thread-safe WebDriver
+    private static final ThreadLocal<WebDriver> threadedDriver = new ThreadLocal<>();
 
-	private static final Logger log = LogManager.getLogger(EvvaChatBaseClass.class);
-	private static final String LOG_FILE_PATH = "logs/test-execution.log";
+    protected WebDriver driver;
+    protected WebDriverWait wait;
+    protected BookAppointment pom;
+    protected static ExtentReports extent;
+    protected static ConfigReader config;
+    private static final Logger log = LogManager.getLogger(EvvaChatBaseClass.class);
 
-	// User Details
-	protected String userName;
-	protected String userPassword;
-	protected String dob;
-	protected String phone;
-	protected String email;
-	protected String botUrl;
-	protected String maximeyesURL;
-	protected String maxUserName;
-	protected String maxUserPass;
-	protected String adminURL;
-	protected String URL;
+    // User Details
+    protected String userName;
+    protected String userPassword;
+    protected String dob;
+    protected String phone;
+    protected String email;
+    protected String botUrl;
+    protected String maximeyesURL;
+    protected String maxUserName;
+    protected String maxUserPass;
+    protected String adminURL;
+    protected String URL;
 
-	@BeforeSuite
-	public void cleanScreenshotFolder() {
-		String screenshotPath = System.getProperty("user.dir") + File.separator + "screenshots";
-		File folder = new File(screenshotPath);
-		if (folder.exists() && folder.isDirectory()) {
-			for (File file : folder.listFiles()) {
-				if (file.isFile()) {
-					file.delete();
-				}
-			}
-			System.out.println("All screenshots deleted.");
-		} else {
-			System.out.println("Screenshot folder does not exist.");
-		}
+    private static final String LOG_FILE_PATH = "logs/test-execution.log";
 
-		String AllurReport = System.getProperty("user.dir") + File.separator + "allure-results";
-		File folder2 = new File(AllurReport);
+    // ✅ Access WebDriver from anywhere (e.g., listeners)
+    public static WebDriver getDriver() {
+        return threadedDriver.get();
+    }
 
-		if (folder2.exists() && folder2.isDirectory()) {
-			for (File file1 : folder2.listFiles()) {
-				if (file1.isFile()) {
-					file1.delete();
-				}
-			}
-			System.out.println("All old Report are deleted.");
-		} else {
-			System.out.println(" Report folder does not exist.");
-		}
+    @BeforeSuite
+    public void cleanScreenshotFolder() {
+        deleteFolderContent("screenshots");
+        deleteFolderContent("allure-results");
+    }
 
-	}
+    private void deleteFolderContent(String folderName) {
+        String path = System.getProperty("user.dir") + File.separator + folderName;
+        File folder = new File(path);
+        if (folder.exists() && folder.isDirectory()) {
+            for (File file : folder.listFiles()) {
+                if (file.isFile()) file.delete();
+            }
+            System.out.println("✅ Cleaned: " + folderName);
+        } else {
+            System.out.println("⚠️ Folder not found: " + folderName);
+        }
+    }
 
-	@BeforeClass
-	public void startBrowser() {
-		WebDriverManager.chromedriver().setup();
-		ChromeOptions options = new ChromeOptions();
-		boolean isHeadless = System.getProperty("headless", "false").equalsIgnoreCase("true");
+    @BeforeClass
+    public void startBrowser() {
+        WebDriverManager.chromedriver().setup();
+        ChromeOptions options = new ChromeOptions();
 
-		if (isHeadless) {
-			options.addArguments("--headless=new");
-			options.addArguments("--disable-gpu");
-			options.addArguments("--window-size=1920,1080");
-			options.addArguments("--no-sandbox");
-			options.addArguments("--disable-dev-shm-usage");
-			log.info("🚀 Running tests in HEADLESS mode");
-		} else {
-			log.info("🖥 Running tests in NORMAL mode");
-		}
+        boolean isHeadless = System.getProperty("headless", "false").equalsIgnoreCase("true");
 
-		options.addArguments("--remote-allow-origins=*");
+        if (isHeadless) {
+            options.addArguments("--headless=new", "--disable-gpu", "--window-size=1920,1080", "--no-sandbox", "--disable-dev-shm-usage");
+            log.info("🚀 Running tests in HEADLESS mode");
+        } else {
+            log.info("🖥 Running tests in NORMAL mode");
+        }
 
-		driver = new ChromeDriver(options);
+        options.addArguments("--remote-allow-origins=*");
 
-		if (!isHeadless) {
-			driver.manage().window().maximize();
-		}
+        driver = new ChromeDriver(options);
+        threadedDriver.set(driver); // ✅ ThreadLocal set
 
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+        if (!isHeadless) {
+            driver.manage().window().maximize();
+        }
 
-		pom = new BookAppointment(driver);
-		config = new ConfigReader();
-		wait = new WebDriverWait(driver, Duration.ofSeconds(50));
+        driver.manage().deleteAllCookies();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(50));
 
-		// Load config values
-		userName = config.getProperty("Username");
-		userPassword = config.getProperty("UserPassword");
-		dob = config.getProperty("dob");
-		phone = config.getProperty("phone");
-		email = config.getProperty("email");
-		botUrl = config.getProperty("botUrl");
-		maximeyesURL = config.getProperty("maximeyesURL");
-		maxUserName = config.getProperty("MaxUserName");
-		maxUserPass = config.getProperty("MaxUserPass"); 
-		adminURL = config.getProperty("adminURL");
-		URL = config.getProperty("URL");
+        pom = new BookAppointment(driver);
+        config = new ConfigReader();
 
-		extent = ExtentManager.getReportInstance();
-	}
+        // Load config
+        userName = config.getProperty("Username");
+        userPassword = config.getProperty("UserPassword");
+        dob = config.getProperty("dob");
+        phone = config.getProperty("phone");
+        email = config.getProperty("email");
+        botUrl = config.getProperty("botUrl");
+        maximeyesURL = config.getProperty("maximeyesURL");
+        maxUserName = config.getProperty("MaxUserName");
+        maxUserPass = config.getProperty("MaxUserPass");
+        adminURL = config.getProperty("adminURL");
+        URL = config.getProperty("URL");
 
-	@AfterTest
-	public void refreshtheBrowserafterTest(Method method) {
-		driver.manage().deleteAllCookies();
-		driver.navigate().refresh();
-	}
-	@BeforeMethod
-	public void setUp(Method method) {
-		test = extent.createTest(method.getName());
-	}
+        extent = ExtentManager.getReportInstance();
+    }
 
-	@AfterMethod
-	public void tearDown(ITestResult result) {
-		if (result.getStatus() == ITestResult.FAILURE) {
-			String screenshotPath = ScreenshotUtil.captureScreenshot(driver, result.getName());
-			test.fail(
-					"<b>❌ Test Failed:</b> " + result.getName() + "<br><b>💥 Reason:</b> "
-							+ result.getThrowable().getMessage(),
-					MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
-			log.error("❌ Test Failed: " + result.getName() + " | Reason: " + result.getThrowable().getMessage());
-			attachLogsToExtentReport();
+    // ✅ Use this utility for tab handling
+    public void openNewTabAndCloseOld(WebDriver driver) {
+        String oldTab = driver.getWindowHandle();
+        ((JavascriptExecutor) driver).executeScript("window.open()");
+        ArrayList<String> tabs = new ArrayList<>(driver.getWindowHandles());
+        String newTab = tabs.stream().filter(tab -> !tab.equals(oldTab)).findFirst().orElse(null);
 
-		} else if (result.getStatus() == ITestResult.SUCCESS) {
-			test.pass("<b>✅ Test Passed:</b> " + result.getName());
-		} else {
-			test.skip("<b>⚠️ Test Skipped:</b> " + result.getName());
-		}
-	}
+        if (newTab != null) {
+            driver.switchTo().window(newTab);
+            driver.switchTo().window(oldTab).close();
+            driver.switchTo().window(newTab);
+        }
+    }
 
-	@AfterClass
-	public void closeBrowser() {
-		if (driver != null) {
-			driver.manage().deleteAllCookies();
-			driver.quit();
-		}
-		extent.flush();
+    @AfterClass
+    public void closeBrowser() {
+        if (driver != null) {
+            driver.quit();
+            threadedDriver.remove();
+        }
 
-		try {
-			String reportPath = System.getProperty("user.dir") + "/reports/ExtentReport.html";
-			File reportFile = new File(reportPath);
-			Desktop.getDesktop().browse(reportFile.toURI());
-		} catch (IOException e) {
-			log.error("⚠️ Error opening Extent Report: " + e.getMessage());
-		}
-	}
+        extent.flush();
 
-	private void attachLogsToExtentReport() {
-		try {
-			String logContent = new String(Files.readAllBytes(Paths.get(LOG_FILE_PATH)));
-			String filteredLogs = logContent.replaceAll("(?m)^((?!ERROR).)*$", "").trim();
+        try {
+            String reportPath = System.getProperty("user.dir") + "/reports/ExtentReport.html";
+            Desktop.getDesktop().browse(new File(reportPath).toURI());
+        } catch (IOException e) {
+            log.error("⚠️ Error opening Extent Report: " + e.getMessage());
+        }
+    }
 
-			if (!filteredLogs.isEmpty()) {
-				test.log(Status.FAIL,
-						"<details><summary>📜 View Error Logs</summary><pre>" + filteredLogs + "</pre></details>");
-			}
-		} catch (IOException e) {
-			log.error("⚠️ Error reading log file: " + e.getMessage());
-		}
-	}
+    protected void attachLogsToExtentReport() {
+        try {
+            String logContent = new String(Files.readAllBytes(Paths.get(LOG_FILE_PATH)));
+            String filteredLogs = logContent.replaceAll("(?m)^((?!ERROR).)*$", "").trim();
+
+            if (!filteredLogs.isEmpty()) {
+                ExtentManager.getTest().log(Status.FAIL,
+                        "<details><summary>📜 View Error Logs</summary><pre>" + filteredLogs + "</pre></details>");
+            }
+        } catch (IOException e) {
+            log.error("⚠️ Error reading log file: " + e.getMessage());
+        }
+    }
 }
