@@ -15,17 +15,19 @@ import com.evaa.baseclass.EvvaChatBaseClass;
 public class BookAppointment extends EvvaChatBaseClass {
 	private WebDriver driver; // ✅ WebDriver instance
 
-	// ✅ Constructor to initialize WebElements
 	public BookAppointment(WebDriver driver) {
 		this.driver = driver;
-		PageFactory.initElements(driver, this); // Initialize PageFactory elements
+		PageFactory.initElements(driver, this);
 	}
 
 	public void waitForElementVisible(WebElement element) {
 		new WebDriverWait(driver, Duration.ofSeconds(50)).until(ExpectedConditions.visibilityOf(element));
 	}
+	
+	public void waitForElementToBeClickable(WebElement element) {
+		new WebDriverWait(driver, Duration.ofSeconds(50)).until(ExpectedConditions.elementToBeClickable(element));	
+	}
 
-	// ✅ Using @FindBy for cleaner locator management
 	@FindBy(how = How.ID, using = "idFirstName")
 	private WebElement firstNameField;
 
@@ -266,7 +268,16 @@ public class BookAppointment extends EvvaChatBaseClass {
 	@FindBy(how = How.ID, using = "UploadInsCardId")
 	private WebElement allowInsuranceRequiredCheckBox;
 	public WebElement allowInsuranceRequiredCheckBox() {
+		waitForElementVisible(allowInsuranceRequiredCheckBox);	
 		return allowInsuranceRequiredCheckBox;
+	}
+	
+	@FindBy(how = How.ID, using = "insuranceReqApptId")
+	private WebElement allowAcceptInsuranceCheckBox;
+	
+	public WebElement allowAcceptInsuranceCheckBox() {
+		waitForElementVisible(allowAcceptInsuranceCheckBox);
+		return allowAcceptInsuranceCheckBox;
 	}
 	
 	@FindBy(how = How.ID, using = "insuranceID")
@@ -524,6 +535,7 @@ public class BookAppointment extends EvvaChatBaseClass {
 	@FindBy(how = How.XPATH, using = "//button[@id='chat_submit']")
 	private WebElement chatSubmit;
 	public void chatSubmit() {
+		waitForElementToBeClickable(chatSubmit);
 		waitForElementVisible(chatSubmit);
 		chatSubmit.click();
 	}

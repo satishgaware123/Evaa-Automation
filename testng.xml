@@ -3,7 +3,7 @@
 <suite name="Suite">
 	<listeners>
 		<listener class-name="com.evaa.utils.RetryListener"/>
-		 <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+		 <listener class-name="com.evaa.utils.Listener"/>
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
@@ -11,9 +11,11 @@
       <class name="com.evaa.chatbot.AppointmentCancelTest"/>
       <class name="com.evaa.chatbot.AppointmentStatusTest"/>
       <class name="com.evaa.chatbot.OpticalOrderCheckTest"/>
+      <class name="com.evaa.chatbot.PrimaryInformationValidationTest"/>
       <class name="com.evaa.chatbot.BookAppointmentSuccessfullyWithInsuranceTest"/>
-      <class name="com.evaa.chatbot.BookAppointmentSuccessfullyTest"/>
+      <class name="com.evaa.chatbot.AfterBookAppointmentTestMsgTest"/>
       <class name="com.evaa.chatbot.RescheduleAppointmentTest"/>
+      <class name="com.evaa.chatbot.BookAppointmentSuccessfullyTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -16,7 +16,8 @@ public class SendTranscriptionTest extends EvvaChatBaseClass {
 	private final String expectedNumber = faker.number().digits(10);
 
 	@Test(priority = 1)
-	public void enableCancelAppointmentSettingsFromAdmin() throws Exception {
+	public void Test_enable_cancel_appointment_settings_from_admin() throws Exception {
+		openNewTabAndCloseOld(driver);
 		driver.get(adminURL);
 		pom.loginWithMaximEyes();
 		pom.enterUsername().sendKeys(userName);
@@ -37,6 +38,7 @@ public class SendTranscriptionTest extends EvvaChatBaseClass {
 
 	@Test(priority = 2, enabled = true)
 	public void Test_ideal_time_out_msg_after_2_minutes() throws Exception {
+		openNewTabAndCloseOld(driver);
 		driver.get(botUrl);
 		pom.openChatBot();
 		driver.switchTo().frame(0); 
@@ -46,7 +48,7 @@ public class SendTranscriptionTest extends EvvaChatBaseClass {
 		fillPrimaryInformationPage();
 		driver.findElement(By.id("otp1")).sendKeys("9753");
 		pom.next_button_on_otp_page().click();
-		Thread.sleep(130000);
+		Thread.sleep(120000);
 		String msgAfter2minutes =  pom.areYouStillThereMSG().getText().trim();
 		Assert.assertTrue(msgAfter2minutes.toLowerCase().contains("still"));
 		
@@ -55,6 +57,7 @@ public class SendTranscriptionTest extends EvvaChatBaseClass {
 	
 	@Test(priority = 3, enabled = true)
 	public void Test_send_transcription_is_working() throws Exception {
+		openNewTabAndCloseOld(driver);
 		driver.get(botUrl);
 		pom.openChatBot();
 		driver.switchTo().frame(0); 
@@ -69,6 +72,7 @@ public class SendTranscriptionTest extends EvvaChatBaseClass {
 	
 	@Test(priority = 4, enabled = true)
 	public void Test_show_error_when_sending_transcription_with_empty_email() throws Exception {
+		openNewTabAndCloseOld(driver);
 		driver.get(botUrl);
 		pom.openChatBot();
 		driver.switchTo().frame(0); 
@@ -83,7 +87,8 @@ public class SendTranscriptionTest extends EvvaChatBaseClass {
 	
 	@Test(priority = 5, enabled = true)
 	public void Test_show_error_when_transcription_sent_with_invalid_email() throws Exception {
-		driver.navigate().refresh();
+		openNewTabAndCloseOld(driver);
+		driver.get(botUrl);
 		pom.openChatBot();
 		driver.switchTo().frame(0); 
 		pom.clickSortMenu();

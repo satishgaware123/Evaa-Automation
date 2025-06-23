@@ -3,17 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.evaa.chatbot.PrimaryInformationValidationTest">
+      <class name="com.evaa.chatbot.BookAppointmentSuccessfullyTest">
         <methods>
-          <include name="validating_first_name_error_msg_on_primary_information_page"/>
+          <include name="Test_book_appointment_without_insurance"/>
           <include name="closeBrowser"/>
-          <include name="tearDown"/>
           <include name="cleanScreenshotFolder"/>
-          <include name="refreshtheBrowserafterTest"/>
           <include name="startBrowser"/>
-          <include name="setUp"/>
         </methods>
-      </class> <!-- com.evaa.chatbot.PrimaryInformationValidationTest -->
+      </class> <!-- com.evaa.chatbot.BookAppointmentSuccessfullyTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

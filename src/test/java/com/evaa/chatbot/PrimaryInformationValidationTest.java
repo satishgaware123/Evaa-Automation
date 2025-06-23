@@ -18,6 +18,7 @@ public class PrimaryInformationValidationTest  extends EvvaChatBaseClass  {
 
 	@Test(priority = 1)
 	public void enableCancelAppointmentSettingsFromAdmin() throws Exception {
+		openNewTabAndCloseOld(driver);
 		driver.get(adminURL);
 		pom.loginWithMaximEyes();
 		pom.enterUsername().sendKeys(userName);
@@ -36,6 +37,7 @@ public class PrimaryInformationValidationTest  extends EvvaChatBaseClass  {
 	}
 	@Test(priority = 2, enabled = true)
 	public void validating_error_msg_on_primary_information_page_for_all_mandatory_fields() throws Exception {
+		openNewTabAndCloseOld(driver);
 		driver.get(botUrl);
 		pom.openChatBot();
 		driver.switchTo().frame(0);
